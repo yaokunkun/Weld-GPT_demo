@@ -106,11 +106,7 @@ corpus_of_value = {
     )) for category, keys in param_keys_and_values.items()
 }
 
-# fw = open('/dev_data_2/zkyao/code/Weld-GPT_demo/app/utils/custom_word_freq.txt', 'w+')
-# fw = open('/dev_data_2/zkyao/conda/envs/chatchat/lib/python3.8/site-packages/pycorrector/data/person_name.txt', 'w+')
-# for key, value in possible_param_values_with_number_values.items():
-#     for v in value:
-#         fw.write(v + '\t200000' + '\n')
-# fw.close()
+
 if __name__ == "__main__":
     print(number_values)
+    print(corpus_of_value)

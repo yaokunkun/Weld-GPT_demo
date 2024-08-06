@@ -23,6 +23,9 @@ number_values_list = sorted(number_values_list, key=len, reverse=True)
 key_list = ["MIG", "GMAW", "AW", "TIG", "FCAW", "FCW-G", "FCW-S", "GMAW-P", "GMAW-S", "GTAW", "GTAW-P", "SMAW"]
 method_list = [item for key in key_list  for item in possible_param_values[key]]
 method_list = sorted(method_list, key=len, reverse=True)
+# 所有焊接材料的列表
+material_list= corpus_of_value['MAT']
+material_list = sorted(material_list, key=len, reverse=True)
 
 def chinese_num2arab_num(query):
     result = ""
@@ -209,6 +212,7 @@ def rule_regconization(query):
     matched_result = {}
 
     def match_MAT(query):
+        # First
         matched_value = ""
         for number_value in number_values_list:
             if number_value in query or number_value.lower() in query.lower():
@@ -225,6 +229,13 @@ def rule_regconization(query):
                 matched_value = matched_value.lower()
                 matched_value = matched_value.replace(lacked_value.lower(), complement_value)
                 break
+
+        # Second
+        if matched_value == "":
+            for material_value in material_list:
+                if material_value in query or material_value.lower() in query.lower():
+                    matched_value = material_value
+                    break
         return matched_value
 
     matched_value = match_MAT(query)
@@ -272,7 +283,7 @@ def rule_regconization(query):
     #    :return:如果匹配到了厚度，返回厚度结果以及擓出方法和”焊接方法“关键词后的query；如果没有匹配到，则返回None
     # """
     def match_THI(query):
-        matched_value = ""
+        matched_value = -1
         # 基于单位进行匹配
         for THI_unit in ["厘米", "毫米", "cm", "mm"]:
             if THI_unit in query:
@@ -288,20 +299,39 @@ def rule_regconization(query):
                     matched_value = query[start_index:unit_index + len(THI_unit)]
                     return matched_value
         # 基于数字进行匹配
-        # 情况②：匹配含有小数点的数字，包括小数点前后的数字
-        pattern_case2 = r'(?<![a-zA-Z0-9])(\d+(\.\d+)?)(?![a-zA-Z0-9])'
+        # 情况②：匹配含有小数点的数字，包括小数点前后的数字  (?<![a-zA-Z0-9])(\d+(\.\d+)?)(?![a-zA-Z0-9])
+        pattern_case2 = r'\d+\.\d+'
         matches_case2 = re.findall(pattern_case2, query)
         if len(matches_case2) > 0 and len(matches_case2[0]):
-            return matches_case2[0][0]
+            return matches_case2[0]
         # # 情况①：匹配前后没有英文字母和数字的整数
         # pattern_case1 = r'(?<![a-zA-Z0-9])(\d+)(?![a-zA-Z0-9])'
         # matches_case1 = re.findall(pattern_case1, query)
         # if len(matches_case1) > 0 and len(matches_case1[0]) == 1:
         #     return matches_case1[0]
-        return matched_value
+        patterns = [
+            r'厚度为(\d+)',
+            r'板厚为(\d+)',
+            r'厚度是(\d+)',
+            r'板厚是(\d+)',
+            r'厚度用(\d+)',
+            r'板厚用(\d+)',
+            r'(\d+)个厚'
+        ]
+        # 将模式列表连接成一个单一的正则表达式
+        combined_pattern = re.compile('|'.join(patterns))
+        # 提取每个句子中符合模式的整数
+        extracted_numbers = []
+        match = combined_pattern.search(query)
+        if match:
+             for group in match.groups():
+                if group:
+                    extracted_numbers.append(int(group))
+        matched_value = extracted_numbers[0] if len(extracted_numbers) != 0 else -1
+        return str(matched_value)
 
     matched_value = match_THI(query)
-    if matched_value != "":
+    if matched_value != '-1':
         # query = query.replace(matched_value, "")
         # MET_keys = ['焊接厚度', '焊接板厚', '厚度', '板厚', '个厚']
         # for MET_key in MET_keys:
