@@ -41,8 +41,8 @@ def update(MET, MAT, DIA, paramIndex, parampairs, userID):
                         ParamName=paramName, ParamValue=paramValue)
         dataIndex = paramSQL.get_data_ID(param)[0][0]
         userParam = UserParam(DataIndex=dataIndex, UserID=userID, DataValue=paramValue)
-        userDataID = userParamSQL.get_userDataID(userParam)
-        if userDataID is None:
+        userDataIndex = userParamSQL.get_userDataIndex(userParam)
+        if userDataIndex is None:
             userParam.UserDataIndex=max(get_all_userDataIndex(), key=lambda x:x[0])[0]+1
             result = userParamSQL.insert_SQL(userParam)
         else:

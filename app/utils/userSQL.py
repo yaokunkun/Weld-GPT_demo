@@ -78,3 +78,10 @@ def login_by_PhoneNumber(PhoneNumber, Password):
         WHERE PhoneNumber = '{}';""".format(PhoneNumber)
     result = access_DB(query)
     return result
+
+def update_password(PhoneNumber, NewPassword):
+    query = """UPDATE userinfo
+    SET Password = '{}'
+    WHERE PhoneNumber = '{}'""".format(NewPassword, PhoneNumber)
+    result = access_DB(query)
+    return result

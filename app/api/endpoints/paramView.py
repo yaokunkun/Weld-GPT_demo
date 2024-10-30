@@ -20,9 +20,9 @@ def add_and_update(userID, method, material, thickness, diameter, params):
         # 把用户添加的厚度在公共表中所存储的-100改为真实值
         new_index_and_thickness = {}
         for data_index, param_index, candidate_thickness in index_and_thickness:
-            if int(candidate_thickness) == -100:
+            if str(candidate_thickness) == "-100":
                 candidate_thickness = convert_slot_to_true_value(userID, data_index)
-            if int(candidate_thickness) != -100:
+            if str(candidate_thickness) != "-100":
                 new_index_and_thickness[param_index] = candidate_thickness
 
         candidate_paramIndex = [index for index, candidate_thickness in new_index_and_thickness.items() if float(candidate_thickness) == float(thickness)]  # 判断焊接厚度在不在刚才的结果里，如果在并取出对应的paramIndex

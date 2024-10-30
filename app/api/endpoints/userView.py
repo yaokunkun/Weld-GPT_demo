@@ -21,3 +21,7 @@ def login_user(UserName="", Password="", PhoneNumber=""):
 @router.post("/user/send_message", response_model=dict)
 def send_message(PhoneNumber):
     return userService.send_message(PhoneNumber)
+
+@router.post("/user/update_password", response_model=dict)
+def update_password(PhoneNumber, NewPassword):
+    return userService.update_password(PhoneNumber, NewPassword)

@@ -5,9 +5,10 @@ from urllib import parse
 import requests
 
 from app.models.User import User
-from app.utils.userSQL import get_all_userID, insert_SQL, select_SQL_by_userID, update_SQL, login_by_userName, login_by_PhoneNumber
+from app.utils.userSQL import get_all_userID, insert_SQL, select_SQL_by_userID, update_SQL, login_by_userName, login_by_PhoneNumber, update_password
 from app.utils.encryption import hash_password, check_password
 from app.utils.aliyunSendSms import Sample
+from app.utils import userSQL
 
 def add(UserName, Password, PhoneNumber, UserRole):
     user = User(UserID=max(get_all_userID(), key=lambda x:x[0])[0]+1,
@@ -55,3 +56,12 @@ def send_message(phoneNumber):
     result = Sample.main(code, phoneNumber)
     return {'info': '验证码发送成功' if result.status_code == 200 else '验证码发送失败',
             'code':code}
+    
+def update_password(phoneNumber, newPassword):
+    hashed_password = hash_password(newPassword)
+    userSQL.update_password(phoneNumber, hashed_password)
+    result = login_by_PhoneNumber(phoneNumber, newPassword)
+    if result is None or len(result) == 0:
+        return {'info': "用户密码修改失败！", 'userID': -1}
+    userID = result[0][0]
+    return {'info': "用户密码修改成功！", 'userID': userID}

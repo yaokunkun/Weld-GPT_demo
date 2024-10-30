@@ -10,6 +10,9 @@ from app.utils.query_process import chinese_num2arab_num, process_THI, diff_matc
     determine_single_welding_intent, standardize_value, rule_regconization, update_rule_result, \
     ner_replace
 from app.utils.state_switch import state_switch
+from app.utils import xunfei_translate
+
+import fasttext
 
 router = APIRouter()
 
@@ -26,7 +29,14 @@ def send_message_query(session_id: str, query: str, userID: int):
     session = sessions.get(session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
-
+    # -①其他语言翻译为中文
+    ## 检测语言是否是中文
+    language = xunfei_translate.directly_judge_language(query)
+    if language == "un":
+        language = xunfei_translate.check_language(query)
+    ## 不是中文则进行讯飞翻译
+    if language != "cn" and len(query) > 8:
+        query = xunfei_translate.translate(text=query, source_language=language)
     # 调用模型，获取输出：意图与槽位
     logging.info(f"query text: {query}")
     query = ner_replace(query)
@@ -78,7 +88,10 @@ def send_message_query(session_id: str, query: str, userID: int):
     # 根据模型输出的意图和实体，整合结果
     print(fixed_slots)
     response = parse_intent_and_slot(new_intent, history_original_slots, history_slots, userID)
-
+    if isinstance(response, str) and language not in ["cn", "un"]:
+        response = xunfei_translate.translate_to(text=response, target_language=language)
+    elif language not in ["cn", "un"]:
+        response["response"] = xunfei_translate.translate_to(text=response["response"], target_language=language)
     return {
         'fixed_query': fixed_query,
         "response": response

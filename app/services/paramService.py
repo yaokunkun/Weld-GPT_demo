@@ -13,7 +13,8 @@ def add(MET, MAT, THI, DIA, paramIndex, parampairs, userID):
     param = Param(DataIndex=max(get_all_dataIndex(), key=lambda x:x[0])[0]+1,
                   WeldingMethod=MET, WeldingMaterial=MAT, WireDiameter=DIA, ParamIndex = paramIndex,
                   ParamName="Guideline value for material", ParamValue=-100)
-    userParam = UserParam(UserDataIndex=max(get_all_userDataIndex(), key=lambda x:x[0])[0]+1,
+    userDataIndex = max(get_all_userDataIndex(), key=lambda x:x[0])[0]+1 if len(get_all_userDataIndex()) > 0 else 0
+    userParam = UserParam(UserDataIndex=userDataIndex,
                           UserID=userID, DataIndex=param.DataIndex, DataValue=THI)
     result1 = paramSQL.insert_SQL(param)
     result2 = userParamSQL.insert_SQL(userParam)
@@ -41,8 +42,8 @@ def update(MET, MAT, DIA, paramIndex, parampairs, userID):
                         ParamName=paramName, ParamValue=paramValue)
         dataIndex = paramSQL.get_data_ID(param)[0][0]
         userParam = UserParam(DataIndex=dataIndex, UserID=userID, DataValue=paramValue)
-        userDataID = userParamSQL.get_userDataID(userParam)
-        if userDataID is None:
+        userDataIndex = userParamSQL.get_userDataIndex(userParam)
+        if userDataIndex is None:
             userParam.UserDataIndex=max(get_all_userDataIndex(), key=lambda x:x[0])[0]+1
             result = userParamSQL.insert_SQL(userParam)
         else:

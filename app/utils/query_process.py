@@ -26,6 +26,7 @@ method_list = sorted(method_list, key=len, reverse=True)
 # 所有焊接材料的列表
 material_list= corpus_of_value['MAT']
 material_list = sorted(material_list, key=len, reverse=True)
+material_list_of_pinyin = [p.get_pinyin(material) for material in material_list]
 
 def chinese_num2arab_num(query):
     result = ""
@@ -228,6 +229,7 @@ def rule_regconization(query):
             if lacked_value.lower() in matched_value.lower():
                 matched_value = matched_value.lower()
                 matched_value = matched_value.replace(lacked_value.lower(), complement_value)
+                print(f"拼音校正：{lacked_value}=>{matched_value}")
                 break
 
         # Second
@@ -236,8 +238,16 @@ def rule_regconization(query):
                 if material_value in query or material_value.lower() in query.lower():
                     matched_value = material_value
                     break
+        
+        # Third
+        if matched_value == "":
+            query_pinyin = p.get_pinyin(query)
+            for i, material_pinyin in enumerate(material_list_of_pinyin):
+                if material_pinyin in query_pinyin:
+                    matched_value = material_list[i]
+        
+        # Finally, return
         return matched_value
-
     matched_value = match_MAT(query)
     if matched_value != "":
         query = query.replace(matched_value, "")
@@ -257,6 +267,7 @@ def rule_regconization(query):
             if method_value in query or method_value.lower() in query.lower():
                 matched_value = method_value
                 break
+        # 先把所有缺字的方法放进列表里，统一先match了，再作补充处理。
         lacked_values = {
             'mi': "mig",
             'ig': "mig",
@@ -265,8 +276,9 @@ def rule_regconization(query):
             "7保焊": "气保焊",
             "7宝焊": "气保焊",
         }
-        if matched_value in lacked_values:
-            matched_value = lacked_values[matched_value]
+        if matched_value.lower() in lacked_values:
+            print(f"拼音校正：{matched_value}=>{lacked_values[matched_value.lower()]}")
+            matched_value = lacked_values[matched_value.lower()]
         return matched_value
 
     matched_value = match_MET(query)
@@ -404,6 +416,7 @@ def ner_replace(query):
         "纯女": "纯铝",
         "存李": "纯铝",
         "村民": "纯铝",
+        "美女": "镁铝",
         "沿白菊": "mig",
         "7保焊": "气保焊",
         "7宝焊": "气保焊",
@@ -413,5 +426,6 @@ def ner_replace(query):
     }
     for error_word in replace_map:
         if error_word in query:
+            print(f"拼音校正：{error_word}=>{replace_map[error_word]}")
             query = query.replace(error_word, replace_map[error_word])
     return query

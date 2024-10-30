@@ -62,8 +62,8 @@ def update_SQL(userParams):
     result = access_DB(query)
     return result
 
-def get_userDataID(userParams):
-    query="""SELECT UserDataID
+def get_userDataIndex(userParams):
+    query="""SELECT UserDataIndex
     FROM userparamsdatatable
     WHERE DataIndex = {} AND UserID = {};
     """.format(userParams.DataIndex, userParams.UserID)
