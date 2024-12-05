@@ -9,12 +9,14 @@ models/*
 *.pcm
 *.log
 
+app/config/*
 app/logs/*
 app/data/*
 app/sampled_text/*
 app/services/data/*
 app/api/endpoints/第一期语音文件/*
 
+app_en/config/*
 app_en/logs/*
 app_en/data/*
 app_en/sampled_text/*
