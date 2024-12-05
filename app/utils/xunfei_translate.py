@@ -7,9 +7,10 @@ import hmac
 from urllib.parse import urlencode
 import json
 import requests
-
 import fasttext
-model = fasttext.load_model("/dev_data_2/zkyao/pretrain_model/fasttext-language-identification/model.bin")
+from app.config import config
+
+model = fasttext.load_model(config.fast_text_moedel_path)
 '''
 1.机器翻译2.0，请填写在讯飞开放平台-控制台-对应能力页面获取的APPID、APISecret、APIKey。
  2.目前仅支持中文与其他语种的互译，不包含中文的两个语种之间不能直接翻译。
