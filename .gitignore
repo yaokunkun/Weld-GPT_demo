@@ -9,6 +9,7 @@ models/*
 *.pcm
 *.log
 
+.vscode/*
 app/config/*
 app/logs/*
 app/data/*
