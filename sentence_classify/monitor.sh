@@ -1,0 +1,1 @@
+tensorboard --logdir=/dev_data_2/zkyao/code/Weld-GPT_demo/models/intent_recognize/25-03-15-15-42-57/logs

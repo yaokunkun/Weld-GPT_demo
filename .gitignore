@@ -22,3 +22,7 @@ app_en/logs/*
 app_en/data/*
 app_en/sampled_text/*
 app_en/services/data/*
+
+sentence_classify/param_control
+sentence_classify/intent_recognize
+sentence_classify/print_output.py

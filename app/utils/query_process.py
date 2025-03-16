@@ -35,6 +35,7 @@ def chinese_num2arab_num(query):
             result += mapping_chinese_num2arab_num[char]
         else:
             result += char
+    result = result.replace('.0', '')
     return result
 
 def process_THI(intent, slots):
