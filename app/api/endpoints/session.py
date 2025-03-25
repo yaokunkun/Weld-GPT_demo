@@ -108,8 +108,9 @@ def send_message_query(session_id: str, query: str, userID: int):
         elif language not in ["cn", "un"]:
             response["response"] = xunfei_translate.translate_to(text=response["response"], target_language=language)
     return {
-        'fixed_query': fixed_query,
-        "response": response
+        "fixed_query": fixed_query,
+        "response": response,
+        "current_slots": standard_slots
     }
 
 
@@ -142,6 +143,8 @@ def ret_any(input_query, input_str:str):
     return {
         "fixed_query": input_query,
         "response":{
-            "response":input_str
-        }
+            "response":input_str,
+        },
+        "current_slots": [("焊接厚度", "5"), ("焊接方法", "MIG")]
     }
+# http://202.38.247.12:8003/api/any?input_query=5个厚，mig&input_str=好的，我已经知道了焊接厚度是5，焊接方法是MIG，现在请你提供焊接材料。
