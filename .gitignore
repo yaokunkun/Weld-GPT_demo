@@ -28,3 +28,5 @@ sentence_classify/intent_recognize
 sentence_classify/print_output.py
 
 mysql/*
+tests/*
+backup.sql

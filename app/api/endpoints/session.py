@@ -35,6 +35,10 @@ def send_message_query(session_id: str, query: str, userID: int):
     if sentence_intent == "RAG":
         fixed_query = query
         response = intent_route.get_rag_response(query)
+        return {
+            "fixed_query": fixed_query,
+            "response": response,
+        }
     elif sentence_intent == "CONTROL":
         fixed_query = query
         response, control_param = intent_route.get_control_response(query)
@@ -145,6 +149,6 @@ def ret_any(input_query, input_str:str):
         "response":{
             "response":input_str,
         },
-        "current_slots": [("焊接厚度", "5"), ("焊接方法", "MIG")]
+        # "current_slots": [("焊接厚度", "5"), ("焊接方法", "MIG")]
     }
 # http://202.38.247.12:8003/api/any?input_query=5个厚，mig&input_str=好的，我已经知道了焊接厚度是5，焊接方法是MIG，现在请你提供焊接材料。

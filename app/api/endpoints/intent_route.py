@@ -5,6 +5,7 @@ from app.services import bert_param_control
 
 
 def get_rag_response(query):
+    return '等待RAG响应中...'
     # 构建请求的JSON数据
     data = {
         "query": query,
