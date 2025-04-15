@@ -25,7 +25,8 @@ def update(userID, UserName, Password, PhoneNumber, UserRole):
     user = User(UserID=userID)
     user.UserName = result[1] if UserName == "" else UserName
     user.Password = result[2] if Password == "" else Password
-    user.Password = hash_password(user.Password)
+    if Password != "":
+        user.Password = hash_password(user.Password)
     user.PhoneNumber = result[3] if PhoneNumber == "" else PhoneNumber
     user.UserRole = result[4] if UserRole == "" else UserRole
     result = update_SQL(user)

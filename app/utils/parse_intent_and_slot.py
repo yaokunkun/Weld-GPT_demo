@@ -1,6 +1,7 @@
 from app.utils.paramSQL import get_all_MET, get_all_MAT, get_all_THI
 from app.utils import paramSQL
 from app.utils import userParamSQL
+from app.services.bert_param_recommend import recommend
 
 def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
     """
@@ -72,6 +73,9 @@ def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
         ret = "好的，我已经知道了焊接方法是{}，焊接材料是{}，以及焊接厚度是{}。现在我来为您查询参数。".format(old_MET, old_MAT, THI)
         result_dict = paramSQL.select_SQL(MET, MAT, THI)
         userData_result_dict = userParamSQL.select_SQL(MET, MAT, THI, userID)
+        # # 参数推荐功能的入口 TODO: 开发中
+        # if len(result_dict) == 0 and len(userData_result_dict) == 0:
+        #     return recommend(MAT, MET, THI)
         new_result_dict = {}
         for diameter, dataIndexList in result_dict.items():
             # 遍历公共数据表中每组焊丝直径和对应的参数list

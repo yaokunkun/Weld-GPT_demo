@@ -5,9 +5,13 @@ import numpy as np
 from transformers import BertTokenizer, AutoModelForSequenceClassification
 from app.config.config import Args, device
 from app.config.config import intent_recognize_config as bert_config
-from app.utils.materials import corpus_of_value
+from app.utils.materials import corpus_of_value, number_values
 from seqeval.metrics.sequence_labeling import get_entities
 import torch
+
+number_values_list = sum([value for value in number_values.values()], [])
+corpus_of_value_list =  sum([value for value in corpus_of_value.values()], [])
+corpus_list = number_values_list + corpus_of_value_list
 
 args = Args()
 device = device
@@ -20,9 +24,12 @@ model.to(device)
 model.eval()
 
 def rule_predict(query):
+    return 'QUERY'  # TODO: RAG开发中，先不测
     rag_patterns = ['什么是', '为什么']
     if any(rag_pattern in query for rag_pattern in rag_patterns):
         return 'RAG'
+    if query in corpus_of_value_list:
+        return 'QUERY'
     return model_predict(query)
     
 def model_predict(query):

@@ -108,5 +108,8 @@ corpus_of_value = {
 
 
 if __name__ == "__main__":
-    print(number_values)
-    print(corpus_of_value)
+    number_values_list = sum([value for value in number_values.values()], [])
+    print(number_values_list)
+    print("==================")
+    corpus_of_value_list =  sum([value for value in corpus_of_value.values()], [])
+    print(corpus_of_value_list)

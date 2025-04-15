@@ -9,6 +9,11 @@ import json
 import requests
 import fasttext
 from app.config import config
+from app.utils.materials import corpus_of_value, number_values
+
+number_values_list = sum([value for value in number_values.values()], [])
+corpus_of_value_list =  sum([value for value in corpus_of_value.values()], [])
+corpus_list = number_values_list + corpus_of_value_list
 
 model = fasttext.load_model(config.fast_text_moedel_path)
 '''
@@ -161,6 +166,8 @@ def is_english_char(char):
     return char.isascii() and char.isalpha()
 
 def directly_judge_language(s):
+    if s in corpus_list:
+        return "cn"
     for char in s:
         unicode_val = ord(char)
         # Check if the character falls in the Hiragana or Katakana range
