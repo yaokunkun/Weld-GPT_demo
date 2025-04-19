@@ -10,6 +10,7 @@ import requests
 import fasttext
 from app.config import config
 from app.utils.materials import corpus_of_value, number_values
+import string
 
 number_values_list = sum([value for value in number_values.values()], [])
 corpus_of_value_list =  sum([value for value in corpus_of_value.values()], [])
@@ -166,7 +167,7 @@ def is_english_char(char):
     return char.isascii() and char.isalpha()
 
 def directly_judge_language(s):
-    if s in corpus_list:
+    if s.strip(string.punctuation).lower() in corpus_list:
         return "cn"
     for char in s:
         unicode_val = ord(char)
