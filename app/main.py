@@ -27,9 +27,14 @@ async def log_requests(request: Request, call_next):
     start_time = time.time()
     response = await call_next(request)
     process_time = (time.time() - start_time) * 1000
-    logging.info(f"请求路径: {request.url.path}, 请求方法: {request.method}, 客户端地址: {request.client.host}, 完成时间: {process_time:.2f}ms, 响应状态: {response.status_code}")
+    try:
+        logging.info(f"请求路径: {request.url.path}, 请求方法: {request.method}, 客户端地址: {request.client.host}, 完成时间: {process_time:.2f}ms, 响应状态: {response.status_code}")
+    except Exception as e:
+        logging.error(f"日志记录失败: {e}")
+        logging.info(f"请求: {request}, 完成时间: {process_time:.2f}ms, 响应状态: {response.status_code}")
+
     return response
 
 
 if __name__ == "__main__":
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8003)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8001)

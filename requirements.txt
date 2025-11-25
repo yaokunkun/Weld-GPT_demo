@@ -1,0 +1,14 @@
+uvicorn
+fastapi
+pycorrector
+mysql-connector-python
+fasttext
+scikit-learn
+openai
+sumeval
+seqeval
+xpinyin
+bcrypt
+aliyun-python-sdk-core
+aliyun-python-sdk-dysmsapi
+alibabacloud_dysmsapi20170525

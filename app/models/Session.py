@@ -5,30 +5,35 @@ from app.utils.query_process import determine_single_welding_intent
 
 sessions = {}  # TODO:这里简单地定义sessions字典常量，以内存的方式存储。后期则放在数据库中永久存储
 
+# Message, SessionData: 定义数据格式的对象
 class Message(BaseModel):
-    sent: str
-    received: Any
+    query: str
+    response: Any
 
 class SessionData(BaseModel):
     id: str
     shared_data: Dict[str, Any]
     messages: List[Message]
+    rag_messages: List[Message]
     state: int
 
-
+# Session: 面向业务的对象
 class Session:
     def __init__(self):
         self.id = str(uuid.uuid4())
         self.shared_data = {}
         self.original_data = {}
         self.messages = []
+        self.rag_messages = []
         self.state = 0
+        self.messages_all_user=[]
 
     def to_model(self) -> SessionData:
         return SessionData(
             id=self.id,
             shared_data=self.shared_data,
-            messages=[Message(sent=m["sent"], received=m["received"]) for m in self.messages],
+            messages=[Message(query=m["query"], response=m["response"]) for m in self.messages],
+            rag_messages=[Message(query=m["query"], response=m["response"]) for m in self.rag_messages],
             state = self.state
         )
 
@@ -53,6 +58,18 @@ class Session:
             original_slots.append((key, value))
         intent_str = "QUERY_" + str(self.state) if self.state != 0 else "OTHER"
         return intent_str, original_slots, standard_slots
+    
+    def add_rag_messages(self, query, response):
+        self.rag_messages.append(Message(query=query, response=response))
+        
+    def get_rag_messages(self):
+        return self.rag_messages
+    
+    def add_user_messages(self, query_user):
+        self.messages_all_user.append(query_user)
+        
+    def get_user_messages(self):
+        return self.messages_all_user
 
 sessions['test-id'] = Session()
 for i in range(50):

@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/dev_data_2/zkyao/code/Weld-GPT_demo')
+sys.path.append('/dev_data/zkyao/code/Weld-GPT_demo')
 import re
 import numpy as np
 from transformers import BertTokenizer, AutoModelForSequenceClassification
@@ -8,6 +8,8 @@ from app.config.config import param_control_config as bert_config
 from app.utils.materials import corpus_of_value
 from seqeval.metrics.sequence_labeling import get_entities
 import torch
+mapping_chinese_num2arab_num = {'点': '.', '零': '0', '一': '1', '壹': '1', '两':'2', '二': '2', '貳': '2', '三': '3', '叁': '3', '四': '4', '肆': '4', '五': '5', '伍': '4','六': '6', '七': '7', '八': '8', '捌': '8', '九': '9', '玖': '9'}
+
 
 args = Args()
 device = device
@@ -18,6 +20,16 @@ tokenizer = BertTokenizer.from_pretrained(bert_config['tokenizer_dir'])
 model = AutoModelForSequenceClassification.from_pretrained(bert_config['model_dir'], num_labels=len(label_list))
 model.to(device)
 model.eval()
+
+def chinese_num2arab_num(query):
+    result = ""
+    for char in query:
+        if char in mapping_chinese_num2arab_num:
+            result += mapping_chinese_num2arab_num[char]
+        else:
+            result += char
+    result = result.replace('.0', '')
+    return result
 
 def _extract_number(query):
     numbers = re.findall(r'\d+', query)
@@ -41,7 +53,17 @@ def _exclude_current_number(query):
 
 def _extract_measure(query):
     current_patterns = ['安', '电流', 'A']
-    voltage_patterns = ['伏', '电压', 'V']
+    voltage_patterns = ['伏', '电压', 'V'] + ['幅', '辐']
+    if any(current_pattern in query for current_pattern in current_patterns) and any(voltage_pattern in query for voltage_pattern in voltage_patterns):
+        for current_pattern in current_patterns:
+            if current_pattern in query:
+                current_index = query.find(current_pattern)
+                break
+        for voltage_pattern in voltage_patterns:
+            if voltage_pattern in query:
+                voltage_index = query.find(voltage_pattern)
+                break
+        return 'CURRENT' if current_index > voltage_index else 'VOLTAGE'
     if any(current_pattern in query for current_pattern in current_patterns):
         return 'CURRENT'
     if any(voltage_pattern in query for voltage_pattern in voltage_patterns):
@@ -49,6 +71,7 @@ def _extract_measure(query):
     return None        
 
 def rule_predict(query):
+    query = chinese_num2arab_num(query)
     query = _exclude_current_number(query)
     number = _extract_number(query)
     measuer = _extract_measure(query)
@@ -56,14 +79,14 @@ def rule_predict(query):
         return None
     up_patterns = ['增加', '加', '扩大', '提升']
     down_patterns = ['减少', '减小', '降低']
-    up_down_exclude_patterns = ['到', '至', '为']
-    control_patterns = ['设为', '调到', '设置为', '调整为', '调整到', '修改到', '修改为', '设置到']
-    if any(up_pattern in query for up_pattern in up_patterns) and all(up_down_exclude_pattern not in query for up_down_exclude_pattern in up_down_exclude_patterns):
+    up_down_exclude_patterns = ['到', '至', '为', '成']
+    control_patterns = ['设为', '调到', '设置为', '调整为', '调整到', '修改到', '修改为', '设置到']+[up_down_pattern+exclude_pattern for up_down_pattern in up_patterns+down_patterns for exclude_pattern in up_down_exclude_patterns]
+    if any(control_pattern in query for control_pattern in control_patterns):
+        mode = 'control'
+    elif any(up_pattern in query for up_pattern in up_patterns) and all(up_down_exclude_pattern not in query for up_down_exclude_pattern in up_down_exclude_patterns):
         mode = 'up'
     elif any(down_pattern in query for down_pattern in down_patterns) and all(up_down_exclude_pattern not in query for up_down_exclude_pattern in up_down_exclude_patterns):
         mode = 'down'
-    elif any(control_pattern in query for control_pattern in control_patterns):
-        mode = 'control'
     else: 
         mode = model_predict(query)
     return (mode, number, measuer)
@@ -83,5 +106,6 @@ def predict(query):
     return rule_predict(query)
 
 if __name__ == '__main__':
-    toy_query = "电流改到3, 现在是18V"
+    # toy_query = "电流改到3, 现在是18V"
+    toy_query = "电压增加3，电流扩大为5"
     print(predict(toy_query))

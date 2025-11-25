@@ -1,0 +1,1851 @@
+{"input": "Look up values for 3 mm mild steel, MIG, 0.8 mm wire.", "label": "QUERY"}
+{"input": "Settings for welding 10 mm S355 plate with MAG in flat position?", "label": "QUERY"}
+{"input": "What parameters for TIG welding 5 mm aluminum fillet joint?", "label": "QUERY"}
+{"input": "Need recommended amps and volts for 12 mm carbon steel plate, FCAW, horizontal.", "label": "QUERY"}
+{"input": "Can you give me welding data for 2 mm stainless sheet, pulse MIG?", "label": "QUERY"}
+{"input": "I want to weld 6 mm stainless to carbon steel with TIG, what setup should I use?", "label": "QUERY"}
+{"input": "Best starting amps for TIG on 1.6 mm 304 plate?", "label": "QUERY"}
+{"input": "Suggest MIG parameters for 8 mm structural beam, spray transfer.", "label": "QUERY"}
+{"input": "How should I set my machine for 4 mm aluminum, MIG, push technique?", "label": "QUERY"}
+{"input": "Give me a WPS-style suggestion for 20 mm mild steel groove weld, SMAW.", "label": "QUERY"}
+{"input": "Got 3 mm galvanized sheet, planning to MIG weld it, what settings?", "label": "QUERY"}
+{"input": "I am welding 1.5 mm car body panel with short-circuit MIG, need voltage and wire feed.", "label": "QUERY"}
+{"input": "Provide welding parameters for 40 mm thick plate using SAW single side.", "label": "QUERY"}
+{"input": "What current range for 2.5 mm 6013 rods on 6 mm plate?", "label": "QUERY"}
+{"input": "Please list recommended TIG amps for 3 mm aluminum butt weld.", "label": "QUERY"}
+{"input": "Need heat input and travel speed suggestions for 25 mm low alloy steel, multi-pass.", "label": "QUERY"}
+{"input": "How should I set my pulsed MIG for 5 mm 5083 aluminum?", "label": "QUERY"}
+{"input": "Give me settings for flux-cored welding 10 mm thick flange to web.", "label": "QUERY"}
+{"input": "Looking for start values for 1 mm stainless sheet with micro MIG.", "label": "QUERY"}
+{"input": "For welding 12 mm pipeline root with TIG, what amps and tungsten size?", "label": "QUERY"}
+{"input": "What parameters do you recommend for 16 mm shipbuilding steel, fillet weld, FCAW?", "label": "QUERY"}
+{"input": "I want to weld 8 mm stainless pipe to plate using TIG, how should I set the current?", "label": "QUERY"}
+{"input": "Starting settings for 3 mm aluminum extrusion, pulse MIG, horizontal position.", "label": "QUERY"}
+{"input": "Suggest voltage and wire speed for 5 mm mild steel fillet, gas shielded flux core.", "label": "QUERY"}
+{"input": "Need a parameter set for 1.2 mm cold-rolled steel, car repair, MIG plug welds.", "label": "QUERY"}
+{"input": "Can you propose SAW parameters for 30 mm thick butt joint, tandem wire?", "label": "QUERY"}
+{"input": "What MIG settings for welding 6 mm checker plate to a 10 mm base plate?", "label": "QUERY"}
+{"input": "Help me pick welding settings for 4 mm stainless square tube, TIG with foot pedal.", "label": "QUERY"}
+{"input": "Values needed for 2 mm aluminum sheet lap joint, MIG, vertical down.", "label": "QUERY"}
+{"input": "Give initial parameters for 9 mm structural steel, spray-arc GMAW, flat.", "label": "QUERY"}
+{"input": "How should I set up for TIG welding 1 mm titanium sheet?", "label": "QUERY"}
+{"input": "Recommend current and voltage for 14 mm S690 high strength steel with MAG.", "label": "QUERY"}
+{"input": "Need orbital TIG welding settings for 3.2 mm stainless tube.", "label": "QUERY"}
+{"input": "Please provide data for welding 7 mm aluminum plate to 5 mm plate with MIG.", "label": "QUERY"}
+{"input": "What parameters for positional FCAW on 8 mm fillet welds?", "label": "QUERY"}
+{"input": "I need suggested amps for 4 mm nickel alloy plate, manual TIG.", "label": "QUERY"}
+{"input": "Set up proposal for 6 mm duplex stainless pipe butt weld, root pass TIG, fill MIG.", "label": "QUERY"}
+{"input": "Give me recommended settings for 3 mm stainless door frame, short-arc MIG.", "label": "QUERY"}
+{"input": "Looking for SAW data on 20 mm low carbon steel fillet welds, double-sided.", "label": "QUERY"}
+{"input": "Can you outline parameters for 5 mm Corten plate using MAG with mixed gas?", "label": "QUERY"}
+{"input": "Need voltage and wire feed suggestions for 2.5 mm galvanized tube, GMAW.", "label": "QUERY"}
+{"input": "How should I tune my MIG for 1.2 mm car panel plug welds?", "label": "QUERY"}
+{"input": "Best settings for TIG welding 2 mm copper sheet?", "label": "QUERY"}
+{"input": "Please provide welding parameter window for 3 mm stainless with pulsed spray.", "label": "QUERY"}
+{"input": "What amps should I run for 3.2 mm 7018 rods on 12 mm plate?", "label": "QUERY"}
+{"input": "I want to weld 10 mm flange to 12 mm web with flux core, give me starting values.", "label": "QUERY"}
+{"input": "Settings for robotic MIG welding 4 mm mild steel brackets?", "label": "QUERY"}
+{"input": "Give parameter suggestions for 1.5 mm aluminum body panels, pulse MIG manual.", "label": "QUERY"}
+{"input": "Need a data set for 25 mm thick butt weld, multi-wire SAW.", "label": "QUERY"}
+{"input": "What welding parameters for 0.8 mm stainless furniture tubing, TIG?", "label": "QUERY"}
+{"input": "Help me choose amps and volts for 6 mm fillet welds on S355, MAG.", "label": "QUERY"}
+{"input": "Looking for guidance on settings for 5 mm fillet weld with self-shielded FCAW.", "label": "QUERY"}
+{"input": "How should I set TIG for a root pass on 8 mm pipe with 2.4 mm tungsten?", "label": "QUERY"}
+{"input": "Recommend spray transfer parameters for 10 mm column base plate welds.", "label": "QUERY"}
+{"input": "Need gas flow and voltage settings for MIG welding 3 mm stainless handrail.", "label": "QUERY"}
+{"input": "Got 1.2 mm mild steel panel, what MIG settings should I start with?", "label": "QUERY"}
+{"input": "Please suggest welding current for 5 mm aluminum plate with AC TIG.", "label": "QUERY"}
+{"input": "Best starting parameters for 2 mm stainless lap joint, pulse MAG.", "label": "QUERY"}
+{"input": "I want parameters for welding 15 mm ship plate using SAW in flat position.", "label": "QUERY"}
+{"input": "Give me a full set of settings for 4 mm robot MIG fillet welds with 1.0 mm wire.", "label": "QUERY"}
+{"input": "Voltage and wire speed for welding 6 mm angle to 8 mm plate, GMAW short arc.", "label": "QUERY"}
+{"input": "Looking for data on 3 mm aluminum extrusion, MIG push-pull gun.", "label": "QUERY"}
+{"input": "How should I set my machine for flux core on 12 mm structural joints?", "label": "QUERY"}
+{"input": "Recommend parameters for 1 mm stainless thin sheet TIG autogenous weld.", "label": "QUERY"}
+{"input": "What values for fillet welding 8 mm mild steel brackets with MAG, horizontal?", "label": "QUERY"}
+{"input": "Please list suggested amps and wire speed for 2.5 mm sheet, MIG, vertical up.", "label": "QUERY"}
+{"input": "Need a starting WPS for 20 mm pressure vessel plate, SMAW root and fill.", "label": "QUERY"}
+{"input": "Give me baseline settings for 5 mm duplex stainless with TIG, DCEN.", "label": "QUERY"}
+{"input": "How to set my MIG for 3 mm galvanized pipe joints?", "label": "QUERY"}
+{"input": "What current and speed should I use for SAW on 30 mm butt joints?", "label": "QUERY"}
+{"input": "Set voltage and amperage for welding 6 mm stainless plate, pulse MIG.", "label": "QUERY"}
+{"input": "Tell me the welding parameters for 4 mm aluminum checker plate, AC TIG.", "label": "QUERY"}
+{"input": "I need control values for welding 2 mm titanium tube with TIG.", "label": "QUERY"}
+{"input": "Provide recommended welding settings for 12 mm thick flange, FCAW, flat.", "label": "QUERY"}
+{"input": "What are good MIG parameters for 1.5 mm car door skin?", "label": "QUERY"}
+{"input": "Can you decrease current by 41A?", "label": "CONTROL"}
+{"input": "Reduce welding current by 15 amps on the main power source.", "label": "CONTROL"}
+{"input": "Increase wire feed speed by 1.0 m per minute.", "label": "CONTROL"}
+{"input": "Set welding voltage to 24.5 volts.", "label": "CONTROL"}
+{"input": "Switch the process selector to MIG mode.", "label": "CONTROL"}
+{"input": "Turn on the shielding gas flow now.", "label": "CONTROL"}
+{"input": "Stop the weld immediately and disable the arc.", "label": "CONTROL"}
+{"input": "Enable program number 3 on the welding robot.", "label": "CONTROL"}
+{"input": "Select job 12 from the memory and activate it.", "label": "CONTROL"}
+{"input": "Raise the crater fill time to 2 seconds.", "label": "CONTROL"}
+{"input": "Lower the pulse frequency by 30 hertz.", "label": "CONTROL"}
+{"input": "Set inductance to a higher level by one step.", "label": "CONTROL"}
+{"input": "Change polarity to DC electrode negative.", "label": "CONTROL"}
+{"input": "Start the automatic welding cycle on line 1.", "label": "CONTROL"}
+{"input": "Pause the welding program and hold current state.", "label": "CONTROL"}
+{"input": "Reset fault alarms on the power source.", "label": "CONTROL"}
+{"input": "Turn off the water cooler for the torch.", "label": "CONTROL"}
+{"input": "Increase travel speed setpoint by 10 percent.", "label": "CONTROL"}
+{"input": "Set pre-flow gas to 0.5 seconds and post-flow to 5 seconds.", "label": "CONTROL"}
+{"input": "Change wire diameter setting from 0.8 mm to 1.0 mm.", "label": "CONTROL"}
+{"input": "Disable hot start on the MMA function.", "label": "CONTROL"}
+{"input": "Enable 2T trigger mode for MIG welding.", "label": "CONTROL"}
+{"input": "Switch to synergic program for 1.0 mm solid wire, steel.", "label": "CONTROL"}
+{"input": "Set the remote control to panel mode only.", "label": "CONTROL"}
+{"input": "Increase arc length correction by plus 5 units.", "label": "CONTROL"}
+{"input": "Can you bump the amperage up by 20A?", "label": "CONTROL"}
+{"input": "Drop the voltage one step lower on this weld path.", "label": "CONTROL"}
+{"input": "Start weaving function with 5 mm amplitude.", "label": "CONTROL"}
+{"input": "Cancel weaving and go back to straight travel.", "label": "CONTROL"}
+{"input": "Set the torch angle compensation to automatic.", "label": "CONTROL"}
+{"input": "Turn on the fume extraction system.", "label": "CONTROL"}
+{"input": "Stop all welding tasks and return to home position.", "label": "CONTROL"}
+{"input": "Welding knowledge needed?", "label": "RAG"}
+{"input": "How do I set up a MIG welder for a beginner?", "label": "RAG"}
+{"input": "What is the difference between MIG, TIG, and stick welding?", "label": "RAG"}
+{"input": "Why does my weld always crack at the toe?", "label": "RAG"}
+{"input": "Explain what heat input means in welding.", "label": "RAG"}
+{"input": "How do I choose a suitable filler metal for stainless steel?", "label": "RAG"}
+{"input": "What causes porosity in MIG welds?", "label": "RAG"}
+{"input": "My TIG welds are turning black, what could be wrong?", "label": "RAG"}
+{"input": "How can I reduce distortion when welding thin plate?", "label": "RAG"}
+{"input": "What are the common welding positions and their symbols?", "label": "RAG"}
+{"input": "The machine shows error code E37, what does that mean?", "label": "RAG"}
+{"input": "Why is interpass temperature control important?", "label": "RAG"}
+{"input": "How do I store low hydrogen electrodes correctly?", "label": "RAG"}
+{"input": "What does the WPS document usually contain?", "label": "RAG"}
+{"input": "Is preheating needed for high strength steel?", "label": "RAG"}
+{"input": "How does plate thickness affect cooling rate of the weld?", "label": "RAG"}
+{"input": "What shielding gas is typical for carbon steel MAG welding?", "label": "RAG"}
+{"input": "Explain the difference between globular and spray transfer.", "label": "RAG"}
+{"input": "My weld bead is too tall and narrow, how can I fix it?", "label": "RAG"}
+{"input": "What is the purpose of a backing bar in welding?", "label": "RAG"}
+{"input": "How can I tell if I have enough penetration?", "label": "RAG"}
+{"input": "Why is post weld heat treatment sometimes required?", "label": "RAG"}
+{"input": "How do I test weld quality without destructive tests?", "label": "RAG"}
+{"input": "Can welding fumes be harmful to health?", "label": "RAG"}
+{"input": "What PPE is necessary for safe welding work?", "label": "RAG"}
+{"input": "How do I read EN ISO welding symbols on drawings?", "label": "RAG"}
+{"input": "What is the role of flux in submerged arc welding?", "label": "RAG"}
+{"input": "Why do I get undercut when welding in vertical up?", "label": "RAG"}
+{"input": "How does travel speed influence weld bead shape?", "label": "RAG"}
+{"input": "My weld pool is too fluid, what adjustments can I make?", "label": "RAG"}
+{"input": "What is lack of fusion and how do I avoid it?", "label": "RAG"}
+{"input": "Explain the difference between fillet and groove welds.", "label": "RAG"}
+{"input": "How thick can I weld in a single pass with FCAW?", "label": "RAG"}
+{"input": "What is the typical duty cycle of an industrial MIG machine?", "label": "RAG"}
+{"input": "Why is backing gas used in stainless TIG welding?", "label": "RAG"}
+{"input": "How do I choose the right tungsten type for TIG?", "label": "RAG"}
+{"input": "What is the correct way to grind tungsten electrodes?", "label": "RAG"}
+{"input": "My weld bead is too convex, what am I doing wrong?", "label": "RAG"}
+{"input": "How do I calibrate a welding power source?", "label": "RAG"}
+{"input": "Can you explain hydrogen induced cracking?", "label": "RAG"}
+{"input": "Why is interpass cleaning so important for multi-pass welds?", "label": "RAG"}
+{"input": "What are the main causes of lack of penetration?", "label": "RAG"}
+{"input": "How does joint preparation affect weld quality?", "label": "RAG"}
+{"input": "What is the purpose of a procedure qualification record?", "label": "RAG"}
+{"input": "How do I choose between stringer beads and weave beads?", "label": "RAG"}
+{"input": "Why is preheat recommended for thick carbon steel?", "label": "RAG"}
+{"input": "What are the effects of too high welding current?", "label": "RAG"}
+{"input": "How do I check gas leaks in my welding hose system?", "label": "RAG"}
+{"input": "The arc keeps stubbing when I stick weld, what should I adjust?", "label": "RAG"}
+{"input": "What is hot start and arc force on an MMA machine?", "label": "RAG"}
+{"input": "How does AC balance affect aluminum TIG welding?", "label": "RAG"}
+{"input": "What is the main difference between solid and flux-cored wire?", "label": "RAG"}
+{"input": "Why are my aluminum welds full of black soot?", "label": "RAG"}
+{"input": "Explain the basic settings on a synergic MIG welder.", "label": "RAG"}
+{"input": "How do welding defects like porosity affect strength?", "label": "RAG"}
+{"input": "What is the typical hardness of a weld metal compared to base metal?", "label": "RAG"}
+{"input": "Can you explain the term heat affected zone?", "label": "RAG"}
+{"input": "Why do we use back gouging on thick butt joints?", "label": "RAG"}
+{"input": "My welder shows an overtemperature warning, what should I do?", "label": "RAG"}
+{"input": "How can I reduce spatter when MIG welding?", "label": "RAG"}
+{"input": "Explain why cleanliness is important before welding aluminum.", "label": "RAG"}
+{"input": "What are common welding standards for structural steel?", "label": "RAG"}
+{"input": "How can I improve the appearance of my TIG welds?", "label": "RAG"}
+{"input": "Why does my arc wander when TIG welding?", "label": "RAG"}
+{"input": "What is the function of a welding positioner?", "label": "RAG"}
+{"input": "How do I safely handle gas cylinders in the workshop?", "label": "RAG"}
+{"input": "What is the difference between DCEN and DCEP in TIG?", "label": "RAG"}
+{"input": "How does welding affect residual stresses in a structure?", "label": "RAG"}
+{"input": "Why is root gap control critical in pipe welding?", "label": "RAG"}
+{"input": "Can I weld cast iron with a normal steel electrode?", "label": "RAG"}
+{"input": "What is the purpose of preheating cast iron before welding?", "label": "RAG"}
+{"input": "How do I troubleshoot inconsistent wire feed?", "label": "RAG"}
+{"input": "My wire keeps birdnesting at the feeder, what should I check?", "label": "RAG"}
+{"input": "What is the recommended storage temperature for low hydrogen rods?", "label": "RAG"}
+{"input": "Explain what impact toughness testing of welds is.", "label": "RAG"}
+{"input": "How do I use a clamp meter to measure welding current?", "label": "RAG"}
+{"input": "What are the safety risks of welding in confined spaces?", "label": "RAG"}
+{"input": "How can I prevent burn-through on thin sheet metal?", "label": "RAG"}
+{"input": "What cleaning methods are best before welding stainless steel?", "label": "RAG"}
+{"input": "How do I know when to change contact tips on a MIG torch?", "label": "RAG"}
+{"input": "Is it okay to weld galvanized steel without removing the coating?", "label": "RAG"}
+{"input": "What type of joint design is best for thick plate welds?", "label": "RAG"}
+{"input": "How does welding sequence influence distortion?", "label": "RAG"}
+{"input": "Can you explain the basics of robotic arc welding?", "label": "RAG"}
+{"input": "What kind of training is needed to become a certified welder?", "label": "RAG"}
+{"input": "How do I interpret radiographic images of welds?", "label": "RAG"}
+{"input": "What causes tungsten inclusions in TIG welds?", "label": "RAG"}
+{"input": "Why should I never weld on a sealed container?", "label": "RAG"}
+{"input": "How do I safely disconnect a welding machine from power?", "label": "RAG"}
+{"input": "What is the weather like today?", "label": "RAG"}
+{"input": "Can you help me plan my vacation, not related to welding?", "label": "RAG"}
+{"input": "How do I change the language on the welding machine display?", "label": "RAG"}
+{"input": "What is the meaning of life?", "label": "RAG"}
+{"input": "How can I improve ventilation in my small workshop?", "label": "RAG"}
+{"input": "Which welding helmet shade should I use for TIG?", "label": "RAG"}
+{"input": "Yo, why are my MIG welds popping like crazy?", "label": "RAG"}
+{"input": "Hey, my arc keeps cutting out every few seconds, any idea why?", "label": "RAG"}
+{"input": "Dude, what gas mix should I run for mild steel MIG?", "label": "RAG"}
+{"input": "Bro, my welds look cold and lumpy, what am I doing wrong?", "label": "RAG"}
+{"input": "Can you explain, in simple words, what a WPS is?", "label": "RAG"}
+{"input": "I got a new inverter welder, how do I use all these functions?", "label": "RAG"}
+{"input": "What are some basic tips for learning to TIG weld?", "label": "RAG"}
+{"input": "Why does my machine trip the breaker when I strike an arc?", "label": "RAG"}
+{"input": "Is it safe to weld in the rain?", "label": "RAG"}
+{"input": "How do I set up a proper welding ground connection?", "label": "RAG"}
+{"input": "Why does my weld bead undercut on the edges when I go vertical up?", "label": "RAG"}
+{"input": "Can you walk me through basic stick welding settings for a hobby welder?", "label": "RAG"}
+{"input": "What does duty cycle 60% at 200A actually mean on my welder?", "label": "RAG"}
+{"input": "Explain in simple terms what interpass temperature is.", "label": "RAG"}
+{"input": "How can I tell if my shielding gas bottle is running low?", "label": "RAG"}
+{"input": "Is it okay to weld on painted steel or should I grind it first?", "label": "RAG"}
+{"input": "What are the main differences between short circuit and spray transfer in MIG?", "label": "RAG"}
+{"input": "My flux core welds look really smoky, is that normal?", "label": "RAG"}
+{"input": "Can you list common welding defects and how to recognize them?", "label": "RAG"}
+{"input": "How should I maintain my MIG torch to keep it in good condition?", "label": "RAG"}
+{"input": "What is the purpose of a root run in pipe welding?", "label": "RAG"}
+{"input": "Why do stainless welds sometimes corrode if I don't clean them properly?", "label": "RAG"}
+{"input": "Is back purging always necessary on stainless pipe?", "label": "RAG"}
+{"input": "What kind of extension cord rating do I need for a 200A welder?", "label": "RAG"}
+{"input": "How do I safely weld near flammable materials in a workshop?", "label": "RAG"}
+{"input": "Why do I need to clamp my workpiece when welding?", "label": "RAG"}
+{"input": "What are the main differences between CO2 and mixed gas for MAG welding?", "label": "RAG"}
+{"input": "How can I improve my hand steadiness for TIG welding?", "label": "RAG"}
+{"input": "What is the impact of preheat on hydrogen cracking risk?", "label": "RAG"}
+{"input": "How can I avoid eye strain when welding for long periods?", "label": "RAG"}
+{"input": "Why does my wire occasionally burn back into the tip?", "label": "RAG"}
+{"input": "What do the numbers on welding rods, like 7018, actually stand for?", "label": "RAG"}
+{"input": "How should I dispose of used grinding disks and welding rods?", "label": "RAG"}
+{"input": "What is the difference between single-phase and three-phase welders?", "label": "RAG"}
+{"input": "How do I select the right size ground clamp for my setup?", "label": "RAG"}
+{"input": "Why is welding on a car fuel tank dangerous even if it's empty?", "label": "RAG"}
+{"input": "What are typical preheat temperatures for different steels?", "label": "RAG"}
+{"input": "How do I recognize a cold lap defect in a weld?", "label": "RAG"}
+{"input": "Can you explain macro-etch testing of welds?", "label": "RAG"}
+{"input": "How often should I service an industrial MIG power source?", "label": "RAG"}
+{"input": "What safety checks should I do before starting a welding shift?", "label": "RAG"}
+{"input": "Is TIG welding stronger than MIG welding?", "label": "RAG"}
+{"input": "Why do my tack welds crack before I finish the joint?", "label": "RAG"}
+{"input": "How does shielding gas flow rate affect weld quality?", "label": "RAG"}
+{"input": "What are the pros and cons of inverter welders vs transformer welders?", "label": "RAG"}
+{"input": "Can you give me a simple explanation of Charpy impact testing?", "label": "RAG"}
+{"input": "How do I store gas cylinders correctly according to safety rules?", "label": "RAG"}
+{"input": "My welds look okay visually; how can I be sure they are strong enough?", "label": "RAG"}
+{"input": "What’s the difference between a welder and a welding operator?", "label": "RAG"}
+{"input": "How does welding heat input relate to grain growth in steel?", "label": "RAG"}
+{"input": "What is the main cause of slag inclusions in SMAW welds?", "label": "RAG"}
+{"input": "How do I choose the correct welding helmet DIN shade?", "label": "RAG"}
+{"input": "Why is TIG welding on aluminum more difficult than on steel?", "label": "RAG"}
+{"input": "Can I run flux cored wire without gas on stainless steel?", "label": "RAG"}
+{"input": "Do I always need to bevel plate edges for full penetration welds?", "label": "RAG"}
+{"input": "What are typical acceptance criteria for visual weld inspection?", "label": "RAG"}
+{"input": "How can I check if my welding leads are in good condition?", "label": "RAG"}
+{"input": "Can welding fumes set off fire alarms?", "label": "RAG"}
+{"input": "Is it okay to quench hot welds in water to cool them faster?", "label": "RAG"}
+{"input": "How does root face size affect penetration in a butt joint?", "label": "RAG"}
+{"input": "Why do some welding codes limit heat input?", "label": "RAG"}
+{"input": "What are the main pipe welding positions, like 1G, 2G, 5G, 6G?", "label": "RAG"}
+{"input": "How do I know if my welding gloves are still safe to use?", "label": "RAG"}
+{"input": "Is it normal for my welds to make popping sounds while cooling?", "label": "RAG"}
+{"input": "How can I reduce welding noise in a small shop?", "label": "RAG"}
+{"input": "What’s the safest way to weld on a vehicle chassis?", "label": "RAG"}
+{"input": "Why do I need a fire watch after welding in some environments?", "label": "RAG"}
+{"input": "Can you explain what lamellar tearing is in welded structures?", "label": "RAG"}
+{"input": "How does joint restraint influence cracking risk?", "label": "RAG"}
+{"input": "What is a typical welding qualification test for structural welders?", "label": "RAG"}
+{"input": "Is it okay to weld in shorts if I’m careful?", "label": "RAG"}
+{"input": "Why do aluminum welds stay shiny while steel welds rust?", "label": "RAG"}
+{"input": "How does arc length influence penetration in stick welding?", "label": "RAG"}
+{"input": "What are the benefits of pulse MIG compared to conventional MIG?", "label": "RAG"}
+{"input": "Can welding magnetic steel cause arc blow issues?", "label": "RAG"}
+{"input": "What’s the proper way to ventilate when welding galvanized?", "label": "RAG"}
+{"input": "How do I pick a welding machine for farm repairs?", "label": "RAG"}
+{"input": "What do I do if I accidentally weld over an inclusion?", "label": "RAG"}
+{"input": "Is grind and back-weld a common technique for thick butt joints?", "label": "RAG"}
+{"input": "How does groove angle affect the amount of weld metal needed?", "label": "RAG"}
+{"input": "What is crater cracking and how can I prevent it?", "label": "RAG"}
+{"input": "Can you explain the basic controls on a TIG machine?", "label": "RAG"}
+{"input": "What’s the ideal bench height for comfortable bench welding?", "label": "RAG"}
+{"input": "Hey, why does my MIG torch get so hot after a long weld?", "label": "RAG"}
+{"input": "Yo, my welds look like bird poop, how do I fix my technique?", "label": "RAG"}
+{"input": "Bro, my stick keeps sticking to the plate, what’s going on?", "label": "RAG"}
+{"input": "Dude, do I really need to wear ear protection when welding?", "label": "RAG"}
+{"input": "Can you tell me in plain English what a PQR is?", "label": "RAG"}
+{"input": "How do I teach a beginner to start and stop the arc cleanly?", "label": "RAG"}
+{"input": "What happens if I weld without proper grounding?", "label": "RAG"}
+{"input": "Why do my aluminum TIG welds look dull instead of shiny?", "label": "RAG"}
+{"input": "How can I minimize cleanup time after flux core welding?", "label": "RAG"}
+{"input": "Is the weather going to affect my outdoor welding today?", "label": "RAG"}
+{"input": "What’s the temperature outside right now?", "label": "RAG"}
+{"input": "Can you recommend a good movie about welding or metalwork?", "label": "RAG"}
+{"input": "What are some common welding interview questions for a job?", "label": "RAG"}
+{"input": "How thick can I weld with a 110V MIG machine realistically?", "label": "RAG"}
+{"input": "Is multi-pass welding always better than single-pass for strength?", "label": "RAG"}
+{"input": "Why is backstepping used as a welding sequence technique?", "label": "RAG"}
+{"input": "Can you explain why distortion happens more on thin sheet metal?", "label": "RAG"}
+{"input": "What is the typical life of a ceramic backing strip?", "label": "RAG"}
+{"input": "How do I pick the right welding curtain for my booth?", "label": "RAG"}
+{"input": "Explain the meaning of position letters like PA, PB, PC, etc.", "label": "RAG"}
+{"input": "What’s the main function of a welding rotator?", "label": "RAG"}
+{"input": "How can I reduce the risk of electric shock while welding?", "label": "RAG"}
+{"input": "Is pulse TIG really better for thin stainless steel?", "label": "RAG"}
+{"input": "Can I weld two different grades of stainless together?", "label": "RAG"}
+{"input": "How do I pick the right size clamp for holding plates during welding?", "label": "RAG"}
+{"input": "What is the difference between fillet size and throat thickness?", "label": "RAG"}
+{"input": "How does weaving pattern affect weld bead profile?", "label": "RAG"}
+{"input": "When should I use stringer beads instead of weave beads?", "label": "RAG"}
+{"input": "Why is heat affected zone hardness important in structural welding?", "label": "RAG"}
+{"input": "Can you describe a typical weld repair procedure?", "label": "RAG"}
+{"input": "What’s the easiest welding process for a total beginner?", "label": "RAG"}
+{"input": "How do I know if my welding gas is contaminated?", "label": "RAG"}
+{"input": "Can a welding arc damage nearby electronics?", "label": "RAG"}
+{"input": "Is it safe to weld near a pacemaker?", "label": "RAG"}
+{"input": "How does preheat help with hydrogen diffusion?", "label": "RAG"}
+{"input": "Can you summarize basic welding metallurgy for carbon steel?", "label": "RAG"}
+{"input": "Explain the concept of carbon equivalent in weldability.", "label": "RAG"}
+{"input": "How does welding in cold weather affect weld quality?", "label": "RAG"}
+{"input": "What’s the best way to practice straight weld beads?", "label": "RAG"}
+{"input": "What shielding gas mix is best for stainless steel MAG welding?", "label": "RAG"}
+{"input": "Why is porosity more common when welding dirty material?", "label": "RAG"}
+{"input": "How do I choose between gas lens and standard TIG collet body?", "label": "RAG"}
+{"input": "What is the role of a welding inspector on site?", "label": "RAG"}
+{"input": "Can I weld aluminum with a regular DC stick welder?", "label": "RAG"}
+{"input": "How does electrode angle change the bead shape in MIG?", "label": "RAG"}
+{"input": "What are recommended settings for welding 1/8\" 7018 on 3/8\" plate?", "label": "QUERY"}
+{"input": "I want to weld 1/4\" mild steel with a 0.9 mm solid wire, what MIG settings should I use?", "label": "QUERY"}
+{"input": "Suggest TIG parameters for welding 2 mm 316 stainless in flat position.", "label": "QUERY"}
+{"input": "Need starting values for short-arc MIG on 1.2 mm car body steel.", "label": "QUERY"}
+{"input": "What should I set for AC TIG on 5 mm aluminum plate, amperage and balance?", "label": "QUERY"}
+{"input": "Give me settings for flux core welding 10 mm structural steel in the horizontal position.", "label": "QUERY"}
+{"input": "How should I set my MIG for welding 3 mm galvanized square tube?", "label": "QUERY"}
+{"input": "I’m welding 8 mm S355 plate fillets with MAG, what volts and wire speed do you recommend?", "label": "QUERY"}
+{"input": "Parameters needed for welding 6 mm aluminum checker plate using pulse MIG.", "label": "QUERY"}
+{"input": "What amps and travel speed for SAW on 25 mm butt joint in flat position?", "label": "QUERY"}
+{"input": "Looking for TIG settings to weld 1.5 mm titanium sheet without filler.", "label": "QUERY"}
+{"input": "Can you suggest FCAW settings for 5 mm fillet welds on structural beam brackets?", "label": "QUERY"}
+{"input": "Hey, what MIG settings should I run for 3/16\" mild steel with 0.8 mm wire?", "label": "QUERY"}
+{"input": "Yo, I gotta weld some 2 mm stainless tube, how many amps on TIG should I start with?", "label": "QUERY"}
+{"input": "For 1/8\" aluminum sheet, what pulse MIG program and wire feed would you use?", "label": "QUERY"}
+{"input": "I want to weld 10 mm plate in vertical up with flux core; give me a starting setup.", "label": "QUERY"}
+{"input": "Need recommended amps for 3.2 mm 7018 rods on 20 mm base plate.", "label": "QUERY"}
+{"input": "What GMAW parameters do you suggest for 4 mm fillet on carbon steel using spray transfer?", "label": "QUERY"}
+{"input": "Settings for robotic MIG on 2.5 mm automotive steel, short circuit transfer?", "label": "QUERY"}
+{"input": "Help me pick TIG current and gas flow for welding 3 mm copper plate.", "label": "QUERY"}
+{"input": "What parameters should I use to weld 6 mm duplex stainless butt joint with TIG root and MIG fill?", "label": "QUERY"}
+{"input": "Suggest synergic MIG settings for 1 mm stainless kitchen hood panels.", "label": "QUERY"}
+{"input": "Which amps and volts for 12 mm T-joint fillets using gas-shielded flux core?", "label": "QUERY"}
+{"input": "I’m welding 5 mm Corten plate with MAG, what starting voltage and wire speed?", "label": "QUERY"}
+{"input": "Give me a starting WPS proposal for 30 mm low alloy steel butt weld, SAW process.", "label": "QUERY"}
+{"input": "Need parameters for 1.6 mm aluminum TIG corner joint, thin sheet work.", "label": "QUERY"}
+{"input": "What settings to run on 0.035\" wire when welding 1/8\" angle iron with MIG?", "label": "QUERY"}
+{"input": "How should I set AC balance, frequency, and amps for 4 mm aluminum TIG?", "label": "QUERY"}
+{"input": "Looking for flux core no-gas settings on 3 mm mild steel fence posts.", "label": "QUERY"}
+{"input": "Best starting MIG settings for 2 mm galvanized roofing sheet lap joints.", "label": "QUERY"}
+{"input": "Which TIG parameters would you use on 2 mm Inconel plate in position 2G?", "label": "QUERY"}
+{"input": "Can you recommend SAW current and voltage for 20 mm fillet weld, double-sided?", "label": "QUERY"}
+{"input": "I need amps, voltage, and wire feed for 8 mm structural flange welds with spray MIG.", "label": "QUERY"}
+{"input": "Settings for positional MIG on 6 mm pipe to plate connection in 3F fillet?", "label": "QUERY"}
+{"input": "What parameters for root pass TIG on 10\" schedule 40 stainless pipe?", "label": "QUERY"}
+{"input": "Give me initial values for short-arc GMAW on 1 mm thin automotive steel panels.", "label": "QUERY"}
+{"input": "How should I set my machine for 5 mm fillet welds with 0.9 mm flux cored wire?", "label": "QUERY"}
+{"input": "Need TIG settings to weld 1 mm stainless exhaust tubing without burning through.", "label": "QUERY"}
+{"input": "For 15 mm carbon steel plate, what SMAW current for 4 mm 7018 in the flat position?", "label": "QUERY"}
+{"input": "What voltage and wire speed should I try for MIG welding 3 mm square tube?", "label": "QUERY"}
+{"input": "Please suggest AC TIG parameters for 6 mm 5083 aluminum butt welds.", "label": "QUERY"}
+{"input": "Hey, what’s a good MIG setup for welding 1/4\" trailer frame rails?", "label": "QUERY"}
+{"input": "Yo bot, I’m welding thin car panels, 0.8 mm, what short arc settings should I use?", "label": "QUERY"}
+{"input": "Settings for 3 mm stainless handrail TIG welds with 2.4 mm tungsten?", "label": "QUERY"}
+{"input": "What current and travel speed should I use for SAW welding 40 mm plate in a single-V groove?", "label": "QUERY"}
+{"input": "Give recommended parameters for fillet welding 8 mm structural gussets with MAG.", "label": "QUERY"}
+{"input": "How to set up pulse MIG for 2 mm aluminum checker plate on a ramp?", "label": "QUERY"}
+{"input": "Need start parameters for welding 5 mm 4130 chromoly tube with TIG.", "label": "QUERY"}
+{"input": "What settings for 0.9 mm solid wire on 3 mm S355 in horizontal fillet position?", "label": "QUERY"}
+{"input": "Which amps and frequency for pulse TIG on 1.5 mm stainless sheet?", "label": "QUERY"}
+{"input": "I want to weld 2\" schedule 80 pipe with 6010 root and 7018 fill; what currents should I use?", "label": "QUERY"}
+{"input": "Can you give me starting MIG parameters for 3 mm stainless in vertical up?", "label": "QUERY"}
+{"input": "Please list amps, volts, and wire speed for 6 mm lap joints with gas-shielded flux core.", "label": "QUERY"}
+{"input": "Set welding current to 180 amps.", "label": "CONTROL"}
+{"input": "Increase welding current by 25 amps from the current value.", "label": "CONTROL"}
+{"input": "Lower the welding current by 10 amps.", "label": "CONTROL"}
+{"input": "Set arc voltage to 22 volts.", "label": "CONTROL"}
+{"input": "Raise voltage by two increments on the main panel.", "label": "CONTROL"}
+{"input": "Decrease wire feed speed by 0.5 m/min.", "label": "CONTROL"}
+{"input": "Boost wire feed speed up by 1.5 meters per minute.", "label": "CONTROL"}
+{"input": "Start the MIG welding program now.", "label": "CONTROL"}
+{"input": "Stop the current welding operation immediately.", "label": "CONTROL"}
+{"input": "Turn on the power source for welding station 2.", "label": "CONTROL"}
+{"input": "Shut down the welding power supply safely.", "label": "CONTROL"}
+{"input": "Enable pulse mode on the MIG process.", "label": "CONTROL"}
+{"input": "Disable pulse mode and switch back to standard mode.", "label": "CONTROL"}
+{"input": "Set process type to TIG on the front panel.", "label": "CONTROL"}
+{"input": "Change process selection from stick to MIG.", "label": "CONTROL"}
+{"input": "Switch gas type setting to mixed gas 82/18.", "label": "CONTROL"}
+{"input": "Turn on shielding gas purge for 5 seconds.", "label": "CONTROL"}
+{"input": "Activate gas pre-flow of 0.3 seconds.", "label": "CONTROL"}
+{"input": "Set post-flow gas time to 6 seconds.", "label": "CONTROL"}
+{"input": "Select job number 7 and load it into active memory.", "label": "CONTROL"}
+{"input": "Store current welding parameters as job 5.", "label": "CONTROL"}
+{"input": "Reset all welding parameters to factory defaults.", "label": "CONTROL"}
+{"input": "Turn on 4T trigger mode for MIG welding.", "label": "CONTROL"}
+{"input": "Switch trigger mode back to 2T.", "label": "CONTROL"}
+{"input": "Enable remote amperage control at the torch.", "label": "CONTROL"}
+{"input": "Disable remote control and use panel settings only.", "label": "CONTROL"}
+{"input": "Increase inductance setting by one step.", "label": "CONTROL"}
+{"input": "Reduce inductance by two levels.", "label": "CONTROL"}
+{"input": "Set polarity to DCEP on the power source.", "label": "CONTROL"}
+{"input": "Change polarity setting to DCEN.", "label": "CONTROL"}
+{"input": "Turn on hot start for MMA at medium level.", "label": "CONTROL"}
+{"input": "Turn off hot start function completely.", "label": "CONTROL"}
+{"input": "Increase arc force by 5 units.", "label": "CONTROL"}
+{"input": "Decrease arc force by 3 units.", "label": "CONTROL"}
+{"input": "Start robot program \"FRAME_WELD_01\".", "label": "CONTROL"}
+{"input": "Pause the active robot welding program.", "label": "CONTROL"}
+{"input": "Resume the paused welding program.", "label": "CONTROL"}
+{"input": "Send the robot back to home position.", "label": "CONTROL"}
+{"input": "Enable weaving with 4 mm amplitude and 2 Hz frequency.", "label": "CONTROL"}
+{"input": "Disable weave function for the current weld.", "label": "CONTROL"}
+{"input": "Set torch oscillation speed to 30 mm/s.", "label": "CONTROL"}
+{"input": "Turn on the water cooling unit for the TIG torch.", "label": "CONTROL"}
+{"input": "Turn off the torch water cooler.", "label": "CONTROL"}
+{"input": "Increase travel speed setpoint by 5 percent.", "label": "CONTROL"}
+{"input": "Reduce travel speed setpoint by 10 percent.", "label": "CONTROL"}
+{"input": "Clear all active alarms on this welding machine.", "label": "CONTROL"}
+{"input": "Acknowledge and reset robot fault messages.", "label": "CONTROL"}
+{"input": "Set crater fill current to 120 amps.", "label": "CONTROL"}
+{"input": "Extend crater fill time to 1.5 seconds.", "label": "CONTROL"}
+{"input": "Enable soft start function on the MIG source.", "label": "CONTROL"}
+{"input": "Disable soft start so the arc strikes hard.", "label": "CONTROL"}
+{"input": "Set up synergic line for 1.0 mm solid wire on carbon steel.", "label": "CONTROL"}
+{"input": "Change synergic line to 1.2 mm flux cored wire.", "label": "CONTROL"}
+{"input": "Hey, bump the amps up by 15A, please.", "label": "CONTROL"}
+{"input": "Drop the volts down one notch.", "label": "CONTROL"}
+{"input": "Crank the wire feed up just a little bit.", "label": "CONTROL"}
+{"input": "Kill the arc right now.", "label": "CONTROL"}
+{"input": "Fire up the welder and get it ready to run.", "label": "CONTROL"}
+{"input": "What MIG parameters should I use for 6 mm mild steel plate with 1.0 mm wire?", "label": "QUERY"}
+{"input": "Suggest TIG settings for welding 2 mm 304 stainless sheet in a corner joint.", "label": "QUERY"}
+{"input": "I want to weld 10 mm carbon steel with FCAW in flat position, what amps and volts?", "label": "QUERY"}
+{"input": "Best starting values for pulse MIG on 3 mm aluminum extrusion with 1.2 mm wire?", "label": "QUERY"}
+{"input": "How should I set my stick welder for 3.2 mm 7018 rods on 8 mm plate?", "label": "QUERY"}
+{"input": "Give me parameters for welding 1.5 mm galvanized sheet using short arc MIG.", "label": "QUERY"}
+{"input": "Need recommended amps and travel speed for SAW on 20 mm low alloy steel butt joint.", "label": "QUERY"}
+{"input": "What TIG current and gas flow for welding 1 mm titanium tube?", "label": "QUERY"}
+{"input": "Settings for MIG welding 5 mm S355 fillet welds with 0.9 mm solid wire?", "label": "QUERY"}
+{"input": "Hey, what should I dial in to weld 3 mm stainless tube with TIG, using 2.4 mm tungsten?", "label": "QUERY"}
+{"input": "Looking for MIG parameters to weld 2 mm car body panel with plug welds.", "label": "QUERY"}
+{"input": "Which amps and volts for FCAW vertical up on 8 mm structural fillets?", "label": "QUERY"}
+{"input": "For 4 mm aluminum plate, what AC TIG settings do you recommend for a butt joint?", "label": "QUERY"}
+{"input": "I need a starting setup for welding 12 mm shipbuilding steel with SAW, single wire.", "label": "QUERY"}
+{"input": "What GMAW parameters should I use for 1.2 mm stainless kitchen panels?", "label": "QUERY"}
+{"input": "Yo, I gotta weld 6 mm angle iron, 0.8 mm wire, CO2 mix, what MIG settings?", "label": "QUERY"}
+{"input": "Suggest TIG amps and pulse settings for 1.6 mm Inconel butt weld.", "label": "QUERY"}
+{"input": "Need starting values for MAG welding 10 mm high strength steel in horizontal position.", "label": "QUERY"}
+{"input": "What amps and wire feed for welding 3 mm mild steel box section with short circuit MIG?", "label": "QUERY"}
+{"input": "Give me settings for 2 mm aluminum lap joint using pulse MIG with argon.", "label": "QUERY"}
+{"input": "How should I set my TIG machine to weld 5 mm copper busbar?", "label": "QUERY"}
+{"input": "Parameters for SAW fillet weld on 16 mm flange to web connection?", "label": "QUERY"}
+{"input": "Best starting setup for no gas flux core on 2.5 mm mild steel gate frame?", "label": "QUERY"}
+{"input": "What current range for 2.5 mm 6013 on 6 mm plate in vertical down?", "label": "QUERY"}
+{"input": "Please recommend MIG spray transfer values for 8 mm structural beam flange welds.", "label": "QUERY"}
+{"input": "Need robotic MIG settings for 2 mm stainless brackets, short circuit mode.", "label": "QUERY"}
+{"input": "For 3 mm duplex stainless plate, what TIG root and MIG fill parameters?", "label": "QUERY"}
+{"input": "Which settings should I use for TIG welding 1.2 mm stainless exhaust pipe?", "label": "QUERY"}
+{"input": "Help me choose amps, volts, and travel speed for SAW on 30 mm groove weld.", "label": "QUERY"}
+{"input": "Set welding current to 150 amps on the main power source.", "label": "CONTROL"}
+{"input": "Increase welding current by 20 amps from the present value.", "label": "CONTROL"}
+{"input": "Drop the welding current by 12 amps.", "label": "CONTROL"}
+{"input": "Set arc voltage to 21.5 volts.", "label": "CONTROL"}
+{"input": "Raise the voltage setting by one step.", "label": "CONTROL"}
+{"input": "Decrease wire feed speed by 0.8 meters per minute.", "label": "CONTROL"}
+{"input": "Bump the wire feed up by 1.2 meters per minute.", "label": "CONTROL"}
+{"input": "Start the TIG welding sequence now.", "label": "CONTROL"}
+{"input": "Stop the welding process and switch off the arc.", "label": "CONTROL"}
+{"input": "Turn on the power to welding station number 3.", "label": "CONTROL"}
+{"input": "Shut down the welding machine completely.", "label": "CONTROL"}
+{"input": "Enable pulse TIG mode on the control panel.", "label": "CONTROL"}
+{"input": "Disable pulse mode and go back to continuous current.", "label": "CONTROL"}
+{"input": "Change process selection from MIG to TIG.", "label": "CONTROL"}
+{"input": "Switch the process type from TIG back to stick.", "label": "CONTROL"}
+{"input": "Set shielding gas type to pure argon.", "label": "CONTROL"}
+{"input": "Switch gas type to carbon dioxide.", "label": "CONTROL"}
+{"input": "Activate gas pre flow of 0.7 seconds.", "label": "CONTROL"}
+{"input": "Set gas post flow to 4 seconds.", "label": "CONTROL"}
+{"input": "Select memory job 2 and make it active.", "label": "CONTROL"}
+{"input": "Save the present parameters as job number 9.", "label": "CONTROL"}
+{"input": "Restore all machine settings to factory defaults.", "label": "CONTROL"}
+{"input": "Turn on 2T trigger mode for this MIG program.", "label": "CONTROL"}
+{"input": "Switch trigger mode to 4T latch.", "label": "CONTROL"}
+{"input": "Enable remote control from the foot pedal.", "label": "CONTROL"}
+{"input": "Disable the foot pedal and use panel control only.", "label": "CONTROL"}
+{"input": "Increase inductance by one level.", "label": "CONTROL"}
+{"input": "Reduce inductance by one level.", "label": "CONTROL"}
+{"input": "Set electrode polarity to DC electrode positive.", "label": "CONTROL"}
+{"input": "Change polarity to DC electrode negative.", "label": "CONTROL"}
+{"input": "Turn on hot start for MMA at high setting.", "label": "CONTROL"}
+{"input": "Turn off hot start on the stick mode.", "label": "CONTROL"}
+{"input": "Increase arc force setting by 4 units.", "label": "CONTROL"}
+{"input": "Decrease arc force by 2 units.", "label": "CONTROL"}
+{"input": "Start robot welding program named BEAM_FILLET_A.", "label": "CONTROL"}
+{"input": "Pause the current robot weld program.", "label": "CONTROL"}
+{"input": "Resume the paused robot welding sequence.", "label": "CONTROL"}
+{"input": "Send the robot to its home position.", "label": "CONTROL"}
+{"input": "Enable weave with 3 millimeter amplitude at 1.5 hertz.", "label": "CONTROL"}
+{"input": "Turn weaving function off for this weld.", "label": "CONTROL"}
+{"input": "Set torch oscillation speed to 25 millimeters per second.", "label": "CONTROL"}
+{"input": "Turn on cooling water for the MIG torch.", "label": "CONTROL"}
+{"input": "Turn off the cooling water circuit.", "label": "CONTROL"}
+{"input": "Increase travel speed reference by 8 percent.", "label": "CONTROL"}
+{"input": "Reduce travel speed reference by 5 percent.", "label": "CONTROL"}
+{"input": "Clear all alarms currently shown on the welder display.", "label": "CONTROL"}
+{"input": "Reset any robot fault messages.", "label": "CONTROL"}
+{"input": "Set crater fill current to 100 amps.", "label": "CONTROL"}
+{"input": "Shorten crater fill time to 0.8 seconds.", "label": "CONTROL"}
+{"input": "Enable soft start for MIG arc ignition.", "label": "CONTROL"}
+{"input": "Disable soft start so ignition is direct.", "label": "CONTROL"}
+{"input": "Choose synergic program for 0.8 mm solid wire on mild steel.", "label": "CONTROL"}
+{"input": "Change synergic program to 1.2 mm flux cored wire.", "label": "CONTROL"}
+{"input": "Hey, turn the amps up a bit, around 10 more.", "label": "CONTROL"}
+{"input": "Drop the volts down just one click.", "label": "CONTROL"}
+{"input": "Crank the wire speed up slightly.", "label": "CONTROL"}
+{"input": "Kill the weld right now, stop the arc.", "label": "CONTROL"}
+{"input": "Power up the welder and get it ready.", "label": "CONTROL"}
+{"input": "Why am I getting so much spatter when I MIG weld on mild steel?", "label": "RAG"}
+{"input": "Can you explain in simple terms what the heat affected zone is?", "label": "RAG"}
+{"input": "How do I choose between MIG and TIG for thin stainless sheet?", "label": "RAG"}
+{"input": "My TIG welds on stainless are turning brown, what might be wrong?", "label": "RAG"}
+{"input": "What causes undercut along the toes of a fillet weld?", "label": "RAG"}
+{"input": "How can I reduce distortion when welding a long thin plate?", "label": "RAG"}
+{"input": "What does duty cycle on a welding machine actually mean?", "label": "RAG"}
+{"input": "How dangerous are welding fumes if I work in a small garage?", "label": "RAG"}
+{"input": "Which PPE do I really need for safe MIG welding at home?", "label": "RAG"}
+{"input": "Why is preheat recommended for thick carbon steel sections?", "label": "RAG"}
+{"input": "How does travel speed affect penetration and bead shape?", "label": "RAG"}
+{"input": "What is the difference between short circuit and spray transfer in GMAW?", "label": "RAG"}
+{"input": "My wire keeps birdnesting in the feeder, what should I check first?", "label": "RAG"}
+{"input": "Can you explain what a procedure qualification record is?", "label": "RAG"}
+{"input": "How do I safely store low hydrogen electrodes to avoid moisture pickup?", "label": "RAG"}
+{"input": "What are the typical welding positions and their designations?", "label": "RAG"}
+{"input": "Is it okay to weld galvanized steel without grinding the zinc off?", "label": "RAG"}
+{"input": "How can I tell if my weld has lack of fusion just by visual inspection?", "label": "RAG"}
+{"input": "Why is back purging used in stainless steel pipe welding?", "label": "RAG"}
+{"input": "What are common causes of porosity in aluminum MIG welds?", "label": "RAG"}
+{"input": "Yo, why do my welds always pull the plate out of square?", "label": "RAG"}
+{"input": "Dude, my stick rod keeps sticking to the metal, what am I doing wrong?", "label": "RAG"}
+{"input": "How should I set up my workshop ventilation for regular welding?", "label": "RAG"}
+{"input": "What basic tests can I do in the shop to check weld quality?", "label": "RAG"}
+{"input": "Why do I get crater cracks when I stop a weld suddenly?", "label": "RAG"}
+{"input": "Can you briefly explain hydrogen induced cracking in welds?", "label": "RAG"}
+{"input": "How does low temperature weather affect outdoor welding?", "label": "RAG"}
+{"input": "What is the safest way to weld inside a tank or confined space?", "label": "RAG"}
+{"input": "How do I choose the right shade number for my welding helmet?", "label": "RAG"}
+{"input": "What’s the difference between fillet weld size and throat thickness?", "label": "RAG"}
+{"input": "Why is cleaning so important before TIG welding aluminum?", "label": "RAG"}
+{"input": "How do I interpret common weld symbols on fabrication drawings?", "label": "RAG"}
+{"input": "Is TIG always stronger than MIG for the same joint design?", "label": "RAG"}
+{"input": "What causes excessive reinforcement on a butt weld?", "label": "RAG"}
+{"input": "Can I weld on a car chassis without disconnecting the battery?", "label": "RAG"}
+{"input": "How do I know when to replace a MIG torch liner?", "label": "RAG"}
+{"input": "What are the health risks of welding galvanized steel?", "label": "RAG"}
+{"input": "Explain the basic idea of carbon equivalent for weldability.", "label": "RAG"}
+{"input": "Why should I avoid welding on a sealed drum or container?", "label": "RAG"}
+{"input": "My welder keeps tripping the breaker, what could be the reason?", "label": "RAG"}
+{"input": "What are typical visual acceptance criteria for structural welds?", "label": "RAG"}
+{"input": "Can you give me some tips to improve my TIG torch control?", "label": "RAG"}
+{"input": "How does joint restraint increase the risk of cracking?", "label": "RAG"}
+{"input": "What is lamellar tearing and where does it occur?", "label": "RAG"}
+{"input": "Is it safe to weld outdoors when it is raining lightly?", "label": "RAG"}
+{"input": "What are the main differences between inverter and transformer welders?", "label": "RAG"}
+{"input": "How can I reduce the amount of spatter cleanup after MIG welding?", "label": "RAG"}
+{"input": "What kind of basic training does a new welder usually need?", "label": "RAG"}
+{"input": "How do I read a simple WPS for a structural weld job?", "label": "RAG"}
+{"input": "Why do my aluminum TIG welds sometimes get black soot?", "label": "RAG"}
+{"input": "Can welding arcs interfere with sensitive electronics nearby?", "label": "RAG"}
+{"input": "What is the best way to practice straight beads for beginners?", "label": "RAG"}
+{"input": "I want to weld a steel plate.", "label": "QUERY"}
+{"input": "I’d like to weld some stainless sheets together.", "label": "QUERY"}
+{"input": "Need to weld two aluminum plates, not sure how yet.", "label": "QUERY"}
+{"input": "I want to weld steel plate to an H-beam.", "label": "QUERY"}
+{"input": "Planning to weld a 3 mm steel plate, any starting advice?", "label": "QUERY"}
+{"input": "I want to weld a thick steel plate to a column.", "label": "QUERY"}
+{"input": "Need to weld stainless plate onto a carbon steel frame.", "label": "QUERY"}
+{"input": "I’m going to weld some aluminum tube to a plate.", "label": "QUERY"}
+{"input": "Want to weld a mild steel bracket onto this 10 mm base plate.", "label": "QUERY"}
+{"input": "I need to weld 5 mm steel sheet for a trailer floor.", "label": "QUERY"}
+{"input": "I want to weld a thin stainless plate without burning through.", "label": "QUERY"}
+{"input": "Need to weld this 8 mm steel plate edge to edge.", "label": "QUERY"}
+{"input": "I’d like to weld two 2 mm aluminum panels for bodywork.", "label": "QUERY"}
+{"input": "I want to weld stainless tube to a flat plate.", "label": "QUERY"}
+{"input": "Trying to weld a 1 mm car body panel, it’s really thin.", "label": "QUERY"}
+{"input": "I’m about to weld a steel plate to a round pipe.", "label": "QUERY"}
+{"input": "Need to weld 12 mm steel plate full penetration.", "label": "QUERY"}
+{"input": "I want to weld some galvanized sheet metal.", "label": "QUERY"}
+{"input": "Trying to weld aluminum sheet about 2 mm thick.", "label": "QUERY"}
+{"input": "I plan to weld two thick steel plates for a base.", "label": "QUERY"}
+{"input": "I want to weld this steel plate with MIG.", "label": "QUERY"}
+{"input": "Planning to weld these aluminum parts using TIG.", "label": "QUERY"}
+{"input": "I’d like to weld the frame with flux core wire.", "label": "QUERY"}
+{"input": "I want to TIG weld this stainless plate.", "label": "QUERY"}
+{"input": "Need to weld this bracket with stick welding.", "label": "QUERY"}
+{"input": "I’m going to MIG weld two steel channels together.", "label": "QUERY"}
+{"input": "Want to weld the door frame using TIG on stainless.", "label": "QUERY"}
+{"input": "I intend to weld this 4 mm plate with pulse MIG.", "label": "QUERY"}
+{"input": "I want to weld a 2 mm steel sheet using short-arc MIG.", "label": "QUERY"}
+{"input": "Thinking of welding this aluminum tube with AC TIG.", "label": "QUERY"}
+{"input": "Need to weld 6 mm plate with flux-cored wire, gas shielded.", "label": "QUERY"}
+{"input": "I want to weld this 10 mm base plate with SAW.", "label": "QUERY"}
+{"input": "We plan to weld these pipe joints with orbital TIG.", "label": "QUERY"}
+{"input": "I’d like to weld a stainless tank with MIG.", "label": "QUERY"}
+{"input": "Want to weld 1.5 mm exhaust tubing with TIG.", "label": "QUERY"}
+{"input": "I’m going to weld 3 mm aluminum with pulse MIG, need a start point.", "label": "QUERY"}
+{"input": "Need to weld 5 mm steel, thinking stick welding with 7018.", "label": "QUERY"}
+{"input": "I want to weld this cast steel bracket with MAG process.", "label": "QUERY"}
+{"input": "Plan is to weld thin sheet metal with short-circuit MIG.", "label": "QUERY"}
+{"input": "I want to weld a 20 mm plate using submerged arc welding.", "label": "QUERY"}
+{"input": "I want to weld 3 mm steel plate to 5 mm plate, any settings?", "label": "QUERY"}
+{"input": "Planning to weld 1.5 mm stainless sheet, what process should I pick?", "label": "QUERY"}
+{"input": "Need to weld 2 mm aluminum with MIG, what should I set?", "label": "QUERY"}
+{"input": "I want to weld 10 mm steel plate, which method should I use?", "label": "QUERY"}
+{"input": "Trying to weld a 6 mm steel plate, how should I set my machine?", "label": "QUERY"}
+{"input": "I’d like to weld a 4 mm aluminum plate for a small boat repair.", "label": "QUERY"}
+{"input": "Want to weld 8 mm steel to a heavy column with flux core, need advice.", "label": "QUERY"}
+{"input": "Need help welding 2 mm stainless with TIG without warping it.", "label": "QUERY"}
+{"input": "I’m going to weld 1 mm body panel; what method and settings are good?", "label": "QUERY"}
+{"input": "I want to weld this thick baseplate, not sure about process or amps.", "label": "QUERY"}
+{"input": "Set welding current to 140 amps.", "label": "CONTROL"}
+{"input": "Increase the current by 18 amps.", "label": "CONTROL"}
+{"input": "Lower the current 10 amps from where it is now.", "label": "CONTROL"}
+{"input": "Set the output voltage to 20.5 volts.", "label": "CONTROL"}
+{"input": "Raise voltage one step on the MIG panel.", "label": "CONTROL"}
+{"input": "Drop the voltage down by two clicks.", "label": "CONTROL"}
+{"input": "Reduce wire feed speed by 0.6 m/min.", "label": "CONTROL"}
+{"input": "Increase wire feed speed by 1.1 m/min.", "label": "CONTROL"}
+{"input": "Start the weld program on station 1.", "label": "CONTROL"}
+{"input": "Stop all welding operations on station 1.", "label": "CONTROL"}
+{"input": "Turn on the main welding power switch.", "label": "CONTROL"}
+{"input": "Shut off the main power to the welder.", "label": "CONTROL"}
+{"input": "Enable TIG mode on this power source.", "label": "CONTROL"}
+{"input": "Switch process from TIG back to MIG.", "label": "CONTROL"}
+{"input": "Turn on pulse MIG mode.", "label": "CONTROL"}
+{"input": "Disable pulse and run standard MIG.", "label": "CONTROL"}
+{"input": "Set shielding gas to 15 liters per minute.", "label": "CONTROL"}
+{"input": "Reduce gas flow to 10 liters per minute.", "label": "CONTROL"}
+{"input": "Activate gas purge for three seconds.", "label": "CONTROL"}
+{"input": "Set post-flow to 7 seconds.", "label": "CONTROL"}
+{"input": "Select program 4 from memory and make it active.", "label": "CONTROL"}
+{"input": "Store the current parameters as job number 6.", "label": "CONTROL"}
+{"input": "Reset this machine back to factory settings.", "label": "CONTROL"}
+{"input": "Switch trigger mode to 4T hold.", "label": "CONTROL"}
+{"input": "Go back to 2T trigger mode.", "label": "CONTROL"}
+{"input": "Enable remote control from the TIG foot pedal.", "label": "CONTROL"}
+{"input": "Disable foot pedal and control amps from the panel.", "label": "CONTROL"}
+{"input": "Increase inductance by one step.", "label": "CONTROL"}
+{"input": "Decrease inductance by two steps.", "label": "CONTROL"}
+{"input": "Change polarity to DC electrode positive.", "label": "CONTROL"}
+{"input": "Switch polarity to DC electrode negative.", "label": "CONTROL"}
+{"input": "Turn hot start on and set it to medium.", "label": "CONTROL"}
+{"input": "Turn hot start completely off.", "label": "CONTROL"}
+{"input": "Increase arc force by 6 units.", "label": "CONTROL"}
+{"input": "Reduce arc force by 4 units.", "label": "CONTROL"}
+{"input": "Start robot welding program FRAME_RING_01.", "label": "CONTROL"}
+{"input": "Pause the currently running robot program.", "label": "CONTROL"}
+{"input": "Resume the paused welding program on the robot.", "label": "CONTROL"}
+{"input": "Send the robot back to home and stand by.", "label": "CONTROL"}
+{"input": "Enable weaving at 4 mm amplitude and 1.8 Hz.", "label": "CONTROL"}
+{"input": "Turn off the weave function for the next weld.", "label": "CONTROL"}
+{"input": "Set torch oscillation speed to 20 mm per second.", "label": "CONTROL"}
+{"input": "Increase travel speed reference by 7 percent.", "label": "CONTROL"}
+{"input": "Reduce travel speed reference by 9 percent.", "label": "CONTROL"}
+{"input": "Turn on the torch cooling fan.", "label": "CONTROL"}
+{"input": "Turn off the torch cooling system.", "label": "CONTROL"}
+{"input": "Clear all active alarms from the display.", "label": "CONTROL"}
+{"input": "Reset all robot error messages.", "label": "CONTROL"}
+{"input": "Set crater fill current to 90 amps.", "label": "CONTROL"}
+{"input": "Extend crater fill time to 2 seconds.", "label": "CONTROL"}
+{"input": "Enable soft start on the MIG welder.", "label": "CONTROL"}
+{"input": "Disable soft start so the arc starts hot.", "label": "CONTROL"}
+{"input": "Choose synergic line for 1.0 mm steel wire.", "label": "CONTROL"}
+{"input": "Switch synergic line to 1.2 mm aluminum wire.", "label": "CONTROL"}
+{"input": "Hey, bump the current up by about 12 amps.", "label": "CONTROL"}
+{"input": "Drop the volts one notch, please.", "label": "CONTROL"}
+{"input": "Crank the wire speed up just a touch.", "label": "CONTROL"}
+{"input": "Kill the arc right away, stop welding.", "label": "CONTROL"}
+{"input": "Fire up the welder and get it ready to weld.", "label": "CONTROL"}
+{"input": "Turn on gas purge so I can check for leaks.", "label": "CONTROL"}
+{"input": "Switch process selector over to stick welding.", "label": "CONTROL"}
+{"input": "What is the basic difference between MIG and TIG welding?", "label": "RAG"}
+{"input": "Why does my weld bead always look too tall and narrow?", "label": "RAG"}
+{"input": "How can I tell if my weld has enough penetration without cutting it?", "label": "RAG"}
+{"input": "What are the most common causes of porosity in MIG welds?", "label": "RAG"}
+{"input": "How do I safely store gas cylinders in a small workshop?", "label": "RAG"}
+{"input": "What does heat input mean in welding and why is it important?", "label": "RAG"}
+{"input": "Why do I get so much spatter when I weld in short circuit mode?", "label": "RAG"}
+{"input": "How can I reduce distortion when welding long flat bars?", "label": "RAG"}
+{"input": "What kind of PPE should I wear for basic welding tasks?", "label": "RAG"}
+{"input": "Why is it dangerous to weld on a closed container or drum?", "label": "RAG"}
+{"input": "How does welding sequence help control distortion?", "label": "RAG"}
+{"input": "What are the usual visual inspection criteria for a good fillet weld?", "label": "RAG"}
+{"input": "My welds keep cracking near the toe, what could be causing that?", "label": "RAG"}
+{"input": "Can you explain in simple language what a weld procedure specification is?", "label": "RAG"}
+{"input": "How should I ventilate my garage if I weld there every weekend?", "label": "RAG"}
+{"input": "What is the heat affected zone and how does it change the metal?", "label": "RAG"}
+{"input": "Is it safe to weld in slightly wet conditions outdoors?", "label": "RAG"}
+{"input": "Why does my stick electrode keep sticking to the workpiece?", "label": "RAG"}
+{"input": "How do I choose the right shade for my welding helmet lens?", "label": "RAG"}
+{"input": "What are basic safety checks I should do before starting to weld?", "label": "RAG"}
+{"input": "Why do my aluminum welds sometimes get black soot around them?", "label": "RAG"}
+{"input": "How can I practice keeping a steady hand while welding?", "label": "RAG"}
+{"input": "What is hydrogen cracking and when is it likely to occur?", "label": "RAG"}
+{"input": "How does low temperature in winter affect weld quality?", "label": "RAG"}
+{"input": "What is the difference between fillet weld size and leg length?", "label": "RAG"}
+{"input": "Why do some welding codes limit maximum heat input?", "label": "RAG"}
+{"input": "What is lamellar tearing and how can it be prevented?", "label": "RAG"}
+{"input": "How often should I inspect my welding cables and ground clamps?", "label": "RAG"}
+{"input": "Is it okay to weld in shorts and a T-shirt if I’m careful?", "label": "RAG"}
+{"input": "What simple tests can I do to check weld strength at home?", "label": "RAG"}
+{"input": "Why is cleaning especially important before welding aluminum?", "label": "RAG"}
+{"input": "What are the main differences between inverter and transformer welders?", "label": "RAG"}
+{"input": "How can I reduce the amount of grinding and cleanup after welding?", "label": "RAG"}
+{"input": "What kind of basic training does a beginner welder usually go through?", "label": "RAG"}
+{"input": "How do I read the common symbols on a welding drawing?", "label": "RAG"}
+{"input": "Yo, why do my welds always pull the frame out of square?", "label": "RAG"}
+{"input": "Dude, my welds sound like they’re frying and popping like crazy, is that bad?", "label": "RAG"}
+{"input": "Can arc radiation from welding damage my eyes even with a helmet?", "label": "RAG"}
+{"input": "How dangerous are welding fumes in a small, poorly ventilated room?", "label": "RAG"}
+{"input": "What’s the best way to practice straight beads on scrap steel?", "label": "RAG"}
+{"input": "Steel plate, thickness 5 mm, MIG.", "label": "QUERY"}
+{"input": "Thickness is 5 mm, welding with MIG.", "label": "QUERY"}
+{"input": "Material: steel, process: MIG.", "label": "QUERY"}
+{"input": "Just mild steel, about 5 mm thick.", "label": "QUERY"}
+{"input": "Stainless steel, 3 mm, TIG.", "label": "QUERY"}
+{"input": "Aluminum plate, 2 mm, MIG.", "label": "QUERY"}
+{"input": "Carbon steel, 10 mm thick.", "label": "QUERY"}
+{"input": "Steel, MIG, thin sheet.", "label": "QUERY"}
+{"input": "Thickness is 8 mm, flux core.", "label": "QUERY"}
+{"input": "2 mm stainless, TIG.", "label": "QUERY"}
+{"input": "MIG on 1 mm car panel.", "label": "QUERY"}
+{"input": "5 mm aluminum plate, TIG.", "label": "QUERY"}
+{"input": "MIG welding on galvanized steel sheet.", "label": "QUERY"}
+{"input": "3 mm mild steel, short-arc MIG.", "label": "QUERY"}
+{"input": "Steel tube, wall thickness 2 mm.", "label": "QUERY"}
+{"input": "Just want to weld 6 mm steel plate.", "label": "QUERY"}
+{"input": "I want to weld 5 mm stainless sheet.", "label": "QUERY"}
+{"input": "Planning to MIG weld 4 mm steel.", "label": "QUERY"}
+{"input": "Need to weld 2 mm aluminum with MIG.", "label": "QUERY"}
+{"input": "Welding 1.5 mm stainless tube, TIG.", "label": "QUERY"}
+{"input": "Thickness is 12 mm, carbon steel plate.", "label": "QUERY"}
+{"input": "Material is S355 steel, 10 mm.", "label": "QUERY"}
+{"input": "High strength steel, around 15 mm thick.", "label": "QUERY"}
+{"input": "5 mm mild steel with flux cored wire.", "label": "QUERY"}
+{"input": "2 mm steel, MAG welding.", "label": "QUERY"}
+{"input": "I want to weld thin stainless, about 1 mm.", "label": "QUERY"}
+{"input": "Just aluminum, 3 mm, pulse MIG.", "label": "QUERY"}
+{"input": "MIG, 0.8 mm wire, 3 mm plate.", "label": "QUERY"}
+{"input": "TIG on 2 mm aluminum sheet.", "label": "QUERY"}
+{"input": "Thickness: 20 mm steel plate.", "label": "QUERY"}
+{"input": "MIG on 5 mm carbon steel.", "label": "QUERY"}
+{"input": "Stainless, about 4 mm thick, TIG weld.", "label": "QUERY"}
+{"input": "Mild steel box section, 2.5 mm wall.", "label": "QUERY"}
+{"input": "Aluminum tube, 1.6 mm wall, TIG.", "label": "QUERY"}
+{"input": "I want to weld a steel plate, about 6 mm.", "label": "QUERY"}
+{"input": "Steel plate, 3 mm, want to MIG it.", "label": "QUERY"}
+{"input": "Only info: steel, MIG, thin sheet.", "label": "QUERY"}
+{"input": "Have 8 mm steel plate to weld.", "label": "QUERY"}
+{"input": "Need to weld 1 mm sheet metal, MIG.", "label": "QUERY"}
+{"input": "Stainless tube, 1.5 mm, TIG weld.", "label": "QUERY"}
+{"input": "MIG, mild steel, plate about 4 mm.", "label": "QUERY"}
+{"input": "Thickness is 0.8 mm, car body steel.", "label": "QUERY"}
+{"input": "2 mm galvanized sheet, MIG process.", "label": "QUERY"}
+{"input": "5 mm aluminum, pulse MIG.", "label": "QUERY"}
+{"input": "Pipe wall 6 mm, carbon steel, stick weld.", "label": "QUERY"}
+{"input": "Just want to weld a 3 mm steel bracket.", "label": "QUERY"}
+{"input": "Stainless plate 2 mm thick, TIG only.", "label": "QUERY"}
+{"input": "MIG welding 5 mm structural steel.", "label": "QUERY"}
+{"input": "Aluminum checker plate, 4 mm.", "label": "QUERY"}
+{"input": "Flux core on 6 mm steel plate.", "label": "QUERY"}
+{"input": "3 mm mild steel angle, MIG.", "label": "QUERY"}
+{"input": "I want to weld 10 mm base plate, steel.", "label": "QUERY"}
+{"input": "Thin stainless, about 0.8 mm, TIG.", "label": "QUERY"}
+{"input": "5 mm carbon steel, stick welding.", "label": "QUERY"}
+{"input": "Material: stainless steel, thickness 6 mm.", "label": "QUERY"}
+{"input": "MIG, 1.0 mm wire, 6 mm plate.", "label": "QUERY"}
+{"input": "2 mm aluminum panel, MIG welding.", "label": "QUERY"}
+{"input": "I have 12 mm steel plate to weld.", "label": "QUERY"}
+{"input": "Just a steel plate, about 5 mm thick.", "label": "QUERY"}
+{"input": "Steel tube, 3 mm wall, MIG weld.", "label": "QUERY"}
+{"input": "TIG on 3 mm stainless, that’s all I know.", "label": "QUERY"}
+{"input": "Thickness 4 mm, mild steel sheet.", "label": "QUERY"}
+{"input": "Aluminum, thin, about 1 mm.", "label": "QUERY"}
+{"input": "High strength steel, 8 mm, MAG.", "label": "QUERY"}
+{"input": "Just MIG welding on carbon steel.", "label": "QUERY"}
+{"input": "Only info: thickness 5 mm, steel.", "label": "QUERY"}
+{"input": "Material is stainless, pipe wall 2 mm.", "label": "QUERY"}
+{"input": "I want to weld thin galvanized steel, maybe 1 mm.", "label": "QUERY"}
+{"input": "MIG, 0.9 mm wire, 5 mm plate.", "label": "QUERY"}
+{"input": "Cast steel, about 10 mm thick.", "label": "QUERY"}
+{"input": "I need to weld a 2 mm aluminum sheet.", "label": "QUERY"}
+{"input": "Mild steel, roughly 3 mm.", "label": "QUERY"}
+{"input": "Steel, thickness around 2 mm, MAG.", "label": "QUERY"}
+{"input": "Stainless steel tube, 1 mm wall.", "label": "QUERY"}
+{"input": "Thick plate, maybe 25 mm, carbon steel.", "label": "QUERY"}
+{"input": "MIG welding aluminum, 3 mm.", "label": "QUERY"}
+{"input": "I am welding 6 mm steel with stick.", "label": "QUERY"}
+{"input": "Just steel, MIG, nothing else known.", "label": "QUERY"}
+{"input": "5 mm stainless plate, TIG weld.", "label": "QUERY"}
+{"input": "Pipe, carbon steel, 4 mm wall.", "label": "QUERY"}
+{"input": "What is steel and what properties does it have?", "label": "RAG"}
+{"input": "Can you explain what steel actually is?", "label": "RAG"}
+{"input": "What are the main mechanical properties of steel?", "label": "RAG"}
+{"input": "In simple words, what is mild steel and what are its characteristics?", "label": "RAG"}
+{"input": "What makes stainless steel different from normal carbon steel?", "label": "RAG"}
+{"input": "What is stainless steel and what are its main properties?", "label": "RAG"}
+{"input": "How does high strength steel differ in properties from regular steel?", "label": "RAG"}
+{"input": "What are the typical properties of structural steel like S355?", "label": "RAG"}
+{"input": "What is carbon steel and what are its main features?", "label": "RAG"}
+{"input": "Can you describe the basic properties of aluminum as a welding material?", "label": "RAG"}
+{"input": "What is aluminum and what are its key characteristics in welding?", "label": "RAG"}
+{"input": "What are the general properties of stainless steel in welding?", "label": "RAG"}
+{"input": "What does the term mild steel mean and what properties does it imply?", "label": "RAG"}
+{"input": "What is duplex stainless steel and what special properties does it have?", "label": "RAG"}
+{"input": "How is steel defined in metallurgy and what are its basic properties?", "label": "RAG"}
+{"input": "What is the difference in properties between low carbon and medium carbon steel?", "label": "RAG"}
+{"input": "What are typical hardness and strength values for structural steel?", "label": "RAG"}
+{"input": "Can you explain the basic physical properties of steel, like density and melting range?", "label": "RAG"}
+{"input": "What makes stainless steel corrosion resistant, property wise?", "label": "RAG"}
+{"input": "What is the microstructure of mild steel and how does it affect properties?", "label": "RAG"}
+{"input": "What is MIG welding and what are its key characteristics?", "label": "RAG"}
+{"input": "Can you explain in simple terms what MIG welding is?", "label": "RAG"}
+{"input": "What are the main features of TIG welding compared to MIG?", "label": "RAG"}
+{"input": "What exactly is flux cored wire and what properties does it have?", "label": "RAG"}
+{"input": "What is galvanized steel and what special properties does the coating give it?", "label": "RAG"}
+{"input": "What properties of steel change when you increase the carbon content?", "label": "RAG"}
+{"input": "How does alloying affect the properties of steel?", "label": "RAG"}
+{"input": "What is heat treated steel and how do its properties differ from as-rolled?", "label": "RAG"}
+{"input": "What are typical mechanical properties of austenitic stainless steel?", "label": "RAG"}
+{"input": "What is the difference in properties between ferritic and austenitic stainless steel?", "label": "RAG"}
+{"input": "Can you list some basic properties of low alloy high strength steels?", "label": "RAG"}
+{"input": "What is cast iron and how are its properties different from steel?", "label": "RAG"}
+{"input": "What is the ductility of mild steel like compared to stainless steel?", "label": "RAG"}
+{"input": "How does plate thickness affect the cooling and properties of the weld?", "label": "RAG"}
+{"input": "What happens to the mechanical properties of steel in the heat affected zone?", "label": "RAG"}
+{"input": "What is the typical tensile strength range of structural carbon steels?", "label": "RAG"}
+{"input": "What does yield strength mean when we talk about steel properties?", "label": "RAG"}
+{"input": "Why is toughness an important property for welded steel structures?", "label": "RAG"}
+{"input": "What is the difference between hardness and strength in steel?", "label": "RAG"}
+{"input": "What are typical properties of 304 stainless steel?", "label": "RAG"}
+{"input": "What are typical properties of 316 stainless steel compared to 304?", "label": "RAG"}
+{"input": "In simple terms, what properties make aluminum harder to weld than steel?", "label": "RAG"}
+{"input": "What is the thermal conductivity of aluminum like compared to steel?", "label": "RAG"}
+{"input": "Why is thermal expansion an important property of stainless steel in welding?", "label": "RAG"}
+{"input": "What do we mean by weldability when we talk about steel properties?", "label": "RAG"}
+{"input": "What is carbon equivalent and how does it relate to steel weldability?", "label": "RAG"}
+{"input": "How do impurities like sulfur and phosphorus affect steel properties?", "label": "RAG"}
+{"input": "Why is low hydrogen steel important, property wise, in welding?", "label": "RAG"}
+{"input": "What are typical properties of quenched and tempered steels?", "label": "RAG"}
+{"input": "Can you explain what yield ratio means for steel?", "label": "RAG"}
+{"input": "What is creep and how does it relate to high temperature properties of steel?", "label": "RAG"}
+{"input": "What basic properties should I know about when choosing a steel for welding?", "label": "RAG"}
+{"input": "Yo, what actually is steel made of and what kind of properties does it have?", "label": "RAG"}
+{"input": "Dude, what is stainless steel really and why doesn’t it rust like normal steel?", "label": "RAG"}
+{"input": "In very simple words, what is carbon steel and how is it different from stainless?", "label": "RAG"}
+{"input": "What is mild steel exactly and why is it so common in welding?", "label": "RAG"}
+{"input": "What are the typical mechanical properties of aluminum used in welding?", "label": "RAG"}
+{"input": "Material: Al, method: mig, thickness 3 mm.", "label": "QUERY"}
+{"input": "Al plate, 5 mm, mig.", "label": "QUERY"}
+{"input": "Al 2 mm, mig only.", "label": "QUERY"}
+{"input": "Using Al wire with mig on 4 mm sheet.", "label": "QUERY"}
+{"input": "Al bracket, t=6 mm, mig weld.", "label": "QUERY"}
+{"input": "Just Al, thin sheet, mig.", "label": "QUERY"}
+{"input": "Al, 1.5 mm, process mig.", "label": "QUERY"}
+{"input": "Need to weld Al sheet, 2 mm, mig.", "label": "QUERY"}
+{"input": "Al plate, thickness 8 mm, mig process.", "label": "QUERY"}
+{"input": "Al 3 mm, no method decided yet.", "label": "QUERY"}
+{"input": "Material: AlSi, method: mig.", "label": "QUERY"}
+{"input": "AlSi wire, mig on 3 mm casting.", "label": "QUERY"}
+{"input": "AlSi filler, 2 mm plate, mig.", "label": "QUERY"}
+{"input": "AlSi, thin panel, mig process only.", "label": "QUERY"}
+{"input": "Using AlSi on 5 mm Al plate, mig.", "label": "QUERY"}
+{"input": "AlSi 1.2 mm wire with mig on body panel.", "label": "QUERY"}
+{"input": "AlSi, t=4 mm, mig welds.", "label": "QUERY"}
+{"input": "Just AlSi material, mig welding.", "label": "QUERY"}
+{"input": "AlSi fillet weld on 3 mm plate, mig.", "label": "QUERY"}
+{"input": "AlSi wire, Al base, mig, thickness about 2 mm.", "label": "QUERY"}
+{"input": "Material: AlMg, mig.", "label": "QUERY"}
+{"input": "AlMg plate 4 mm, mig weld.", "label": "QUERY"}
+{"input": "AlMg 3 mm, process mig only.", "label": "QUERY"}
+{"input": "Using AlMg wire on Al extrusion, mig.", "label": "QUERY"}
+{"input": "AlMg, 2 mm sheet, mig.", "label": "QUERY"}
+{"input": "AlMg, thickness 6 mm, mig welding.", "label": "QUERY"}
+{"input": "Just AlMg material, mig process.", "label": "QUERY"}
+{"input": "AlMg tube, 2.5 mm wall, mig.", "label": "QUERY"}
+{"input": "AlMg filler, Al base, mig welding, 3 mm.", "label": "QUERY"}
+{"input": "AlMg, boat hull panel, mig.", "label": "QUERY"}
+{"input": "CuSi wire with mig on thin Steel.", "label": "QUERY"}
+{"input": "Material: CuSi, process mig.", "label": "QUERY"}
+{"input": "CuSi filler, Steel tube 2 mm, mig.", "label": "QUERY"}
+{"input": "Using CuSi for brazing-like mig on Steel sheet.", "label": "QUERY"}
+{"input": "CuSi, 1 mm sheet, mig welding.", "label": "QUERY"}
+{"input": "CuSi, 2 mm thickness, mig only.", "label": "QUERY"}
+{"input": "CuSi wire, car body panel, mig.", "label": "QUERY"}
+{"input": "CuSi material used with mig on galvanized Steel.", "label": "QUERY"}
+{"input": "CuSi, lap joint, Steel 0.8 mm, mig.", "label": "QUERY"}
+{"input": "CuSi on thin Steel door skin, mig.", "label": "QUERY"}
+{"input": "Flux cored wire, material: Flux, 5 mm Steel.", "label": "QUERY"}
+{"input": "Flux cored (Flux), no gas, Steel plate 6 mm.", "label": "QUERY"}
+{"input": "Using Flux wire on 3 mm Steel, mig mode.", "label": "QUERY"}
+{"input": "Flux 1.2 mm, 8 mm Fe plate.", "label": "QUERY"}
+{"input": "Flux, self-shielded, thin Steel square tube.", "label": "QUERY"}
+{"input": "Flux wire only, outdoor welding on Steel.", "label": "QUERY"}
+{"input": "Flux cored on 4 mm Fe plate.", "label": "QUERY"}
+{"input": "Flux, thickness 2.5 mm Steel sheet.", "label": "QUERY"}
+{"input": "Flux for fillet weld, Steel 10 mm.", "label": "QUERY"}
+{"input": "Using Flux on rusty Fe material.", "label": "QUERY"}
+{"input": "Base material: Fe, mig.", "label": "QUERY"}
+{"input": "Fe plate 5 mm, mig process.", "label": "QUERY"}
+{"input": "Fe 3 mm, unknown method yet.", "label": "QUERY"}
+{"input": "Fe, t=8 mm, mig weld.", "label": "QUERY"}
+{"input": "Fe sheet, 2 mm, mig.", "label": "QUERY"}
+{"input": "Fe 1.5 mm with mig and 0.8 mm wire.", "label": "QUERY"}
+{"input": "Just Fe plate, about 4 mm thick.", "label": "QUERY"}
+{"input": "Fe, thin sheet, mig.", "label": "QUERY"}
+{"input": "Fe tube, 3 mm wall thickness.", "label": "QUERY"}
+{"input": "Fe 12 mm plate, heavy weld.", "label": "QUERY"}
+{"input": "Base: Steel, method: mig.", "label": "QUERY"}
+{"input": "Steel 5 mm, mig only.", "label": "QUERY"}
+{"input": "Steel plate 3 mm, process mig.", "label": "QUERY"}
+{"input": "Steel, thickness 2 mm, mig welds.", "label": "QUERY"}
+{"input": "Steel 8 mm, mig or mma?", "label": "QUERY"}
+{"input": "Steel tube, 2 mm wall, mig.", "label": "QUERY"}
+{"input": "Just Steel, thin sheet, mig.", "label": "QUERY"}
+{"input": "Steel 10 mm base plate, mig process.", "label": "QUERY"}
+{"input": "Steel corner joint, 4 mm, mig.", "label": "QUERY"}
+{"input": "Steel 1 mm car panel, mig.", "label": "QUERY"}
+{"input": "Al plate, 4 mm, method tig_ac.", "label": "QUERY"}
+{"input": "Al 3 mm, tig_ac welding.", "label": "QUERY"}
+{"input": "Material Al, tig_ac only.", "label": "QUERY"}
+{"input": "Thin Al, about 2 mm, tig_ac.", "label": "QUERY"}
+{"input": "AlMg, 5 mm, tig_ac.", "label": "QUERY"}
+{"input": "AlSi casting, tig_ac weld.", "label": "QUERY"}
+{"input": "Al checker plate, 3 mm, tig_ac process.", "label": "QUERY"}
+{"input": "Al, 1.6 mm, tig_ac on AC balance.", "label": "QUERY"}
+{"input": "Al tube, 2.5 mm wall, tig_ac.", "label": "QUERY"}
+{"input": "Just Al, tig_ac, thin material.", "label": "QUERY"}
+{"input": "Steel 5 mm, tig_dc.", "label": "QUERY"}
+{"input": "Material Steel, method tig_dc.", "label": "QUERY"}
+{"input": "Fe 3 mm, tig_dc root weld.", "label": "QUERY"}
+{"input": "Stainless (Steel), 2 mm, tig_dc.", "label": "QUERY"}
+{"input": "Steel tube, 1.5 mm, tig_dc.", "label": "QUERY"}
+{"input": "Steel 8 mm plate, tig_dc with filler.", "label": "QUERY"}
+{"input": "Fe, 4 mm, tig_dc only.", "label": "QUERY"}
+{"input": "Steel 1 mm exhaust tube, tig_dc.", "label": "QUERY"}
+{"input": "Just Steel, tig_dc welding.", "label": "QUERY"}
+{"input": "Fe material, 6 mm, tig_dc root, mig fill.", "label": "QUERY"}
+{"input": "Steel 6 mm, mma.", "label": "QUERY"}
+{"input": "Base material: Fe, method mma.", "label": "QUERY"}
+{"input": "Steel plate 10 mm, stick (mma).", "label": "QUERY"}
+{"input": "Fe 4 mm, mma with basic electrodes.", "label": "QUERY"}
+{"input": "Steel, thickness 8 mm, mma weld.", "label": "QUERY"}
+{"input": "Steel corner joint, mma only.", "label": "QUERY"}
+{"input": "Fe 12 mm plate, multi-pass mma.", "label": "QUERY"}
+{"input": "Just Steel, mma welding with 7018.", "label": "QUERY"}
+{"input": "Fe, 5 mm, mma basic rod.", "label": "QUERY"}
+{"input": "Steel, 3 mm, mma or mig?", "label": "QUERY"}
+{"input": "Al 3 mm, method not decided yet.", "label": "QUERY"}
+{"input": "Steel 2 mm, no process selected.", "label": "QUERY"}
+{"input": "Fe plate 5 mm, method \"\" (unknown).", "label": "QUERY"}
+{"input": "Material Al, thickness 1 mm, process not set.", "label": "QUERY"}
+{"input": "CuSi on Steel, no method defined yet.", "label": "QUERY"}
+{"input": "Flux on Steel 4 mm, process to be chosen.", "label": "QUERY"}
+{"input": "Steel plate, 6 mm, process \"\".", "label": "QUERY"}
+{"input": "AlMg, 2 mm, welding method still open.", "label": "QUERY"}
+{"input": "Al 5 mm, process unspecified.", "label": "QUERY"}
+{"input": "Fe, 3 mm sheet, method TBD.", "label": "QUERY"}
+{"input": "Does this machine support mig for Steel?", "label": "QUERY"}
+{"input": "Which welding methods does this welder support: mig, tig_ac, tig_dc, mma?", "label": "QUERY"}
+{"input": "What welding processes are available on this machine for Al?", "label": "QUERY"}
+{"input": "Can this power source run tig_ac on AlMg?", "label": "QUERY"}
+{"input": "Does this unit support tig_dc for Steel and Fe?", "label": "QUERY"}
+{"input": "Is mma supported on this welder for Steel plates?", "label": "QUERY"}
+{"input": "Which of these methods are supported: mig, tig_ac, tig_dc?", "label": "QUERY"}
+{"input": "Can I use mig and mma on the same machine with Steel?", "label": "QUERY"}
+{"input": "Does the machine allow tig_ac for Al and mig for Steel?", "label": "QUERY"}
+{"input": "What welding methods does this robot support, mig only or also tig_dc?", "label": "QUERY"}
+{"input": "Is tig_ac available on this model or just mig?", "label": "QUERY"}
+{"input": "Can this compact welder handle both mig and mma on Steel?", "label": "QUERY"}
+{"input": "Does this device support mig with AlSi wire?", "label": "QUERY"}
+{"input": "Which welding modes are enabled: mig, tig_dc, mma?", "label": "QUERY"}
+{"input": "Yo, does this machine even do tig_ac on Al or just mig on Steel?", "label": "QUERY"}
+{"input": "Can I switch between mig and tig_dc on this unit?", "label": "QUERY"}
+{"input": "Is mma supported here, or is it mig-only?", "label": "QUERY"}
+{"input": "What material–method combos are supported, like Al with tig_ac and Steel with mig?", "label": "QUERY"}
+{"input": "Does this welder support mig on Fe and tig_dc on Steel?", "label": "QUERY"}
+{"input": "Can I run CuSi wire in mig mode on this machine?", "label": "QUERY"}
+{"input": "I need a detailed suggestion for welding a 5 mm Steel plate with mig, because I'm not sure what kind of settings or preparation are appropriate for this material and thickness.", "label": "QUERY"}
+{"input": "For a small repair job on my trailer frame made from 4 mm Steel, I’m planning to use mig, and I’d like to know what considerations I should keep in mind for that material and process.", "label": "QUERY"}
+{"input": "I have some 3 mm Al sheet that I want to weld using tig_ac, and I’d like guidance on whether this combination of material and method is suitable for long continuous seams.", "label": "QUERY"}
+{"input": "When I weld a 2 mm AlMg panel with mig on this compact machine, what should I be aware of in terms of wire selection and shielding gas for that material and thickness?", "label": "QUERY"}
+{"input": "I’m planning to weld 6 mm Steel base plates to Fe columns using mma, and I’d like advice on whether that method is the best choice for these materials and thicknesses.", "label": "QUERY"}
+{"input": "For a batch of thin 1.5 mm Al roof panels, I want to use tig_ac instead of mig, and I’m wondering how well this machine handles that material–method combination.", "label": "QUERY"}
+{"input": "We need to join 8 mm Fe plates with mig in production, and I’d like to understand if this welder is really optimized for that material and thickness range.", "label": "QUERY"}
+{"input": "I have 2.5 mm Steel tubing and I’m not sure whether mig or mma is the better method on this power source for that specific material and wall thickness.", "label": "QUERY"}
+{"input": "Our job involves lap welding 3 mm AlMg to 3 mm Al using mig, and I want to confirm that this machine supports that material combination and welding process reliably.", "label": "QUERY"}
+{"input": "I’m about to start a project on 10 mm Steel plates with mma, and I’d like to know if this unit is strong enough for that thickness or if mig would be a better method.", "label": "QUERY"}
+{"input": "For thin car body panels made from 0.8 mm Steel, I plan to use mig only, and I need to be sure the machine’s mig mode is really suitable for such thin material.", "label": "QUERY"}
+{"input": "We want to use CuSi wire in mig mode on 1 mm galvanized Steel, so I need to confirm that this machine supports that combination of material and process.", "label": "QUERY"}
+{"input": "I have a mix of 3 mm and 5 mm Al parts, and I want to know whether this welder can handle both mig and tig_ac on Al with those thicknesses.", "label": "QUERY"}
+{"input": "For stainless exhaust pipes made from 1.2 mm Steel, I’d like to use tig_dc on this machine, and I want to verify that the tig_dc function is stable for such thin material.", "label": "QUERY"}
+{"input": "We’re planning to weld 6 mm structural Steel beams using mig on this model, and I’d appreciate clarification on whether it is designed for heavy-duty Steel work.", "label": "QUERY"}
+{"input": "I often weld 2 mm AlSi castings with mig and occasionally switch to tig_ac, so I want to know if this welder supports both methods for that material.", "label": "QUERY"}
+{"input": "For repair of 4 mm Fe brackets, I’d like to alternate between mig and mma, and I’m wondering if the machine can switch smoothly between those methods on Fe.", "label": "QUERY"}
+{"input": "I’m going to weld a 5 mm Steel plate to a 5 mm Fe plate and I’d like to use mig on both; can you confirm this machine is suitable for that kind of Steel/Fe work?", "label": "QUERY"}
+{"input": "We have a lot of 3 mm AlMg boat panels to weld with tig_ac and I’m concerned whether this power source is capable of long AC runs on AlMg at that thickness.", "label": "QUERY"}
+{"input": "I want to weld 1.6 mm Al tube using tig_ac and occasionally mig, and I need to know whether the machine supports both methods specifically for Al.", "label": "QUERY"}
+{"input": "Our shop mainly works with 8 mm Steel using mma, but we are thinking of moving to mig on this welder, so I’d like to know if 8 mm Steel mig is really supported.", "label": "QUERY"}
+{"input": "For 2 mm Steel furniture tubing, I’m interested in whether the mig mode on this machine can provide a smooth arc suitable for cosmetic welds on that material.", "label": "QUERY"}
+{"input": "I will be welding 3 mm Al sheets using mig in spray mode, and I want to confirm that this unit supports mig on Al at that thickness without overheating.", "label": "QUERY"}
+{"input": "Our current project needs both tig_dc on thin Steel and mig on thicker Steel, so I’d like to know if this single power source supports both methods across those thicknesses.", "label": "QUERY"}
+{"input": "I frequently weld 5 mm Steel using mma rods, and I wonder whether this welder’s mma mode is robust enough for that thickness over long shifts.", "label": "QUERY"}
+{"input": "We have 4 mm Fe plates that we might weld either with mig or with mma, and I’d like to know how well this machine supports both methods on Fe.", "label": "QUERY"}
+{"input": "For a prototype made from 2 mm Al and 2 mm AlSi parts, I’m curious whether this model supports mig on both materials without changing major settings.", "label": "QUERY"}
+{"input": "I plan to weld 3 mm Steel base plates with mig and occasionally switch to mma for root passes, and I want to know if this machine supports that style of mixed work.", "label": "QUERY"}
+{"input": "Our application requires welding 6 mm Steel with mig and 3 mm Al with tig_ac using the same machine, so I need confirmation that both methods and materials are supported.", "label": "QUERY"}
+{"input": "From a metallurgical point of view, could you explain in detail what Steel actually is, how it differs from pure Fe, and which basic mechanical properties make it so widely used in welded structures?", "label": "RAG"}
+{"input": "I’d like a long, easy-to-understand explanation of Al as a welding material, including what it is, what typical properties it has, and why those properties make Al more difficult to weld than Steel.", "label": "RAG"}
+{"input": "Can you describe what AlMg alloys are, what their main mechanical and corrosion-resistance properties are, and why they are commonly chosen for welded boat hulls and similar structures?", "label": "RAG"}
+{"input": "Please explain in simple but detailed language what AlSi filler alloys are, what properties they give the weld metal, and in which situations using AlSi is preferable to using pure Al filler.", "label": "RAG"}
+{"input": "I want to understand what CuSi wire actually is and what specific properties, like lower melting temperature or different wetting behavior, it brings compared to standard Steel mig wire in body repair work.", "label": "RAG"}
+{"input": "Could you give a thorough explanation of what Flux-cored (Flux) wire is, what its main properties are, and how those properties affect penetration, slag formation, and suitability for outdoor welding?", "label": "RAG"}
+{"input": "What are the characteristic properties of Fe as a base element compared to Steel, and how does adding carbon and alloying elements transform Fe into different kinds of Steel for welding applications?", "label": "RAG"}
+{"input": "In practical welding terms, what is the difference in properties between mild Steel and high strength Steel, and how do these property differences influence the way we should weld and preheat them?", "label": "RAG"}
+{"input": "Could you explain in more depth what makes stainless Steel corrosion resistant, what microstructural features give it those properties, and how these features influence the welding process?", "label": "RAG"}
+{"input": "I’d like a clear explanation of what mig welding is as a process, what its main properties and characteristics are, and why those characteristics make it suitable for materials like Steel and Al.", "label": "RAG"}
+{"input": "Can you carefully describe the difference between tig_ac and tig_dc in terms of arc characteristics and cleaning action, and explain why tig_ac is normally used for Al while tig_dc is preferred for Steel?", "label": "RAG"}
+{"input": "What are the defining properties of mma (stick) welding compared to mig and tig, and how do those properties affect portability, penetration, and ease of use in field welding on Steel?", "label": "RAG"}
+{"input": "From a properties point of view, why does increasing the carbon content in Steel usually increase hardness and strength but reduce toughness and weldability?", "label": "RAG"}
+{"input": "Could you summarize the key physical and mechanical properties that a welder should know about Steel, such as density, melting range, tensile strength, and toughness, and how they relate to welding practice?", "label": "RAG"}
+{"input": "In beginner-friendly terms, can you explain what we mean when we talk about the weldability properties of a Steel and how carbon equivalent is used to estimate those properties?", "label": "RAG"}
+{"input": "Set the welding process mode on this machine to mig and then ramp the current up slowly until it reaches 180 amps, keeping all other parameters unchanged.", "label": "CONTROL"}
+{"input": "Switch the method from mig to tig_dc for the next weld on Steel, and lock that tig_dc mode so the operator cannot accidentally change back to mig during the shift.", "label": "CONTROL"}
+{"input": "Enable tig_ac mode on the power source so that the operator can weld Al parts, and preset the AC frequency and balance to their default factory values.", "label": "CONTROL"}
+{"input": "Change the main welding process selection from tig_dc to mma, making sure that the machine updates the display to show mma as the active method for Steel.", "label": "CONTROL"}
+{"input": "Activate mig mode with CuSi wire loaded, and store the current combination of parameters as a dedicated job for thin Steel body panels.", "label": "CONTROL"}
+{"input": "Turn on mma mode for 6 mm Steel plates, set the output current to 150 amps, and save this as job number 5 in the machine memory.", "label": "CONTROL"}
+{"input": "Switch the process from mig on Steel to tig_ac on Al, and automatically recall the last used tig_ac job for Al from the machine’s memory.", "label": "CONTROL"}
+{"input": "Go into the settings menu, select mig as the active process, and then enable the specific program that is optimized for Flux-cored (Flux) wire on Steel.", "label": "CONTROL"}
+{"input": "Change the active material setting from Steel to Al and ensure the welder stays in mig mode, adjusting its internal synergic line to match Al wire.", "label": "CONTROL"}
+{"input": "Select tig_dc as the process for the upcoming root pass on Steel pipe, and disable mig so the operator cannot accidentally trigger the wrong method.", "label": "CONTROL"}
+{"input": "Enable mig mode and set the material type to Fe, then lock those selections so that only current and voltage can be adjusted by the operator.", "label": "CONTROL"}
+{"input": "Switch the power source from tig_dc back to mig on Steel and restore the default mig settings that were stored in job slot 1.", "label": "CONTROL"}
+{"input": "Activate the multi-process function so that the machine can quickly toggle between mig for Steel and tig_ac for Al using the front panel process selector.", "label": "CONTROL"}
+{"input": "Force the welder into mma-only operation, disabling mig, tig_ac and tig_dc modes so that only stick welding can be used on Steel today.", "label": "CONTROL"}
+{"input": "Set up this unit so that mig is the default startup process for Steel, with tig_ac and tig_dc remaining available but not automatically selected at power-on.", "label": "CONTROL"}
+{"input": "Steel 5 mm, mig.", "label": "QUERY"}
+{"input": "Al 3 mm, tig_ac.", "label": "QUERY"}
+{"input": "Fe plate 4 mm, mig.", "label": "QUERY"}
+{"input": "AlMg 2 mm sheet, mig.", "label": "QUERY"}
+{"input": "Steel tube, 2 mm wall, mma.", "label": "QUERY"}
+{"input": "What is Steel and what properties does it have?", "label": "RAG"}
+{"input": "What is Al and what are its basic properties?", "label": "RAG"}
+{"input": "What are the main properties of Fe as a metal?", "label": "RAG"}
+{"input": "Set process to mig.", "label": "CONTROL"}
+{"input": "Switch method to tig_dc.", "label": "CONTROL"}
+{"input": "Steel 8 mm, mig welding.", "label": "QUERY"}
+{"input": "Al 1.5 mm panel, mig.", "label": "QUERY"}
+{"input": "AlSi casting, 3 mm, mig.", "label": "QUERY"}
+{"input": "Fe 10 mm plate, mma.", "label": "QUERY"}
+{"input": "Al 2 mm tube, tig_ac.", "label": "QUERY"}
+{"input": "What is stainless Steel and what makes it special?", "label": "RAG"}
+{"input": "What is AlMg and what properties does it have?", "label": "RAG"}
+{"input": "What typical properties does AlSi filler metal have?", "label": "RAG"}
+{"input": "Set method to mma.", "label": "CONTROL"}
+{"input": "Enable tig_ac mode.", "label": "CONTROL"}
+{"input": "Steel sheet, 1 mm, mig.", "label": "QUERY"}
+{"input": "Al 5 mm plate, mig.", "label": "QUERY"}
+{"input": "Fe 6 mm, mig process.", "label": "QUERY"}
+{"input": "AlMg 4 mm hull panel, mig.", "label": "QUERY"}
+{"input": "Steel 3 mm bracket, mma.", "label": "QUERY"}
+{"input": "What is Flux wire and what are its properties?", "label": "RAG"}
+{"input": "What is CuSi wire and what properties does it have?", "label": "RAG"}
+{"input": "What are the main mechanical properties of Steel?", "label": "RAG"}
+{"input": "Switch to mig on Steel.", "label": "CONTROL"}
+{"input": "Activate mma for Steel.", "label": "CONTROL"}
+{"input": "Al 3 mm, mig spray.", "label": "QUERY"}
+{"input": "Steel 12 mm plate, mma.", "label": "QUERY"}
+{"input": "Fe 2 mm thin sheet, mig.", "label": "QUERY"}
+{"input": "AlSi 2 mm car panel, mig.", "label": "QUERY"}
+{"input": "AlMg 3 mm, tig_ac.", "label": "QUERY"}
+{"input": "Can you explain what Steel is in simple words?", "label": "RAG"}
+{"input": "What properties make Steel good for welding?", "label": "RAG"}
+{"input": "What is the basic definition of Fe and its properties?", "label": "RAG"}
+{"input": "Set welding mode to tig_dc.", "label": "CONTROL"}
+{"input": "Turn on mig process.", "label": "CONTROL"}
+{"input": "Steel corner joint, 4 mm, mig.", "label": "QUERY"}
+{"input": "Al floor panel 2 mm, mig.", "label": "QUERY"}
+{"input": "Fe 5 mm angle, mma.", "label": "QUERY"}
+{"input": "Al 1 mm sheet, tig_ac.", "label": "QUERY"}
+{"input": "Steel tube, 3 mm wall, mig.", "label": "QUERY"}
+{"input": "What is Al and what mechanical properties does it have?", "label": "RAG"}
+{"input": "What properties does AlMg have for welding?", "label": "RAG"}
+{"input": "What is Flux-cored wire and what characteristics does it show?", "label": "RAG"}
+{"input": "Change process from mma to mig.", "label": "CONTROL"}
+{"input": "Lock method to tig_ac.", "label": "CONTROL"}
+{"input": "AlMg 2 mm boat panel, mig.", "label": "QUERY"}
+{"input": "Steel 6 mm base plate, mig.", "label": "QUERY"}
+{"input": "Fe 3 mm sheet, tig_dc.", "label": "QUERY"}
+{"input": "AlSi 1.5 mm body part, mig.", "label": "QUERY"}
+{"input": "Steel 2 mm thin plate, mig.", "label": "QUERY"}
+{"input": "What is the difference between Steel and pure Fe?", "label": "RAG"}
+{"input": "What key properties does CuSi wire have?", "label": "RAG"}
+{"input": "What are the main properties of structural Steel?", "label": "RAG"}
+{"input": "Enable mig on Fe.", "label": "CONTROL"}
+{"input": "Select tig_dc for Steel.", "label": "CONTROL"}
+{"input": "Fe 8 mm plate, mig.", "label": "QUERY"}
+{"input": "Al 4 mm panel, tig_ac.", "label": "QUERY"}
+{"input": "Steel 3 mm tube, mig.", "label": "QUERY"}
+{"input": "AlMg 5 mm frame, mig.", "label": "QUERY"}
+{"input": "AlSi 3 mm cover, mig.", "label": "QUERY"}
+{"input": "What is Steel as a material and how strong is it?", "label": "RAG"}
+{"input": "What typical density and strength does Fe have?", "label": "RAG"}
+{"input": "What are the basic properties of Al used in welding?", "label": "RAG"}
+{"input": "Switch default process to mig.", "label": "CONTROL"}
+{"input": "Turn off tig_ac mode.", "label": "CONTROL"}
+{"input": "Steel 1.2 mm car panel, mig.", "label": "QUERY"}
+{"input": "Al 2.5 mm bracket, mig.", "label": "QUERY"}
+{"input": "Fe 10 mm flange, mma.", "label": "QUERY"}
+{"input": "AlMg 3 mm profile, tig_ac.", "label": "QUERY"}
+{"input": "Steel 5 mm gusset, mig.", "label": "QUERY"}
+{"input": "What is mild Steel and what properties define it?", "label": "RAG"}
+{"input": "What properties differentiate stainless Steel from mild Steel?", "label": "RAG"}
+{"input": "What is the main property difference between Al and Steel?", "label": "RAG"}
+{"input": "Set machine to mma only.", "label": "CONTROL"}
+{"input": "Allow mig and tig_dc modes.", "label": "CONTROL"}
+{"input": "Al 1 mm roof skin, mig.", "label": "QUERY"}
+{"input": "Steel 4 mm bracket, mma.", "label": "QUERY"}
+{"input": "Fe 2 mm panel, mig.", "label": "QUERY"}
+{"input": "AlSi 2 mm roof rail, mig.", "label": "QUERY"}
+{"input": "Al 3 mm tube, tig_ac.", "label": "QUERY"}
+{"input": "What is AlSi alloy and what properties does it have?", "label": "RAG"}
+{"input": "What corrosion properties does AlMg show?", "label": "RAG"}
+{"input": "What toughness and strength does typical Steel have?", "label": "RAG"}
+{"input": "Switch process to tig_ac on Al.", "label": "CONTROL"}
+{"input": "Use mig for Steel only.", "label": "CONTROL"}
+{"input": "Steel plate 2 mm, mig short-arc.", "label": "QUERY"}
+{"input": "Al 6 mm thick plate, mig.", "label": "QUERY"}
+{"input": "Fe 3 mm, mig root.", "label": "QUERY"}
+{"input": "AlMg 2 mm hull, tig_ac.", "label": "QUERY"}
+{"input": "Steel 8 mm, mma multi-pass.", "label": "QUERY"}
+{"input": "What is Fe and how does it behave compared to Steel?", "label": "RAG"}
+{"input": "What main mechanical properties does Flux wire weld metal have?", "label": "RAG"}
+{"input": "What is CuSi and why is it used on thin Steel?", "label": "RAG"}
+{"input": "Turn on mig for Fe material.", "label": "CONTROL"}
+{"input": "Disable mma mode for this job.", "label": "CONTROL"}
+{"input": "Al 2 mm, tig_ac only.", "label": "QUERY"}
+{"input": "Steel 3 mm, mig only.", "label": "QUERY"}
+{"input": "Fe 4 mm, mma only.", "label": "QUERY"}
+{"input": "AlMg 3 mm, mig only.", "label": "QUERY"}
+{"input": "AlSi 1 mm, mig only.", "label": "QUERY"}
+{"input": "What is AlMg and what strength properties does it give?", "label": "RAG"}
+{"input": "What is mild Steel and how tough is it?", "label": "RAG"}
+{"input": "What is Flux and what slag properties does it have?", "label": "RAG"}
+{"input": "Set default material to Steel.", "label": "CONTROL"}
+{"input": "Select Al as active material.", "label": "CONTROL"}
+{"input": "Steel 5 mm fillet, mig.", "label": "QUERY"}
+{"input": "Al 1.2 mm skin, mig plug welds.", "label": "QUERY"}
+{"input": "Fe 6 mm stiffener, mma.", "label": "QUERY"}
+{"input": "AlMg 4 mm panel, mig spray.", "label": "QUERY"}
+{"input": "Steel 2 mm tube, tig_dc.", "label": "QUERY"}
+{"input": "What properties of Steel change with more carbon?", "label": "RAG"}
+{"input": "What are the key physical properties of Fe?", "label": "RAG"}
+{"input": "What are typical yield and tensile strength values for Steel?", "label": "RAG"}
+{"input": "Turn on tig_dc for Steel pipe.", "label": "CONTROL"}
+{"input": "Lock mig mode for this program.", "label": "CONTROL"}
+{"input": "Al 3 mm corner joint, tig_ac.", "label": "QUERY"}
+{"input": "Steel 7 mm web, mig.", "label": "QUERY"}
+{"input": "Fe 3 mm angle, mig.", "label": "QUERY"}
+{"input": "AlSi 2 mm door skin, mig.", "label": "QUERY"}
+{"input": "Steel 1.5 mm sheet, mig stitch.", "label": "QUERY"}
+{"input": "What makes Steel ductile or brittle in welding?", "label": "RAG"}
+{"input": "What are the typical welding properties of Al?", "label": "RAG"}
+{"input": "What basic properties define stainless Steel?", "label": "RAG"}
+{"input": "Enable mig process on startup.", "label": "CONTROL"}
+{"input": "Set process selector to tig_ac.", "label": "CONTROL"}
+{"input": "Al 2 mm plate, mig pulse.", "label": "QUERY"}
+{"input": "Steel 10 mm joint, mma.", "label": "QUERY"}
+{"input": "Fe 2 mm sheet metal, mig.", "label": "QUERY"}
+{"input": "AlMg 5 mm extrusion, mig.", "label": "QUERY"}
+{"input": "Steel 3 mm channel, mig.", "label": "QUERY"}
+{"input": "What is Fe microstructure like and how does it affect properties?", "label": "RAG"}
+{"input": "What heat conduction properties does Al have?", "label": "RAG"}
+{"input": "What properties make Flux wire good outdoors?", "label": "RAG"}
+{"input": "Switch unit to mma only mode.", "label": "CONTROL"}
+{"input": "Allow tig_dc and disallow tig_ac.", "label": "CONTROL"}
+{"input": "Al 4 mm, tig_ac root.", "label": "QUERY"}
+{"input": "Steel 2 mm, mig root.", "label": "QUERY"}
+{"input": "Fe 5 mm, mma root.", "label": "QUERY"}
+{"input": "AlSi 3 mm, mig fillet.", "label": "QUERY"}
+{"input": "AlMg 2 mm, mig lap.", "label": "QUERY"}
+{"input": "What mechanical properties does CuSi weld metal show?", "label": "RAG"}
+{"input": "What is high strength Steel and what properties define it?", "label": "RAG"}
+{"input": "What typical toughness does structural Steel need?", "label": "RAG"}
+{"input": "Set process mode to mig for all jobs.", "label": "CONTROL"}
+{"input": "Switch all Steel jobs to mma.", "label": "CONTROL"}
+{"input": "Steel 6 mm column weld, mig.", "label": "QUERY"}
+{"input": "Al 1.5 mm cover, tig_ac.", "label": "QUERY"}
+{"input": "Fe 3 mm sheet, mig plug.", "label": "QUERY"}
+{"input": "AlMg 3 mm hull seam, mig.", "label": "QUERY"}
+{"input": "Steel 4 mm plate, mma.", "label": "QUERY"}
+{"input": "What is Steel and how does its property of toughness matter?", "label": "RAG"}
+{"input": "What are basic thermal properties of Al in welding?", "label": "RAG"}
+{"input": "What property differences exist between Fe and Steel?", "label": "RAG"}
+{"input": "Activate tig_dc as current method.", "label": "CONTROL"}
+{"input": "Disable mig for this operator.", "label": "CONTROL"}
+{"input": "Al 3 mm panel, tig_ac fillet.", "label": "QUERY"}
+{"input": "Steel 2 mm sheet, mig lap.", "label": "QUERY"}
+{"input": "Fe 8 mm plate, mig groove.", "label": "QUERY"}
+{"input": "AlSi 1 mm panel, mig stitch.", "label": "QUERY"}
+{"input": "AlMg 4 mm, tig_ac fillet.", "label": "QUERY"}
+{"input": "What is mild Steel and what basic properties does it have?", "label": "RAG"}
+{"input": "What are the corrosion properties of Al alloys?", "label": "RAG"}
+{"input": "What property of Steel controls weldability most?", "label": "RAG"}
+{"input": "Set startup method to tig_dc.", "label": "CONTROL"}
+{"input": "Force mma on all Steel pieces.", "label": "CONTROL"}
+{"input": "Al 2 mm skin, mig seam.", "label": "QUERY"}
+{"input": "Steel 5 mm web, mig spray.", "label": "QUERY"}
+{"input": "Fe 4 mm bar, mma.", "label": "QUERY"}
+{"input": "AlMg 3 mm panel, mig short-arc.", "label": "QUERY"}
+{"input": "Steel 1 mm patch, mig.", "label": "QUERY"}
+{"input": "What is Al and what stiffness and strength does it have?", "label": "RAG"}
+{"input": "What typical hardness can Steel reach after welding?", "label": "RAG"}
+{"input": "What are the key toughness properties of Steel weld metal?", "label": "RAG"}
+{"input": "Limit machine to mig and mma.", "label": "CONTROL"}
+{"input": "Turn off tig modes.", "label": "CONTROL"}
+{"input": "Al 3 mm tube, mig.", "label": "QUERY"}
+{"input": "Steel 9 mm plate, mma.", "label": "QUERY"}
+{"input": "Fe 2.5 mm sheet, mig.", "label": "QUERY"}
+{"input": "AlSi 2.5 mm casting, mig.", "label": "QUERY"}
+{"input": "AlMg 5 mm profile, mig.", "label": "QUERY"}
+{"input": "What makes Steel stronger than pure Fe?", "label": "RAG"}
+{"input": "What physical properties make Al cool so fast?", "label": "RAG"}
+{"input": "What main properties should I know about Flux welds?", "label": "RAG"}
+{"input": "Select Steel as material and mig as process.", "label": "CONTROL"}
+{"input": "Change active material from Steel to Al.", "label": "CONTROL"}
+{"input": "Al 1.2 mm, tig_ac, thin sheet.", "label": "QUERY"}
+{"input": "Steel 3 mm plate, mig pulses.", "label": "QUERY"}
+{"input": "Fe 6 mm tee joint, mma.", "label": "QUERY"}
+{"input": "AlMg 2 mm seam, tig_ac.", "label": "QUERY"}
+{"input": "Steel 2 mm patch panel, mig.", "label": "QUERY"}
+{"input": "What is Steel and why is its strength property important?", "label": "RAG"}
+{"input": "What are the basic elastic properties of Fe?", "label": "RAG"}
+{"input": "What thermal expansion properties does Al have?", "label": "RAG"}
+{"input": "Set quick-select method to mig.", "label": "CONTROL"}
+{"input": "Block mma selection for now.", "label": "CONTROL"}
+{"input": "Al 4 mm, mig fillet.", "label": "QUERY"}
+{"input": "Steel 15 mm, mma heavy weld.", "label": "QUERY"}
+{"input": "Fe 3 mm, tig_dc fillet.", "label": "QUERY"}
+{"input": "AlSi 1.5 mm, mig seam.", "label": "QUERY"}
+{"input": "AlMg 3.5 mm, mig fillet.", "label": "QUERY"}
+{"input": "What is AlMg and what strength and ductility does it have?", "label": "RAG"}
+{"input": "What properties make CuSi good for thin Steel?", "label": "RAG"}
+{"input": "What toughness requirements do structural Steels usually have?", "label": "RAG"}
+{"input": "Enable process switching between mig and tig_dc.", "label": "CONTROL"}
+{"input": "Freeze process on tig_ac for this job.", "label": "CONTROL"}
+{"input": "Al 2 mm deck plate, tig_ac.", "label": "QUERY"}
+{"input": "Steel 4 mm support, mig.", "label": "QUERY"}
+{"input": "Fe 5 mm, mig fillet.", "label": "QUERY"}
+{"input": "AlSi 2 mm, mig lap.", "label": "QUERY"}
+{"input": "AlMg 2 mm transom, mig.", "label": "QUERY"}
+{"input": "What is Steel and what main properties define it as a structural metal?", "label": "RAG"}
+{"input": "What primary properties of Al should a welder know?", "label": "RAG"}
+{"input": "What are the common property limits for high strength Steel?", "label": "RAG"}
+{"input": "Set active process to mma for all Fe.", "label": "CONTROL"}
+{"input": "Allow tig_dc for Steel, deny tig_ac.", "label": "CONTROL"}
+{"input": "What welding method is suitable for 5mm steel sheet?", "label": "QUERY"}
+{"input": "Can I use a MIG welder on aluminum?", "label": "QUERY"}
+{"input": "How thick can the Flux material be used?", "label": "QUERY"}
+{"input": "Decrease the current by 30A.", "label": "CONTROL"}
+{"input": "Set the wire size to 1.2mm.", "label": "CONTROL"}
+{"input": "Increase the voltage to 25V.", "label": "CONTROL"}
+{"input": "How to weld copper with TIGDC?", "label": "RAG"}
+{"input": "What is the purpose of Flux in welding?", "label": "RAG"}
+{"input": "Tell me about the properties of steel.", "label": "RAG"}
+{"input": "Why does thickness affect the welding process?", "label": "RAG"}
+{"input": "How do I calibrate the welder?", "label": "RAG"}
+{"input": "What is MIG welding used for?", "label": "RAG"}
+{"input": "Is TIGAC different from TIGDC?", "label": "RAG"}
+{"input": "What is the difference between Al and AlSi?", "label": "RAG"}
+{"input": "What are the common welding machine errors?", "label": "RAG"}
+{"input": "Can I weld thick materials with MMA?", "label": "QUERY"}
+{"input": "How thick is the 1.6mm wire?", "label": "QUERY"}
+{"input": "Use a TIGDC welder for 2mm thick steel.", "label": "QUERY"}
+{"input": "Could you show me how to set the wire diameter?", "label": "RAG"}
+{"input": "What is the best way to weld thin Al sheets?", "label": "RAG"}
+{"input": "Set the wire thickness to 5mm.", "label": "CONTROL"}
+{"input": "What's the function of the welder's current control?", "label": "RAG"}
+{"input": "What is Steel welding method?", "label": "QUERY"}
+{"input": "How to adjust the machine for MIG welding?", "label": "RAG"}
+{"input": "Set the MIG wire size to 1.2mm.", "label": "CONTROL"}
+{"input": "What are the properties of Fe and Al?", "label": "RAG"}
+{"input": "Thick material is AlMg, what's the welding method?", "label": "QUERY"}
+{"input": "Can the machine handle 4mm AlMg welding?", "label": "QUERY"}
+{"input": "What's the recommended gas for TIGDC welding on steel?", "label": "RAG"}
+{"input": "Set the welder to 220V.", "label": "CONTROL"}
+{"input": "What is the correct wire for 3mm thick material?", "label": "QUERY"}
+{"input": "Welding thickness is 5, method is MIG.", "label": "QUERY"}
+{"input": "How to weld thin steel plates?", "label": "RAG"}
+{"input": "Can you increase the temperature by 10°C?", "label": "CONTROL"}
+{"input": "MIG welder for 1.2mm wire on flux material.", "label": "QUERY"}
+{"input": "How to use the machine for TIGDC welding?", "label": "RAG"}
+{"input": "Steel, 3mm thickness, MIG method - what is this setup?", "label": "QUERY"}
+{"input": "What's the right welding technique for 1.6mm thickness?", "label": "RAG"}
+{"input": "MMA welding for 2mm thick steel.", "label": "QUERY"}
+{"input": "What's the maximun thickness for AlSi welding?", "label": "QUERY"}
+{"input": "Set current to 120A.", "label": "CONTROL"}
+{"input": "What welding machine is suitable for 5mm steel?", "label": "QUERY"}
+{"input": "What is the best wire diameter for MIG on steel?", "label": "RAG"}
+{"input": "How thick is the material when using TIGDC?", "label": "RAG"}
+{"input": "Set the machine to MIG method.", "label": "CONTROL"}
+{"input": "Can this machine weld 5mm thick Fe?", "label": "QUERY"}
+{"input": "What is Flux material used for?", "label": "RAG"}
+{"input": "What's the recommended welding method for AlMg?", "label": "RAG"}
+{"input": "Set wire thickness to 4mm for TIG welding.", "label": "CONTROL"}
+{"input": "Why is the wire size important in welding?", "label": "RAG"}
+{"input": "How to weld 3mm thick materials using MIG?", "label": "RAG"}
+{"input": "Set the current to 100A for 1.2mm Al wire.", "label": "CONTROL"}
+{"input": "What is the welding method for 5mm steel?", "label": "QUERY"}
+{"input": "If I use MIG wire with 2mm thickness, what are the settings?", "label": "RAG"}
+{"input": "Is MIG suitable for 3mm thick steel?", "label": "QUERY"}
+{"input": "How to adjust thickness in the welder?", "label": "RAG"}
+{"input": "I want to use TIGDC for 2mm AlSi.", "label": "QUERY"}
+{"input": "Can you change the wire diameter to 1.6mm?", "label": "CONTROL"}
+{"input": "What is the thickness of the material?", "label": "RAG"}
+{"input": "MIG welding method for 3mm Fe.", "label": "QUERY"}
+{"input": "How to weld with MMA on thick material?", "label": "RAG"}
+{"input": "Set the current to 150A for 1.2mm wire.", "label": "CONTROL"}
+{"input": "Use TIGDC for 5mm thickness.", "label": "QUERY"}
+{"input": "I need the proper welding method for 4mm steel.", "label": "QUERY"}
+{"input": "What is the correct current for welding 5mm thickness with MIG?", "label": "RAG"}
+{"input": "How to weld 1.2mm wire with MIG?", "label": "RAG"}
+{"input": "Tell me about the characteristics of AlSi.", "label": "RAG"}
+{"input": "Can I weld 3mm thick metal with TIGDC?", "label": "QUERY"}
+{"input": "What happens if the wire is too thick for the material?", "label": "RAG"}
+{"input": "Set the machine to Flux welding mode.", "label": "CONTROL"}
+{"input": "What is the right current for 2.5mm thick steel?", "label": "RAG"}
+{"input": "How to adjust the wire size on the welder.", "label": "RAG"}
+{"input": "Use MMA welding for steel with 3mm thickness.", "label": "QUERY"}
+{"input": "How do I choose the correct welding method?", "label": "RAG"}
+{"input": "Set the wire thickness to 1.6 mm.", "label": "CONTROL"}
+{"input": "Can this welder handle AlMg with 5mm thickness?", "label": "QUERY"}
+{"input": "What is the recommended thickness for TIG welding?", "label": "RAG"}
+{"input": "Set the wire to 1.2mm for MIG method.", "label": "CONTROL"}
+{"input": "What is the best method for welding thick steel?", "label": "RAG"}
+{"input": "What is Flux material in welding?", "label": "RAG"}
+{"input": "MIG welding with 5mm thickness.", "label": "QUERY"}
+{"input": "What is the current setting for 1.6mm wire?", "label": "RAG"}
+{"input": "Set the current to 120A for 5mm thickness.", "label": "CONTROL"}
+{"input": "How to weld 1.2mm Al wire with TIGDC?", "label": "RAG"}
+{"input": "Use MIG for 3mm thick steel.", "label": "QUERY"}
+{"input": "What's the best wire for 5mm thick steel?", "label": "RAG"}
+{"input": "How to adjust machine for 1.6mm wire thickness?", "label": "RAG"}
+{"input": "Set machine for 5mm Al welding.", "label": "CONTROL"}
+{"input": "What are the different types of welding methods?", "label": "RAG"}
+{"input": "Decrease the voltage by 5V.", "label": "CONTROL"}
+{"input": "MIG welding for 5mm steel thickness.", "label": "QUERY"}
+{"input": "Can the machine weld 3mm thick Fe?", "label": "QUERY"}
+{"input": "What is the recommended welding method for 2.5mm material?", "label": "RAG"}
+{"input": "Set the wire to 1.6mm for TIGDC.", "label": "CONTROL"}
+{"input": "How to weld 4mm thick steel with MIG?", "label": "RAG"}
+{"input": "Set wire to 1.2mm, method is MIG.", "label": "CONTROL"}
+{"input": "What is the function of wire thickness in welding?", "label": "RAG"}
+{"input": "We want to use TIGAC for steel with thickness 3.", "label": "QUERY"}
+{"input": "What are the welding characteristics for thickness 5mm?", "label": "RAG"}
+{"input": "Set current to 150A for 1.6mm wire.", "label": "CONTROL"}
+{"input": "How to use the welder for 1.2mm thick AlSi?", "label": "RAG"}
+{"input": "What is the right wire thickness for 5mm steel?", "label": "RAG"}
+{"input": "What is 1.6mm wire for MIG welding?", "label": "RAG"}
+{"input": "Increase the current to match 5mm thickness.", "label": "CONTROL"}
+{"input": "Can I use MMA for 4mm thick steel?", "label": "QUERY"}
+{"input": "What's the correct method for 5mm thick material?", "label": "QUERY"}
+{"input": "Change the wire from 1.2mm to 1.6mm.", "label": "CONTROL"}
+{"input": "What is the standard wire thickness for MIG welding?", "label": "RAG"}
+{"input": "Set current and wire for 3mm thick steel.", "label": "CONTROL"}
+{"input": "What is the function of wire diameter in welding?", "label": "RAG"}
+{"input": "Set machine for TIGDC welding on 5mm steel.", "label": "CONTROL"}
+{"input": "How to weld 2.5mm thick Fe with MIG?", "label": "RAG"}
+{"input": "What is the recommended wire for welding 5mm thickness?", "label": "RAG"}
+{"input": "Set the machine to a current of 140A.", "label": "CONTROL"}
+{"input": "How to set the machine for 1.6mm wire diameter?", "label": "RAG"}
+{"input": "What's the recommended current for 5mm thickness?", "label": "RAG"}
+{"input": "I need to weld 5mm steel on the machine.", "label": "QUERY"}
+{"input": "Set the wire to 1.2mm and use MIG method.", "label": "CONTROL"}
+{"input": "What is the maximum thickness for Al welding?", "label": "RAG"}
+{"input": "What's the process of MIG welding on steel?", "label": "RAG"}
+{"input": "Use TIGDC with 2.5mm thickness on Fe.", "label": "QUERY"}
+{"input": "What is the proper welding method for 3mm thick Al?", "label": "RAG"}
+{"input": "How does the thickness affect the welding method?", "label": "RAG"}
+{"input": "Set current to 100A, wire is 1.2mm.", "label": "CONTROL"}
+{"input": "What is the effect of material on welding thickness?", "label": "RAG"}
+{"input": "Set machine for 4mm thick AlSi with MIG.", "label": "CONTROL"}
+{"input": "What's the best method for 5mm thick steel?", "label": "QUERY"}
+{"input": "How to weld with MMA on thick material?", "label": "RAG"}
+{"input": "Set current to 120A, thickness is 5mm.", "label": "CONTROL"}
+{"input": "Use MIG for welding 2.5mm thickness on Fe.", "label": "QUERY"}
+{"input": "What is the correct material for welding with TIGDC?", "label": "RAG"}
+{"input": "What is the standard thickness for Flux welding?", "label": "RAG"}
+{"input": "How do I know which welding method to use?", "label": "RAG"}
+{"input": "What is the maximum thickness for 1.2mm wire?", "label": "RAG"}
+{"input": "Set the machine to 1.6mm thickness and MIG method.", "label": "CONTROL"}
+{"input": "Is TIGDC suitable for 5mm thick steel?", "label": "QUERY"}
+{"input": "What happens if the thickness is too high for MIG?", "label": "RAG"}
+{"input": "Adjust the wire size for 5mm thick steel.", "label": "CONTROL"}
+{"input": "What is the best way to weld 3mm thick materials?", "label": "RAG"}
+{"input": "Use TIGAC on 2mm thick Al.", "label": "QUERY"}
+{"input": "Set current for 3mm thick Al wire.", "label": "CONTROL"}
+{"input": "What is the current setting for 4mm thick steel?", "label": "RAG"}
+{"input": "Set the wire to 1.2mm, method is MIG.", "label": "CONTROL"}
+{"input": "How to weld with flux material on 3mm thick plates?", "label": "RAG"}
+{"input": "What is the recommended method for 5mm steel welding?", "label": "QUERY"}
+{"input": "What is the correct thickness for 1.6mm wire?", "label": "RAG"}
+{"input": "What is the maximum current for welding 3mm thick material?", "label": "RAG"}
+{"input": "Can I weld with MIG on 1.6mm thickness Al?", "label": "QUERY"}
+{"input": "What is 5mm thickness for welding with TIGDC?", "label": "RAG"}
+{"input": "Set the machine to 220V for 3mm thick steel.", "label": "CONTROL"}
+{"input": "Use MMA with 2.5mm thickness on steel.", "label": "QUERY"}
+{"input": "What is the proper wire thickness for 1.2mm steel?", "label": "RAG"}
+{"input": "Set the wire thickness to 2.5mm.", "label": "CONTROL"}
+{"input": "What is the best method for 3mm thick Fe welding?", "label": "RAG"}
+{"input": "Set current to 150A for 3mm thick steel welding.", "label": "CONTROL"}
+{"input": "What is required for MIG welding on 5mm thick steel?", "label": "RAG"}
+{"input": "Increase the current by 20A.", "label": "CONTROL"}
+{"input": "What welding method is used for 1.6mm thick flux material?", "label": "RAG"}
+{"input": "Can the machine handle 2mm thick AlSi welding?", "label": "QUERY"}
+{"input": "How thick is the material for MMA welding?", "label": "RAG"}
+{"input": "Set the machine for 3mm thick steel.", "label": "CONTROL"}
+{"input": "What is the correct method for 2.5mm thick steel?", "label": "RAG"}
+{"input": "How to choose the right welding method for flux?", "label": "RAG"}
+{"input": "Set wire size to 1.2mm for MIG welding.", "label": "CONTROL"}
+{"input": "What is the material used for welding thickness 5?", "label": "RAG"}
+{"input": "Change wire diameter to 1.6mm for TIG welding.", "label": "CONTROL"}
+{"input": "What are the settings for 3mm thick material?", "label": "RAG"}
+{"input": "Use TIGDC for welding 5mm thick material.", "label": "QUERY"}
+{"input": "What is the function of the wire in welding?", "label": "RAG"}
+{"input": "Set the machine for 4mm thick Al welding.", "label": "CONTROL"}
+{"input": "What are the different welding methods for steel?", "label": "RAG"}
+{"input": "Can I use MIG for 2.5mm thick AlSi?", "label": "QUERY"}
+{"input": "What is the maximum wire size for 3mm thick steel welding?", "label": "RAG"}
+{"input": "Set wire thickness to 2.5mm and method to TIGDC.", "label": "CONTROL"}
+{"input": "How to weld 5mm thick steel with MIG?", "label": "RAG"}
+{"input": "What's the best material for thickness 2.5mm?", "label": "RAG"}
+{"input": "Change the method to TIGDC for 4mm thickness.", "label": "CONTROL"}
+{"input": "What is the recommended material for 3mm thickness welding?", "label": "RAG"}
+{"input": "What is the machine current for 5mm steel welding?", "label": "RAG"}
+{"input": "Set machine to 150A for 5mm thick material.", "label": "CONTROL"}
+{"input": "How thick is the material when using MMA welding?", "label": "RAG"}
+{"input": "Use MIG method on 3mm thick Fe.", "label": "QUERY"}
+{"input": "What's the recommended welding method for 2.5mm steel?", "label": "RAG"}
+{"input": "Can the machine weld 5mm thick material with MIG?", "label": "QUERY"}
+{"input": "Set current to 120A, method is TIGDC.", "label": "CONTROL"}
+{"input": "What is the welding material for 5mm thick plates?", "label": "RAG"}
+{"input": "Use Flux material with 3mm thickness.", "label": "QUERY"}
+{"input": "What is the current for 5mm thick steel welding?", "label": "RAG"}
+{"input": "Set wire to 1.6mm for 5mm thick material.", "label": "CONTROL"}
+{"input": "Which material is suitable for 3mm thick welding with TIGDC?", "label": "RAG"}
+{"input": "Set the machine to 1.2mm wire and MIG method.", "label": "CONTROL"}
+{"input": "What is the right thickness for Flux welding?", "label": "RAG"}
+{"input": "What is the proper welding method for 4mm thick steel?", "label": "RAG"}
+{"input": "Decrease current to 100A for 5mm thickness.", "label": "CONTROL"}
+{"input": "Use TIGAC for 3mm Al welding.", "label": "QUERY"}
+{"input": "How to weld 1.2mm thick material with MIG?", "label": "RAG"}
+{"input": "Set the wire thickness to 4mm for 5mm material.", "label": "CONTROL"}
+{"input": "What is the best thickness for welding with MIG on steel?", "label": "RAG"}
+{"input": "What are the settings for 5mm thick steel welding?", "label": "RAG"}
+{"input": "Set the current to match 5mm thickness.", "label": "CONTROL"}
+{"input": "How does wire thickness affect the welding outcome?", "label": "RAG"}
+{"input": "Can you set the machine to 3mm thickness and MIG welding?", "label": "CONTROL"}
+{"input": "What is the recommended method for 4mm thick flux material?", "label": "RAG"}
+{"input": "Set machine to MIG, wire is 1.6mm.", "label": "CONTROL"}
+{"input": "Which wire is best for 4mm thick steel welding?", "label": "RAG"}
+{"input": "How to weld 3mm thick Fe with TIGDC?", "label": "RAG"}
+{"input": "Use 1.2mm wire and MIG for 5mm thickness.", "label": "CONTROL"}
+{"input": "What is the material for welding 2.5mm thickness?", "label": "RAG"}
+{"input": "Set to TIGDC for 5mm thick AlMg.", "label": "CONTROL"}
+{"input": "What's the process for welding 5mm thick steel?", "label": "RAG"}
+{"input": "How to set the current for 3mm thick material welding?", "label": "RAG"}
+{"input": "Change the wire size to 1.2mm.", "label": "CONTROL"}
+{"input": "Can this machine handle 4mm thick Al welding?", "label": "QUERY"}
+{"input": "What welding method should I use for 5mm thick steel?", "label": "RAG"}
+{"input": "Set the wire to 1.6mm for 4mm thick material.", "label": "CONTROL"}
+{"input": "What is the function of the welding current?", "label": "RAG"}
+{"input": "What is the wire size for welding 5mm steel?", "label": "RAG"}
+{"input": "Can I use MIG for 3mm thick steel plates?", "label": "QUERY"}
+{"input": "What is the current setting for 1.6mm wire welding?", "label": "RAG"}
+{"input": "Set wire to 1.2mm, material is steel.", "label": "CONTROL"}
+{"input": "What is the welding process for Flux material?", "label": "RAG"}
+{"input": "Use TIGDC with 3mm thick steel.", "label": "QUERY"}
+{"input": "How to adjust the wire diameter for 5mm thick material?", "label": "RAG"}
+{"input": "Set the machine to MIG for 4mm thickness.", "label": "CONTROL"}
+{"input": "What happens if I weld with 1.2mm wire on 5mm thickness?", "label": "RAG"}
+{"input": "What is the recommended method for 1.6mm thick steel?", "label": "RAG"}
+{"input": "Set machine for 5mm thick material and MIG method.", "label": "CONTROL"}
+{"input": "How thick is the steel welding material?", "label": "RAG"}
+{"input": "Set the current to 100A for 2.5mm thick material.", "label": "CONTROL"}
+{"input": "What is the correct method for 4mm thick Al welding?", "label": "RAG"}
+{"input": "Can the machine weld 5mm thick steel with MMA?", "label": "QUERY"}
+{"input": "Set wire to 1.2mm for 5mm thick steel welding.", "label": "CONTROL"}
+{"input": "What is the function of the thickness in welding?", "label": "RAG"}
+{"input": "Which method is better for 3mm thick steel welding?", "label": "RAG"}
+{"input": "Set the machine to TIGDC, thickness is 5mm.", "label": "CONTROL"}
+{"input": "What is the wire thickness for 4mm material welding?", "label": "RAG"}
+{"input": "Use 1.6mm wire for 5mm thick materials.", "label": "CONTROL"}
+{"input": "What is the material for 4mm thick welding?", "label": "RAG"}
+{"input": "How to set the machine for 3mm thick AlSi welding?", "label": "CONTROL"}
+{"input": "Set wire to 2.5mm for MIG on steel.", "label": "CONTROL"}
+{"input": "Change the wire size from 1.6mm to 2.5mm.", "label": "CONTROL"}
+{"input": "Can this machine handle 5mm thick Al welding?", "label": "QUERY"}
+{"input": "How to adjust the machine for 5mm thick materials?", "label": "RAG"}
+{"input": "Set the machine to 1.6mm wire and TIGDC method.", "label": "CONTROL"}
+{"input": "What is the correct method for 5mm thick welding?", "label": "RAG"}
+{"input": "Set wire thickness to 1.2mm for MIG welding.", "label": "CONTROL"}
+{"input": "What's the maximum wire thickness for TIG welding on steel?", "label": "RAG"}
+{"input": "Use MMA method for 2.5mm thick steel welding.", "label": "QUERY"}
+{"input": "What is the welding current for 1.6mm thick material?", "label": "RAG"}
+{"input": "Set the wire to 5mm thickness and MIG method.", "label": "CONTROL"}
+{"input": "How to set up the welder for welding 5mm thick steel?", "label": "RAG"}
+{"input": "Can the machine handle 5mm thick material with MIG?", "label": "QUERY"}
+{"input": "What is the wire current setting for 4mm thick welding?", "label": "RAG"}
+{"input": "Set the current to 150A for 5mm thick Al welding.", "label": "CONTROL"}
+{"input": "How thick is the material when using MIG method?", "label": "RAG"}
+{"input": "What is the correct method for 3mm thick Fe welding?", "label": "RAG"}
+{"input": "Set the thickness to 4mm for TIGDC welding.", "label": "CONTROL"}
+{"input": "What is the welding material for 5mm thick plates?", "label": "RAG"}
+{"input": "Set machine for MIG with 3mm thickness.", "label": "CONTROL"}
+{"input": "How to adjust the current for 5mm thick welding?", "label": "RAG"}
+{"input": "What is the thickness of the material?", "label": "RAG"}
+{"input": "Set the wire to 1.2mm for 3mm thick Al welding.", "label": "CONTROL"}
+{"input": "What is the function of wire thickness in welding?", "label": "RAG"}
+{"input": "Set the machine for 4mm thick material and MIG method.", "label": "CONTROL"}
+{"input": "Can I weld 5mm thick steel using TIGDC method?", "label": "QUERY"}
+{"input": "Set the thickness to 5mm for MMA welding.", "label": "CONTROL"}
+{"input": "Can the machine handle 3mm thick steel with MIG method?", "label": "QUERY"}
+{"input": "What is the recommended wire size for 5mm thick welding?", "label": "RAG"}
+{"input": "Decrease the thickness setting to 3mm.", "label": "CONTROL"}
+{"input": "Set wire to 1.6mm and use TIGAC for 5mm thick material.", "label": "CONTROL"}
+{"input": "What is the best way to weld 2.5mm thick material?", "label": "RAG"}
+{"input": "Set current to 120A for 2.5mm thick steel welding.", "label": "CONTROL"}
+{"input": "What is the thickness setting for Flux welding?", "label": "RAG"}
+{"input": "How thick is the material if using MIG method?", "label": "RAG"}
+{"input": "Set the thickness to 1.6mm and wire to 1.2mm.", "label": "CONTROL"}
+{"input": "What is the wire size for welding 5mm thick Fe?", "label": "RAG"}
+{"input": "Set the current to handle 5mm thick material.", "label": "CONTROL"}
+{"input": "Use TIGDC method for 3mm thick Al welding.", "label": "QUERY"}
+{"input": "What is the best thickness for welding with MMA?", "label": "RAG"}
+{"input": "Set the wire diameter to 1.2mm for 5mm thick steel.", "label": "CONTROL"}
+{"input": "Can I use MIG welding for 5mm thick steel?", "label": "QUERY"}
+{"input": "Set wire to 1.6mm and thickness to 5mm.", "label": "CONTROL"}
+{"input": "How to weld 5mm thick steel with MIG method?", "label": "RAG"}
+{"input": "Set machine to current 150A and wire 1.2mm.", "label": "CONTROL"}
+{"input": "What is the material for welding with MIG on 5mm thickness?", "label": "RAG"}
+{"input": "Use TIGAC for 5mm thick Flux welding.", "label": "CONTROL"}
+{"input": "How to adjust the machine for 4mm thick Al welding?", "label": "CONTROL"}
+{"input": "What is the function of welding thickness?", "label": "RAG"}
+{"input": "Set the wire to 2.5mm for 5mm thick material.", "label": "CONTROL"}
+{"input": "What is the thickness of the steel welding material?", "label": "RAG"}
+{"input": "Set the machine to MIG with 1.2mm wire and 5mm thickness.", "label": "CONTROL"}
+{"input": "What's the effect of material type on thickness?", "label": "RAG"}
+{"input": "Set the wire to 1.6mm for 3mm thick Fe welding.", "label": "CONTROL"}
+{"input": "What is the best wire for 5mm thick steel welding?", "label": "RAG"}
+{"input": "Use MIG welding for 5mm thick steel materials.", "label": "QUERY"}
+{"input": "Can the machine handle 5mm thick material with MIG method?", "label": "QUERY"}
+{"input": "Set machine for 5mm thick material and MIG method.", "label": "CONTROL"}
+{"input": "How to weld with TIGDC method on 5mm thick steel?", "label": "RAG"}
+{"input": "Set the thickness to 5mm for TIG welding on Fe.", "label": "CONTROL"}
+{"input": "What is the thickness for welding with MIG on steel?", "label": "RAG"}
+{"input": "Set wire size to 1.6mm, method is TIGDC, thickness is 5.", "label": "CONTROL"}
+{"input": "What are the steps for welding 5mm thick steel with MIG?", "label": "RAG"}
+{"input": "Change the wire diameter to 1.2mm for 5mm thick welding.", "label": "CONTROL"}
+{"input": "How to weld 1.6mm wire with 5mm thickness?", "label": "RAG"}
+{"input": "What is the correct method for 5mm thick Al welding?", "label": "RAG"}
+{"input": "Set the machine for 5mm thick Al welding with MIG.", "label": "CONTROL"}
+{"input": "Set current to 140A for 4mm thick material welding.", "label": "CONTROL"}
+{"input": "What is the best welding method for 3mm thick steel?", "label": "RAG"}
+{"input": "What wire size is needed for 5mm thick material?", "label": "RAG"}
+{"input": "Set the wire to 1.6mm and use MIG for 5mm thick welding.", "label": "CONTROL"}
+{"input": "Can this machine weld 5mm thick Al material?", "label": "QUERY"}
+{"input": "Set the wire to 1.6mm for welding with TIGDC method.", "label": "CONTROL"}
+{"input": "What's the recommended method for 4mm thick steel welding?", "label": "RAG"}
+{"input": "Set current to 100A, wire is 1.2mm, material is steel.", "label": "CONTROL"}
+{"input": "How to adjust the machine for 2.5mm thick material welding?", "label": "RAG"}
+{"input": "Set the welding machine for 5mm thick steel with MIG.", "label": "CONTROL"}
+{"input": "What is the correct material for 5mm thick welding?", "label": "RAG"}
+{"input": "Set the thickness to 4mm for Flux welding.", "label": "CONTROL"}
+{"input": "Set the wire to 1.6mm for 4mm thick material welding.", "label": "CONTROL"}
+{"input": "Use MMA welding for 5mm thick materials.", "label": "QUERY"}
+{"input": "Can the welder handle 5mm thick Fe welding?", "label": "QUERY"}
+{"input": "Set current to 150A and wire to 1.2mm for 5mm thick steel welding.", "label": "CONTROL"}
+{"input": "What's the right method for welding 5mm thick steel?", "label": "RAG"}
+{"input": "Set machine for TIG welding on 2.5mm thick material.", "label": "CONTROL"}
+{"input": "How does the machine handle 5mm thick material welding?", "label": "RAG"}
+{"input": "What's the thickness of the material for Flux welding?", "label": "RAG"}
+{"input": "Set the wire diameter to 1.6mm for 5mm thick Fe welding.", "label": "CONTROL"}
+{"input": "What is the function of welding wire thickness?", "label": "RAG"}
+{"input": "Set wire thickness to 5mm for MIG welding.", "label": "CONTROL"}
+{"input": "What is the recommended current for 4mm thick Al welding?", "label": "RAG"}
+{"input": "Set the machine to MMA, wire is 1.2mm, thickness is 5mm.", "label": "CONTROL"}
+{"input": "Can I use MIG for 5mm thick Al material?", "label": "QUERY"}
+{"input": "Set the wire to 1.2mm and thickness to 5mm.", "label": "CONTROL"}
+{"input": "What's the maximum thickness for welding with TIGDC method?", "label": "RAG"}
+{"input": "What wire thickness is needed for steel welding with 5mm thickness?", "label": "RAG"}
+{"input": "Adjust the current for 5mm thick material welding.", "label": "CONTROL"}
+{"input": "Set the machine for MIG, 1.2mm wire, 5mm thick steel.", "label": "CONTROL"}
+{"input": "What is the recommended thickness for AlMg welding?", "label": "RAG"}
+{"input": "Set the thickness to 3mm for MIG welding on Fe.", "label": "CONTROL"}
+{"input": "What is the correct wire size for 5mm thick material welding?", "label": "RAG"}
+{"input": "Change MIG method to weld 5mm thick steel.", "label": "CONTROL"}
+{"input": "What is the recommended welding method for 2.5mm thick steel?", "label": "RAG"}
+{"input": "How to set the machine for 5mm thick material?", "label": "CONTROL"}
+{"input": "What's the proper welding method for 5mm thick AlSi?", "label": "RAG"}
+{"input": "Steel 5 mm plate, mig.", "label": "QUERY"}
+{"input": "Al 3 mm sheet, tig_ac.", "label": "QUERY"}
+{"input": "Fe 4 mm plate, mig.", "label": "QUERY"}
+{"input": "AlMg 2 mm panel, mig.", "label": "QUERY"}
+{"input": "What is Steel as a material and what properties does it have?", "label": "RAG"}
+{"input": "What basic properties does Al have compared to Steel?", "label": "RAG"}
+{"input": "What are the typical mechanical properties of Fe in welding?", "label": "RAG"}
+{"input": "AlSi 1.5 mm casting, mig.", "label": "QUERY"}
+{"input": "Set process to mig on Steel.", "label": "CONTROL"}
+{"input": "What is AlMg alloy and what properties make it good for welding?", "label": "RAG"}
+{"input": "Steel 3 mm tube, mig.", "label": "QUERY"}
+{"input": "Al 2 mm roof skin, mig.", "label": "QUERY"}
+{"input": "AlMg 4 mm hull plate, tig_ac.", "label": "QUERY"}
+{"input": "Fe 6 mm flange, mma.", "label": "QUERY"}
+{"input": "What properties make stainless Steel different from mild Steel?", "label": "RAG"}
+{"input": "What is Flux wire and what properties does its slag have?", "label": "RAG"}
+{"input": "What is CuSi wire and what advantages do its properties give?", "label": "RAG"}
+{"input": "Al 1 mm panel, tig_ac only.", "label": "QUERY"}
+{"input": "Switch active method to tig_dc.", "label": "CONTROL"}
+{"input": "What does yield strength mean when we talk about Steel properties?", "label": "RAG"}
+{"input": "Steel 8 mm base plate, mma.", "label": "QUERY"}
+{"input": "Al 4 mm tread plate, mig.", "label": "QUERY"}
+{"input": "Fe 3 mm bracket, mig.", "label": "QUERY"}
+{"input": "AlSi 2 mm body panel, mig.", "label": "QUERY"}
+{"input": "What is high strength Steel and what key properties define it?", "label": "RAG"}
+{"input": "What main properties of Al affect distortion in welding?", "label": "RAG"}
+{"input": "What typical density and melting range does Steel have?", "label": "RAG"}
+{"input": "AlMg 3 mm extrusion, mig.", "label": "QUERY"}
+{"input": "Enable mig mode for Fe.", "label": "CONTROL"}
+{"input": "What mechanical properties does AlMg show in shipbuilding?", "label": "RAG"}
+{"input": "Steel 1 mm car body, mig.", "label": "QUERY"}
+{"input": "Al 2.5 mm tube, tig_ac.", "label": "QUERY"}
+{"input": "Fe 5 mm tee joint, mma.", "label": "QUERY"}
+{"input": "AlSi 1 mm rail, mig.", "label": "QUERY"}
+{"input": "What is mild Steel and which basic properties does it have?", "label": "RAG"}
+{"input": "What is Fe in metallurgy and how do its properties compare to Steel?", "label": "RAG"}
+{"input": "What are the main toughness properties required for structural Steel?", "label": "RAG"}
+{"input": "Al 3 mm corner joint, mig.", "label": "QUERY"}
+{"input": "Change process from mma to mig.", "label": "CONTROL"}
+{"input": "What is AlSi and what are its typical weld metal properties?", "label": "RAG"}
+{"input": "Steel 6 mm column web, mig.", "label": "QUERY"}
+{"input": "Al 1.2 mm skin, mig plug welds.", "label": "QUERY"}
+{"input": "Fe 2 mm sheet, mig.", "label": "QUERY"}
+{"input": "AlMg 2 mm hull seam, mig.", "label": "QUERY"}
+{"input": "What property makes Steel stronger than pure Fe?", "label": "RAG"}
+{"input": "What are the main physical properties of Al relevant to welding?", "label": "RAG"}
+{"input": "What hardness levels can welded Steel typically reach?", "label": "RAG"}
+{"input": "Al 5 mm plate, tig_ac.", "label": "QUERY"}
+{"input": "Lock method to mig for Steel.", "label": "CONTROL"}
+{"input": "What properties of Flux wire make it suitable for outdoor welding?", "label": "RAG"}
+{"input": "Steel 4 mm angle, mma.", "label": "QUERY"}
+{"input": "Al 3 mm sheet, mig spray.", "label": "QUERY"}
+{"input": "Fe 8 mm plate, mig groove.", "label": "QUERY"}
+{"input": "AlSi 2 mm patch panel, mig.", "label": "QUERY"}
+{"input": "What is the basic definition of Steel in simple words?", "label": "RAG"}
+{"input": "What thermal expansion properties does Al have?", "label": "RAG"}
+{"input": "What is carbon Steel and what properties distinguish it?", "label": "RAG"}
+{"input": "AlMg 3.5 mm frame, mig.", "label": "QUERY"}
+{"input": "Set welding mode to tig_ac.", "label": "CONTROL"}
+{"input": "What property differences exist between Fe and Steel in welding?", "label": "RAG"}
+{"input": "Steel 2 mm patch, mig stitch.", "label": "QUERY"}
+{"input": "Al 2 mm panel, tig_ac butt.", "label": "QUERY"}
+{"input": "Fe 3 mm sheet, mig lap.", "label": "QUERY"}
+{"input": "AlMg 2 mm profile, mig.", "label": "QUERY"}
+{"input": "What is Al and why is its high conductivity an important property?", "label": "RAG"}
+{"input": "What are typical tensile strength values for structural Steel?", "label": "RAG"}
+{"input": "What ductility properties does mild Steel usually have?", "label": "RAG"}
+{"input": "AlSi 1.2 mm panel, mig seam.", "label": "QUERY"}
+{"input": "Activate mma on Steel only.", "label": "CONTROL"}
+{"input": "What properties of CuSi wire help reduce distortion on thin Steel?", "label": "RAG"}
+{"input": "Steel 3 mm tube, tig_dc.", "label": "QUERY"}
+{"input": "Al 6 mm plate, mig.", "label": "QUERY"}
+{"input": "Fe 2.5 mm sheet, mig.", "label": "QUERY"}
+{"input": "AlMg 5 mm deck plate, tig_ac.", "label": "QUERY"}
+{"input": "What is stainless Steel and what corrosion properties define it?", "label": "RAG"}
+{"input": "What is the typical density of Al compared to Steel?", "label": "RAG"}
+{"input": "How does thickness affect mechanical properties of a Steel weld?", "label": "RAG"}
+{"input": "Al 1.5 mm cover, mig.", "label": "QUERY"}
+{"input": "Switch startup process to mig.", "label": "CONTROL"}
+{"input": "What properties make AlMg popular for marine structures?", "label": "RAG"}
+{"input": "Steel 10 mm plate, mma heavy weld.", "label": "QUERY"}
+{"input": "Al 1 mm tank skin, mig.", "label": "QUERY"}
+{"input": "Fe 5 mm stiffener, mig.", "label": "QUERY"}
+{"input": "AlSi 2.5 mm rail, mig.", "label": "QUERY"}
+{"input": "What is Fe microstructure like and how does it affect properties?", "label": "RAG"}
+{"input": "What are the main properties of high strength Steel weld metal?", "label": "RAG"}
+{"input": "What property of Steel mainly controls its weldability?", "label": "RAG"}
+{"input": "AlMg 3 mm transom, mig.", "label": "QUERY"}
+{"input": "Turn off tig_ac mode.", "label": "CONTROL"}
+{"input": "What is Flux and what are the key properties of its slag system?", "label": "RAG"}
+{"input": "Steel 5 mm gusset, mig.", "label": "QUERY"}
+{"input": "Al 2 mm tube, tig_ac fillet.", "label": "QUERY"}
+{"input": "Fe 4 mm plate, mma.", "label": "QUERY"}
+{"input": "AlSi 1 mm strip, mig.", "label": "QUERY"}
+{"input": "What is mild Steel and why are its toughness properties important?", "label": "RAG"}
+{"input": "What thermal properties of Al affect cooling speed of welds?", "label": "RAG"}
+{"input": "What impact toughness is typically required for structural Steel?", "label": "RAG"}
+{"input": "AlMg 2 mm bracket, mig.", "label": "QUERY"}
+{"input": "Allow mig and tig_dc, block mma.", "label": "CONTROL"}
+{"input": "What are the basic fatigue properties of Steel welds?", "label": "RAG"}
+{"input": "Steel 2 mm sheet, mig short-arc.", "label": "QUERY"}
+{"input": "Al 3 mm hatch cover, mig.", "label": "QUERY"}
+{"input": "Fe 6 mm web, mma.", "label": "QUERY"}
+{"input": "AlMg 2 mm car panel, mig.", "label": "QUERY"}
+{"input": "What is Al and what stiffness and strength properties does it show?", "label": "RAG"}
+{"input": "What basic elastic properties does Steel have?", "label": "RAG"}
+{"input": "What hardness and toughness balance is common in mild Steel?", "label": "RAG"}
+{"input": "AlSi 1.8 mm casting, mig.", "label": "QUERY"}
+{"input": "Set tig_dc as default process.", "label": "CONTROL"}
+{"input": "What microstructural properties give stainless Steel corrosion resistance?", "label": "RAG"}
+{"input": "Steel 7 mm flange, mig spray.", "label": "QUERY"}
+{"input": "Al 2 mm floor plate, mig.", "label": "QUERY"}
+{"input": "Fe 3 mm angle, tig_dc.", "label": "QUERY"}
+{"input": "AlMg 4 mm panel, mig spray.", "label": "QUERY"}
+{"input": "What typical properties does AlSi weld metal have?", "label": "RAG"}
+{"input": "What is Fe and what are its key physical properties?", "label": "RAG"}
+{"input": "What tensile strength range do common structural Steels cover?", "label": "RAG"}
+{"input": "Al 1.2 mm roof skin, mig.", "label": "QUERY"}
+{"input": "Force mig-only operation on Steel.", "label": "CONTROL"}
+{"input": "What properties of Al cause more distortion than Steel during welding?", "label": "RAG"}
+{"input": "Steel 3 mm bracket, mig.", "label": "QUERY"}
+{"input": "Al 4 mm tube, tig_ac.", "label": "QUERY"}
+{"input": "Fe 2 mm patch, mig plug.", "label": "QUERY"}
+{"input": "AlMg 3 mm rib, mig.", "label": "QUERY"}
+{"input": "What is CuSi wire and which mechanical properties does its weld metal show?", "label": "RAG"}
+{"input": "What is Steel and how do alloying elements change its properties?", "label": "RAG"}
+{"input": "What are the typical toughness properties of weld metal in Steel?", "label": "RAG"}
+{"input": "AlSi 2 mm seam, mig.", "label": "QUERY"}
+{"input": "Enable process switching between mig and mma.", "label": "CONTROL"}
+{"input": "What properties distinguish high strength Steel from mild Steel?", "label": "RAG"}
+{"input": "Steel 1.5 mm sheet, mig spots.", "label": "QUERY"}
+{"input": "Al 2 mm bracket, mig.", "label": "QUERY"}
+{"input": "Fe 3 mm plate, tig_dc root.", "label": "QUERY"}
+{"input": "AlMg 2.5 mm panel, tig_ac.", "label": "QUERY"}
+{"input": "What is AlMg and what combination of strength and ductility does it offer?", "label": "RAG"}
+{"input": "What is Flux wire and what impact does it have on weld metal properties?", "label": "RAG"}
+{"input": "What is the basic stress–strain behavior of mild Steel?", "label": "RAG"}
+{"input": "AlSi 1 mm corner joint, mig.", "label": "QUERY"}
+{"input": "Set unit to mma-only for Steel.", "label": "CONTROL"}
+{"input": "What properties of Fe change most when it is turned into Steel?", "label": "RAG"}
+{"input": "Steel 6 mm support plate, mig.", "label": "QUERY"}
+{"input": "Al 3 mm deck panel, tig_ac.", "label": "QUERY"}
+{"input": "Fe 4 mm channel, mig.", "label": "QUERY"}
+{"input": "AlMg 3 mm stringer, mig.", "label": "QUERY"}
+{"input": "What properties describe the toughness of Steel at low temperatures?", "label": "RAG"}
+{"input": "What is Al and what typical modulus of elasticity does it have?", "label": "RAG"}
+{"input": "What are the common property differences between carbon Steel and stainless Steel?", "label": "RAG"}
+{"input": "AlSi 2 mm roof rail, mig.", "label": "QUERY"}
+{"input": "Allow tig_ac on Al, block tig_dc on Steel.", "label": "CONTROL"}
+{"input": "What mechanical properties define structural Steel grades like S355?", "label": "RAG"}
+{"input": "Steel 2 mm panel, mig lap.", "label": "QUERY"}
+{"input": "Al 5 mm frame, mig.", "label": "QUERY"}
+{"input": "Fe 3 mm cover plate, mma.", "label": "QUERY"}
+{"input": "AlMg 2 mm hull side, mig.", "label": "QUERY"}
+{"input": "What is Steel and why is its yield strength property important?", "label": "RAG"}
+{"input": "What is Fe and how does its crystal structure affect its properties?", "label": "RAG"}
+{"input": "What resistance to cracking should high strength Steel welds have?", "label": "RAG"}
+{"input": "AlSi 1.3 mm panel, mig.", "label": "QUERY"}
+{"input": "Set material to Steel and keep process mig.", "label": "CONTROL"}
+{"input": "What properties does Al have that cause lower strength at high temperatures?", "label": "RAG"}
+{"input": "Steel 8 mm splice, mma.", "label": "QUERY"}
+{"input": "Al 2 mm door skin, mig.", "label": "QUERY"}
+{"input": "Fe 5 mm bar, mig.", "label": "QUERY"}
+{"input": "AlMg 4 mm transom plate, mig.", "label": "QUERY"}
+{"input": "What is AlSi and what properties make it useful for casting repairs?", "label": "RAG"}
+{"input": "What are the base mechanical properties of Fe before alloying?", "label": "RAG"}
+{"input": "What is the typical impact energy required for structural Steel tests?", "label": "RAG"}
+{"input": "Al 1.8 mm sheet, tig_ac.", "label": "QUERY"}
+{"input": "Change active material from Al to Fe.", "label": "CONTROL"}
+{"input": "What properties of Flux welds affect slag removal effort?", "label": "RAG"}
+{"input": "Steel 3 mm patch, mig.", "label": "QUERY"}
+{"input": "Al 3 mm panel, mig.", "label": "QUERY"}
+{"input": "Fe 2 mm sheet, tig_dc.", "label": "QUERY"}
+{"input": "AlMg 2 mm tank wall, tig_ac.", "label": "QUERY"}
+{"input": "What is Steel and how do its strength properties vary with alloying?", "label": "RAG"}
+{"input": "What is Al and how do its properties influence weld pool control?", "label": "RAG"}
+{"input": "What stiffness properties are important when choosing Steel grades?", "label": "RAG"}
+{"input": "AlSi 2 mm cover, mig fillet.", "label": "QUERY"}
+{"input": "Enable mig for Steel and tig_ac for Al.", "label": "CONTROL"}
+{"input": "What properties of AlMg change when magnesium content increases?", "label": "RAG"}
+{"input": "Steel 6 mm bracket, mig.", "label": "QUERY"}
+{"input": "Al 2 mm fuel tank skin, mig.", "label": "QUERY"}
+{"input": "Fe 3 mm frame, mma.", "label": "QUERY"}
+{"input": "AlMg 3 mm bulkhead, mig.", "label": "QUERY"}
+{"input": "What is Fe and what are its key thermal properties?", "label": "RAG"}
+{"input": "What is mild Steel and what typical strength range does it offer?", "label": "RAG"}
+{"input": "What fracture toughness properties do critical Steel welds need?", "label": "RAG"}
+{"input": "AlSi 1 mm body trim, mig.", "label": "QUERY"}
+{"input": "Lock tig_ac mode for all Al jobs.", "label": "CONTROL"}
+{"input": "What is CuSi and how do its weld metal properties compare to Steel welds?", "label": "RAG"}
+{"input": "Steel 4 mm base plate, mig.", "label": "QUERY"}
+{"input": "Al 2.2 mm panel, tig_ac.", "label": "QUERY"}
+{"input": "Fe 4 mm sheet, mig.", "label": "QUERY"}
+{"input": "AlMg 2.8 mm profile, mig.", "label": "QUERY"}
+{"input": "What are the typical elastic properties of carbon Steel?", "label": "RAG"}
+{"input": "What are the main conductivity properties of Al in welding?", "label": "RAG"}
+{"input": "What is the usual hardness range for normalized Steel?", "label": "RAG"}
+{"input": "AlSi 1.6 mm panel, mig stitch.", "label": "QUERY"}
+{"input": "Turn off mma mode for this job.", "label": "CONTROL"}
+{"input": "What properties make stainless Steel resistant to atmospheric corrosion?", "label": "RAG"}
+{"input": "Steel 5 mm flange, mig spray.", "label": "QUERY"}
+{"input": "Al 3 mm hatch, mig.", "label": "QUERY"}
+{"input": "Fe 3.5 mm plate, tig_dc.", "label": "QUERY"}
+{"input": "AlMg 2 mm frame, mig short-arc.", "label": "QUERY"}
+{"input": "What is Steel and how does its microstructure affect its properties?", "label": "RAG"}
+{"input": "What is Al and why do its properties demand higher travel speeds?", "label": "RAG"}
+{"input": "What are the typical stress–strain properties of high strength Steel?", "label": "RAG"}
+{"input": "AlSi 2 mm seam, mig plug welds.", "label": "QUERY"}
+{"input": "Set quick-select to mig for Steel.", "label": "CONTROL"}
+{"input": "What properties of Flux influence penetration and bead shape?", "label": "RAG"}
+{"input": "Steel 2 mm automotive panel, mig.", "label": "QUERY"}
+{"input": "Al 4 mm deck plate, tig_ac.", "label": "QUERY"}
+{"input": "Fe 5 mm bracket, mma.", "label": "QUERY"}
+{"input": "AlMg 3 mm door, mig.", "label": "QUERY"}
+{"input": "What is Fe and what properties make it a good base for Steel alloys?", "label": "RAG"}
+{"input": "What are the main stiffness and strength properties of mild Steel?", "label": "RAG"}
+{"input": "What properties does AlMg offer in terms of corrosion resistance?", "label": "RAG"}
+{"input": "AlSi 1.4 mm patch, mig.", "label": "QUERY"}
+{"input": "Allow only mig and tig_dc processes.", "label": "CONTROL"}
+{"input": "What key properties of Steel are checked in a material certificate?", "label": "RAG"}
+{"input": "Steel 9 mm plate, mma.", "label": "QUERY"}
+{"input": "Al 2 mm roof panel, mig seam.", "label": "QUERY"}
+{"input": "Fe 2.5 mm sheet, mig plug.", "label": "QUERY"}
+{"input": "AlMg 2 mm hull bottom, mig.", "label": "QUERY"}
+{"input": "What is Steel and what plastic deformation properties does it have?", "label": "RAG"}
+{"input": "What is Al and how do its thermal properties affect preheat needs?", "label": "RAG"}
+{"input": "What fracture properties do Steel welds need in cold climates?", "label": "RAG"}
+{"input": "AlSi 1.8 mm panel, mig lap.", "label": "QUERY"}
+{"input": "Switch Steel material jobs to mma by default.", "label": "CONTROL"}
+{"input": "What properties of high strength Steel make it sensitive to heat input?", "label": "RAG"}

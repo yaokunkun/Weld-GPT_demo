@@ -1,34 +1,53 @@
 import ast
 from fastapi import HTTPException, APIRouter, Body
-from app.services.paramService import get_index_and_thickness, add, update, convert_slot_to_true_value
-
+from app.services.paramService import add2,del3,del2,get_id_user4,find2,find_by_userID2,del_all
 
 router = APIRouter()
 
-@router.post("/add_and_update", response_model=dict)
-def add_and_update(userID, method, material, thickness, diameter, params):
-    params = ast.literal_eval(params)
-    # 1.先根据`WeldingMethod`、`WeldingMaterial`、`WireDiameter`，来**查询**目前有哪些`ParamIndex`
-    index_and_thickness = get_index_and_thickness(method, material, diameter)
-    # 2.返回的结果如果为空，则调用**增加功能**，当前的`ParamIndex`为1；
-    # 如果不为空，再判断当前的焊接厚度是否包含在其中：如果包含，则调用**更新功能**，`ParamIndex`为其厚度所在的；
-    # 反之则调用**增加功能**，`ParamIndex`为当前最大值+1。
-    if index_and_thickness is None or len(index_and_thickness) == 0:  # 如果返回结果为空
-        paramIndex = 1
-        return add(method, material, thickness, diameter, paramIndex, params, userID)
-    else:  # 如果返回结果不为空
-        # 把用户添加的厚度在公共表中所存储的-100改为真实值
-        new_index_and_thickness = {}
-        for data_index, param_index, candidate_thickness in index_and_thickness:
-            if str(candidate_thickness) == "-100":
-                candidate_thickness = convert_slot_to_true_value(userID, data_index)
-            if str(candidate_thickness) != "-100":
-                new_index_and_thickness[param_index] = candidate_thickness
 
-        candidate_paramIndex = [index for index, candidate_thickness in new_index_and_thickness.items() if float(candidate_thickness) == float(thickness)]  # 判断焊接厚度在不在刚才的结果里，如果在并取出对应的paramIndex
-        if len(candidate_paramIndex) != 0:  # 如果焊接厚度在刚才的返回结果里面
-            paramIndex = candidate_paramIndex[0]
-            return update(method, material, diameter, paramIndex, params, userID)
-        else:
-            paramIndex = max(index_and_thickness, key=lambda x: x[1])[0] + 1
-            return add(method, material, thickness, diameter, paramIndex, params, userID)
+@router.post("/find_user_param_data", response_model=dict)
+def find_user_param_data(userID):
+    return find2(find_by_userID2(userID))
+
+@router.post("/add_user_param_data", response_model=dict)
+def add_user_param_data(userID, method, material, thickness, diameter, params):
+    params = ast.literal_eval(params)
+    # 使用精确匹配来检查是否已存在完全相同的参数组合
+    result = get_id_user4(userID, method, material, thickness, diameter)
+    
+    # 如果没找到完全相同的组合，允许添加
+    if not result:
+        return add2(userID, method, material, thickness, diameter, params)
+    else:
+        con={'info': "查询到同名数据，是否删除并更新？","content":""}
+        con["content"]=result
+        return  con
+    
+
+@router.post("/del_user_param_data", response_model=dict)
+def del_user_param_data(userID, ID:int):
+    IDS=find_by_userID2(userID)
+    id_access=[id_pair[0] for id_pair in IDS]
+    print (id_access)   
+    if ID in id_access:
+        return del2(ID)
+        
+    else:
+        return {'info':"您删除的数据,不是你的账户所能删除的"}
+    
+@router.post("/del_all_user_param_data", response_model=dict)
+def del_user_param_data(userID:int):
+    return del_all(userID)
+    
+@router.post("/update_user_param_data", response_model=dict)
+def update_user_param_data(userID, method, material, thickness, diameter, params):
+    params = ast.literal_eval(params)
+    result = get_id_user4(userID, method, material, thickness, diameter)
+    # 如果没找到匹配的数据
+    if not result:
+        return {'info': "您更新的数据不存在"}
+    #找到了，就删除
+    else:
+        information=del3(userID, method, material, thickness, diameter)
+        information.update(add2(userID, method, material, thickness, diameter, params))
+    return information

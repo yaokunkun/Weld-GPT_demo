@@ -20,7 +20,7 @@ mapping_query_value2standard_value = possible_param_values
 number_values_list = [item for value_list in number_values.values() for item in value_list]
 number_values_list = sorted(number_values_list, key=len, reverse=True)
 # 所有焊接方法的列表
-key_list = ["MIG", "GMAW", "AW", "TIG", "FCAW", "FCW-G", "FCW-S", "GMAW-P", "GMAW-S", "GTAW", "GTAW-P", "SMAW"]
+key_list = ["MIG", "MMA","TIG_AC", "TIG_DC"]
 method_list = [item for key in key_list  for item in possible_param_values[key]]
 method_list = sorted(method_list, key=len, reverse=True)
 # 所有焊接材料的列表
@@ -204,7 +204,8 @@ def determine_single_welding_intent(slots):
     else:
         return 'OTHER'
 
-def rule_regconization(query):
+def rule_regconization(query,userID):
+    from app.utils.paramSQL import get_all_MET,get_all_MAT, get_all_THI
     """
     对query进行牌号的材料匹配
     :param query:
@@ -213,7 +214,7 @@ def rule_regconization(query):
     # matched_value = None
     matched_result = {}
 
-    def match_MAT(query):
+    def match_MAT(query,userID):
         # First
         matched_value = ""
         for number_value in number_values_list:
@@ -235,6 +236,7 @@ def rule_regconization(query):
 
         # Second
         if matched_value == "":
+            material_list.extend(get_all_MAT(userID))
             for material_value in material_list:
                 if material_value in query or material_value.lower() in query.lower():
                     matched_value = material_value
@@ -249,7 +251,7 @@ def rule_regconization(query):
         
         # Finally, return
         return matched_value
-    matched_value = match_MAT(query)
+    matched_value = match_MAT(query,userID)
     if matched_value != "":
         query = query.replace(matched_value, "")
         MAT_keys = ['焊接材料', '材料', '焊材']
@@ -262,8 +264,9 @@ def rule_regconization(query):
     #    :param query:
     #    :return:如果匹配到了方法，返回牌号结果以及擓出方法和”焊接方法“关键词后的query；如果没有匹配到，则返回None
     # """
-    def match_MET(query):
+    def match_MET(query,userID):
         matched_value = ""
+        method_list.extend(get_all_MET(userID))
         for method_value in method_list:
             if method_value in query or method_value.lower() in query.lower():
                 matched_value = method_value
@@ -282,7 +285,7 @@ def rule_regconization(query):
             matched_value = lacked_values[matched_value.lower()]
         return matched_value
 
-    matched_value = match_MET(query)
+    matched_value = match_MET(query,userID)
     if matched_value != "":
         # query = query.replace(matched_value, "")
         # MET_keys = ['焊接方法', '焊接方式', '方法', '方式', '用']
@@ -337,7 +340,7 @@ def rule_regconization(query):
         extracted_numbers = []
         match = combined_pattern.search(query)
         if match:
-             for group in match.groups():
+            for group in match.groups():
                 if group:
                     extracted_numbers.append(int(group))
         matched_value = extracted_numbers[0] if len(extracted_numbers) != 0 else -1

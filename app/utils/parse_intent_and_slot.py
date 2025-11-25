@@ -1,7 +1,7 @@
-from app.utils.paramSQL import get_all_MET, get_all_MAT, get_all_THI
+from app.utils.paramSQL import get_all_MET, get_all_MAT, get_all_THI,select_SQL_rec
 from app.utils import paramSQL
 from app.utils import userParamSQL
-from app.services.bert_param_recommend import recommend
+from app.services.bert_param_recommend import recommend,rec_tig_ac,rec_tig_dc
 
 def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
     """
@@ -11,6 +11,7 @@ def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
     :param standard_slots: 数据库中存储的标准参数value
     :return: response
     """
+    
     old_MET = ""
     old_MAT = ""
     MET = ""
@@ -32,32 +33,61 @@ def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
         elif fixed_slot[0] == 'MAT':
             old_MAT = fixed_slot[1]
 
-    all_MET = get_all_MET()
-    all_MAT = get_all_MAT()
+    all_MET = get_all_MET(userID)
+    all_MAT = get_all_MAT(userID)
+    # 材料为铝返回一个疑问句
+    if  MAT.upper()=="AL" and MET.upper()=="MIG" and THI!=0:
+        ret= "检测到您查询的焊接方法为 MIG, 焊接材料为铝 , 本系统下铝有多个种类 【\"AlMg \",\"AlSi\",\"pureAl\"】对应参数不同,请输入你想要查询的具体材料"
+        return ret
+    elif MAT.upper()=="AL" and MET.upper()=="MIG" and THI==0:
+        ret = f"检测到您查询的焊接方法为 MIG, 焊接材料为铝 , 本系统下铝有多个种类 【\"AlMg \",\"AlSi\",\"pureAl\"】对应参数不同,请输入你想要查询的具体材料，除此之外请提供焊接厚度"
+        return ret
+    # 方法为TIG_AC   
+    if  MET.upper()=="TIG_AC" and THI!=0:
+        return rec_tig_ac(THI)
+    elif MET.upper()=="TIG_AC" and THI==0:
+        ret = f"您查询的TIG_AC焊接方法只能使用铝材料,若想要使用焊机推荐的MIG焊接方法需要使用的焊接材料可以是{all_MAT},若您真的想要使用tig_ac方法,请提供焊接厚度"
+        return ret
+    # 方法为TIG_DC   
+    if  MET.upper()=="TIG_DC" and THI!=0:
+        return rec_tig_dc(THI)
+    elif MET.upper()=="TIG_DC" and THI==0:
+        ret = f"您查询的TIG_DC焊接方法只能使用钢材料,若想要使用焊机推荐的MIG焊接方法需要使用的焊接材料可以是{all_MAT},若您真的想要使用tig_dc方法,请提供焊接厚度"
+        return ret
+    #焊接方法mig或mma
     if intent == 'QUERY_1':
-        ret = "好的，我已经知道了焊接厚度是{}，现在请你提供焊接方法和焊接材料。其中焊接方法有：{}，焊接材料有：{}。".format(THI, all_MET, all_MAT)
+        all_MET.extend(["TIG_DC","TIG_AC"])
+        ret = "好的，我已经知道了焊接厚度是{}，现在请你提供焊接方法和焊接材料。其中焊接方法有：{}，焊接材料有：{}。其中TIG_DC只能用于钢, TIG_AC只能用铝。".format(THI, all_MET, all_MAT)
         return ret
     elif intent == 'QUERY_2':
-        all_THI = get_all_THI(MET=MET)
+        all_THI = get_all_THI(userID=userID,MET=MET)
         ret = "好的，我已经知道了焊接方法是{}，现在请你提供焊接材料和焊接厚度。其中焊接材料有：{}，焊接厚度有：{}。".format(old_MET, all_MAT, all_THI)
         return ret
     elif intent == 'QUERY_3':
-        all_THI = get_all_THI(MAT=MAT)
+        all_THI = get_all_THI(userID=userID,MAT=MAT)
+        if MAT in ["AlSi","Al","AlMg"]:
+            all_MET.append("tig_ac")
+        elif MAT=="Steel":
+            all_MET.append("tig_dc")
         ret = "好的，我已经知道了焊接材料是{}，现在请你提供焊接方法和焊接厚度。其中焊接方法有：{}，焊接厚度有：{}。".format(old_MAT, all_MET, all_THI)
         return ret
     elif intent == 'QUERY_4':
         ret = "好的，我已经知道了焊接厚度是{}，焊接方法是{}，现在请你提供焊接材料。其中焊接材料有：{}。".format(THI, old_MET, all_MAT)
         return ret
     elif intent == 'QUERY_5':
+        if MAT in ["AlSi","Al","AlMg"]:
+            all_MET.append("tig_ac")
+        elif MAT=="Steel":
+            all_MET.append("tig_dc")
         ret = "好的，我已经知道了焊接厚度是{}，焊接材料是{}，现在请你提供焊接方法。其中焊接方法有：{}。".format(THI, old_MAT, all_MET)
         return ret
     elif intent == 'QUERY_6':
-        all_THI = get_all_THI(MET=MET, MAT=MAT)
+        all_THI = get_all_THI(userID=userID,MET=MET, MAT=MAT)
         # TODO:增加需求：如果这里all_THI是空，则换用其他方法MET查询可选的厚度
         if len(all_THI) == 0:
             for met_candidate in all_MET:
                 if met_candidate != MET:
-                    all_THI_candidate = get_all_THI(MET=MET, MAT=MAT)
+                    all_THI_candidate = get_all_THI(userID=userID,MET=MET, MAT=MAT)
                     if len(all_THI_candidate) != 0:
                         ret = "好的，你提供的焊接方法是{}，焊接材料是{}，但是没有对应的焊接厚度。你可以选择焊接方法{}，然后提供焊接厚度。焊接方法{}可选的焊接厚度有：{}".format(old_MET, old_MAT, met_candidate, met_candidate, all_THI_candidate)
                         return  ret
@@ -70,32 +100,49 @@ def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
         ret = "好的，我已经知道了焊接方法是{}，焊接材料是{}，现在请你提供焊接厚度。现在可选的焊接厚度有：{}".format(old_MET, old_MAT, all_THI)
         return ret
     elif intent == 'QUERY_7':
-        ret = "好的，我已经知道了焊接方法是{}，焊接材料是{}，以及焊接厚度是{}。现在我来为您查询参数。".format(old_MET, old_MAT, THI)
+        ret = "好的，我已经知道了焊接方法是{}，焊接材料是{}，以及焊接厚度是{}。现在我来为您查询参数。我们将展示官方计算和您的自定义参数".format(old_MET, old_MAT, THI)
+        #原始查非用户表逻辑
+        
         result_dict = paramSQL.select_SQL(MET, MAT, THI)
-        userData_result_dict = userParamSQL.select_SQL(MET, MAT, THI, userID)
-        # 参数推荐功能的入口 TODO: 开发中
+        THI=float(THI)
+        userData_result_dict = paramSQL.select_user_SQL(old_MET, old_MAT, THI, userID)
+
+        print("我们来看看到底为什么不识别：",MET, MAT, THI, userID,result_dict)
+        
+        
         if len(result_dict) == 0 and len(userData_result_dict) == 0:
-            return recommend(MAT, MET, THI)
+            return recommend(MAT, MET, THI, userID)
+        #若官方库需要进行计算厚度我们给他走推荐算法计算一次
+        flag=select_SQL_rec(MET,MAT)
+        official_cal={}
+        if len(flag) != 0 and len(result_dict) == 0 and len(userData_result_dict) != 0:
+            official_cal=recommend(MAT, MET, THI, userID)
+            
+        print(official_cal)
         new_result_dict = {}
-        for diameter, dataIndexList in result_dict.items():
-            # 遍历公共数据表中每组焊丝直径和对应的参数list
-            for dataIndex in dataIndexList:
-                # 遍历所有参数list
-                paramName, paramValue = paramSQL.select_by_ID(dataIndex)[0]
-                if diameter not in new_result_dict:
-                    new_result_dict[diameter] = []
-                new_result_dict[diameter].append({paramName: paramValue})
+        user_new_result_dict={}
+        
+        #拼接官方库
+        for Diameter, ParamName, ParamValue in result_dict:
+            DiameterO=f"WireDiameter:{Diameter}"  #字典键值拼接
+            if DiameterO not in new_result_dict:  
+                new_result_dict[DiameterO] = []   #创建字典键值与对应列表  产生的数据格式为 {'WireDiameter:10': [ {'焊接方法0': '焊接参数0'}, {'焊接方法1': '焊接参数1'}],'WireDiameter:20': []}
+            new_result_dict[DiameterO].append({ParamName: ParamValue})  #填写列表
+        
+        #拼接用户库
+        if userData_result_dict and len(userData_result_dict) != 0:
+            
+            for Diameter, ParamName, ParamValue in userData_result_dict:
+                DiameterO = f"WireDiameter:{Diameter}"  # 字典键值拼接
+                if DiameterO not in user_new_result_dict:
+                    user_new_result_dict[DiameterO] = []  # 创建字典键值与对应列表
+                user_new_result_dict[DiameterO].append({ParamName: ParamValue})  # 填写列表
 
-        for diameter, dataIndexList in userData_result_dict.items():
-            # 遍历用户个人数据表中每组焊丝直径和对应的参数list
-            for dataIndex in dataIndexList:
-                # 遍历所有参数list
-                paramName, _ = paramSQL.select_by_ID(dataIndex)[0]
-                paramValue = userParamSQL.select_by_ID(dataIndex, userID)[0]
-                if diameter not in new_result_dict:
-                    new_result_dict[diameter] = []
-                new_result_dict[diameter].append({paramName: paramValue})
-
-        return {"response": ret, "data": new_result_dict}
+            if len(result_dict) == 0:
+                return {"response": ret, "data": official_cal["data"],"data_user":user_new_result_dict}
+            else:
+                return {"response": ret, "data": new_result_dict,"data_user":user_new_result_dict}
+        else:
+            return {"response": ret, "data": new_result_dict,"data_user":"空"}
     else:
         return "不好意思，我没有识别到您提供的参数，请您降低说话语速再次输入。"

@@ -9,9 +9,9 @@
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/app/main.py",
-            "python": "/dev_data_2/zkyao/conda/envs/chatchat/bin/python",
+            "python": "/home/zkyao/miniconda3/envs/vora/bin/python",
             "console": "integratedTerminal",
-            "cwd": "/dev_data_2/zkyao/code/Weld-GPT_demo/app",
+            "cwd": "/dev_data/zkyao/code/Weld-GPT_demo/app",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"
             }

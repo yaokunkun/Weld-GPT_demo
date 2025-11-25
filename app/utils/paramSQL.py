@@ -3,7 +3,7 @@ from app.config import config
 
 user = config.MYSQL_USER
 password = config.MYSQL_PASSWORD
-
+#访问数据库
 def access_DB(query):
     try:
             # 连接到 MySQL 数据库
@@ -35,146 +35,231 @@ def access_DB(query):
             cursor.close()
             connection.close()
 
+#官方表部分
+#新SQL查表逻辑
+def select_SQL_rec(MET, MAT):  #推荐系统用，看是否只会走厚度推荐
+    # 拼接SQL语句
+    query = f"""
+        SELECT Thickness
+        FROM param_data
+        WHERE Method = '{MET}'
+        AND Material = '{MAT}'
+        """
+    #连接数据库并执行查询，返回的是元组列表[(Diameter, ParamName, ParamValue)]
+    result = access_DB(query)
+    return result
 def select_SQL(MET, MAT, THI):
-    # （一）拼接SQL语句
-
-#     query = f"""SELECT ParamName, ParamValue, WireDiameter
-# FROM paramsdatatable
-# WHERE (WeldingMethod, WeldingMaterial, WireDiameter, ParamIndex) IN (
-# SELECT WeldingMethod, WeldingMaterial, WireDiameter, ParamIndex
-#                    FROM paramsdatatable
-#                    WHERE WeldingMethod = '{MET}'
-#                    AND WeldingMaterial = '{MAT}'
-#                    AND ParamName = 'Guideline value for material'
-#                    AND ParamValue = '{THI}'
-#                );"""
-    query = f"""SELECT DataIndex, WireDiameter
-FROM paramsdatatable
-WHERE (WeldingMethod, WeldingMaterial, WireDiameter, ParamIndex) IN (
-SELECT WeldingMethod, WeldingMaterial, WireDiameter, ParamIndex
-                   FROM paramsdatatable
-                   WHERE WeldingMethod = '{MET}'
-                   AND WeldingMaterial = '{MAT}'
-                   AND ParamName = 'Guideline value for material'
-                   AND ParamValue = '{THI}'
-               );
-    """
-    #（二）连接数据库并执行查询
-    result = access_DB(query)
-
-    # （三）组装查询结果为嵌套字典的格式，返回。
-    result_dict = {}
-
-    # for param_name, param_value, diameter in result:
-    #     if f"WireDiameter:{diameter}" not in result_dict:
-    #         result_dict[f"WireDiameter:{diameter}"] = []
-    #     # 对于每个参数和值，创建一个小字典并添加到列表中
-    #     param_dict = {param_name: param_value}
-    #     result_dict[f"WireDiameter:{diameter}"].append(param_dict)
-    for dataIndex, diameter in result:
-        if f"WireDiameter:{diameter}" not in result_dict:
-            result_dict[f"WireDiameter:{diameter}"] = []
-        result_dict[f"WireDiameter:{diameter}"].append(dataIndex)
-
-    return result_dict
-
-def select_by_ID(dataIndex):
-    query = """SELECT ParamName, ParamValue
-                            FROM paramsdatatable
-                            WHERE DataIndex = {};""".format(dataIndex)
+    # 拼接SQL语句
+    query = f"""
+        SELECT Diameter, ParamName, ParamValue
+        FROM param_data
+        WHERE Method = '{MET}'
+        AND Material = '{MAT}'
+        AND Thickness = '{THI}'
+        """
+    #连接数据库并执行查询，返回的是元组列表[(Diameter, ParamName, ParamValue)]
     result = access_DB(query)
     return result
-
-def get_all_MET():
+#作用同上一个函数，别名查询（前端要求）
+def get_param_by_mat_met_thi(MAT, MET, THI):
     # （一）拼接SQL语句
-    query = """SELECT DISTINCT WeldingMethod
-FROM paramsdatatable;"""
-
-    # （二）连接数据库并执行查询
-    result = access_DB(query)
-
-    # （三）返回结果。
-    result = [e[0] for e in result]
-    return result
-
-def get_all_MAT():
-    # （一）拼接SQL语句
-    query = """SELECT DISTINCT WeldingMaterial
-FROM paramsdatatable;"""
-
-    # （二）连接数据库并执行查询
-    result = access_DB(query)
-
-    # （三）返回结果。
-    result = [e[0] for e in result]
-    return result
-
-def get_all_THI(MET=None, MAT=None):
-    # （一）拼接SQL语句
-    # Basic query
-    query = """
-        SELECT DISTINCT ParamValue 
-        FROM paramsdatatable 
-        WHERE ParamName = 'Guideline value for material'
+    query = f"""
+        SELECT Diameter, ParamName, ParamValue
+        FROM param_data
+        WHERE Method = '{MET}'
+        AND Material = '{MAT}'
+        AND Thickness = '{THI}'
         """
 
-    # If MET is provided, add it to the query
-    if MET is not None:
-        query += f"\nAND WeldingMethod = '{MET}'"
-
-    # If MAT is provided, add it to the query
-    if MAT is not None:
-        query += f"\nAND WeldingMaterial = '{MAT}'"
-
-    # Add the ORDER BY clause
-    query += "\nORDER BY CAST(ParamValue AS DECIMAL(10, 2)) ASC;"
-
     # （二）连接数据库并执行查询
     result = access_DB(query)
 
+    # （三）返回结果
+    return result
+
+def get_all_param_by_MAT_MET(MET, MAT):
+    # （一）拼接SQL语句
+
+    query = f"""
+        SELECT Thickness, Diameter, ParamName, ParamValue
+        FROM param_data
+        WHERE Material = '{MAT}'
+        AND Method = '{MET}'
+        """
+    # （二）连接数据库并执行查询
+    result = access_DB(query)
     # （三）返回结果。
-    result = [e[0] for e in result]
+    # result = [e[0] for e in result]
     return result
 
-def get_all_dataIndex():
-    query = """SELECT DataIndex FROM paramsdatatable;"""
-    return access_DB(query)
 
-def get_index_and_thickness_SQL(MET, MAT, DIA):
-    query = f"""SELECT DataIndex, ParamIndex, ParamValue
-                   FROM paramsdatatable
-                   WHERE WeldingMethod = '{MET}'
-                   AND WeldingMaterial = '{MAT}'
-                   AND WireDiameter = '{DIA}'
-                   AND ParamName = 'Guideline value for material';"""
+###########
+#用户表部分
+###########
+
+#查找所有厚度
+def get_all_THI(userID,MET=None, MAT=None):
+    
+    if MET is not None:
+        if MAT is not None:
+            query = f"""SELECT Thickness FROM param_data WHERE Method = '{MET}' AND Material = '{MAT}';"""
+            query_user=f"""SELECT Thickness FROM `USER_PARAM_T` WHERE Method = '{MET}' AND Material = '{MAT}' AND user_ID='{userID}';"""
+        else:
+            query = f"""SELECT Thickness FROM param_data WHERE Method = '{MET}' ;"""
+            query_user = f"""SELECT Thickness FROM `USER_PARAM_T` WHERE Method = '{MET}' AND user_ID='{userID}';"""
+    elif MAT is not None:
+        query = f"""SELECT Thickness FROM param_data WHERE Material = '{MAT}';"""
+        query_user = f"""SELECT Thickness FROM `USER_PARAM_T` WHERE Material = '{MAT}' AND user_ID='{userID}';"""
+    else:
+        query = f"""SELECT Thickness FROM param_data;"""
+        query_user = f"""SELECT Thickness FROM `USER_PARAM_T` user_ID='{userID}';"""
+    result = access_DB(query)
+    result_user = access_DB(query_user)
+    result0 = [item[0] for item in result] #元组列表变为列表 列表推导式 
+    result1 = list(set(result0))  #去重
+    result0_user = [item[0] for item in result_user] #元组列表变为列表 列表推导式 
+    result1_user = list(set(result0_user))  #去重
+    result1.extend(result1_user)
+    return result1
+
+#新增用户表参数
+def insert_user_param(UID=None,MET=None,MAT=None,THI=None,DIA=None,PN=None,PV=None):
+    if not all([UID,MET,MAT,THI,DIA,PN,PV]):
+        return False
+    else:
+        query= f"""INSERT INTO `USER_PARAM_T`(`USER_ID`,`Method`,`Material` ,`Thickness`,`Diameter`,`ParamName`,`ParamValue`)
+        VALUES ({UID},'{MET}','{MAT}',{THI},'{DIA}','{PN}',{PV})"""
+        result=access_DB(query)
+        return result
+
+#修改用户表参数
+def change_user_param(ID=None,UID=None,MET=None,MAT=None,THI=None,DIA=None,PN=None,PV=None):
+    if not all([ID,UID,MET,MAT,THI,DIA,PN,PV]):
+        return False
+    else:
+        query= f"""UPDATE `USER_PARAM_T` SET `USER_ID`={UID},`Method`='{MET}',`Material`='{MAT}',`Thickness`={THI},`Diameter`='{DIA}',`ParamName`='{PN}',`ParamValue`={PV} WHERE `ID`={ID}"""
+        result=access_DB(query)
+        return result
+
+#删除用户表参数
+def delete_user_param(ID=None):
+    if not ID:
+        return False
+    else:
+        query= f"""DELETE FROM `USER_PARAM_T` WHERE `ID`={ID}"""
+        result=access_DB(query)
+        return result
+    
+def delete_user_param2(UID=None,MET=None,MAT=None,THI=None,DIA=None):
+    if not all([UID,MET,MAT,THI,DIA]):
+        return False
+    else:
+        query= f"""DELETE FROM `USER_PARAM_T` WHERE `USER_ID`={UID} AND `Method`='{MET}' AND `Material`='{MAT}' AND `Thickness`='{THI}' AND `Diameter`='{DIA}'"""
+        result=access_DB(query)
+        return result
+    
+def delete_user_param_all(UID=None):
+    if not UID:
+        return False
+    else:
+        query= f"""DELETE FROM `USER_PARAM_T` WHERE `USER_ID`={UID} """
+        result=access_DB(query)
+        print(result)
+        return result
+
+#搜索用户表 通用, 返回id和uid（一对多查询）
+def search_id_user(UID=None,MET=None,MAT=None,THI=None,DIA=None,PN=None,PV=None):
+    if not UID:
+        return [()]
+    else:
+        query= f"""SELECT ID,USER_ID FROM `USER_PARAM_T` WHERE USER_ID={UID}"""
+        CONDITIONS=[]
+        if MET:
+            CONDITIONS.append(f"Method='{MET}'")
+        if MAT:
+            CONDITIONS.append(f"Material='{MAT}'")
+        if THI:
+            CONDITIONS.append(f"Thickness={THI}")
+        if DIA:
+            CONDITIONS.append(f"Diameter='{DIA}'")
+        if PN:
+            CONDITIONS.append(f"ParamName='{PN}'")
+        if PV:
+            CONDITIONS.append(f"ParamValue={PV}")
+        if CONDITIONS:
+            query= query+ " AND " +' AND '.join(CONDITIONS)
+        result=access_DB(query)
+        return result
+########################################################
+#通过id和uid组查询返回所有参数（多组查询）
+def find_BY_ID(IDS):   #  IDS = [(id,user_ID),(1, 100), (2, 100), (3, 100)]  # 来自search_id_user的返回结果
+    if not IDS:
+        return [()]
+    else:
+        RESULTS=[]
+        for ID in IDS:
+            query= f"""SELECT * FROM `USER_PARAM_T` WHERE ID={ID[0]}"""
+            result=access_DB(query)
+            RESULTS.append(result[0])
+        return RESULTS
+
+#三要素 材料厚度方法 查询用户表
+def select_user_SQL(MET, MAT, THI,userID):
+    # 拼接SQL语句
+    query = f"""
+        SELECT Diameter, ParamName, ParamValue
+        FROM `USER_PARAM_T`
+        WHERE Method = '{MET}'
+        AND Material = '{MAT}'
+        AND Thickness = {THI}
+        AND User_ID = '{userID}'
+        """
+    #连接数据库并执行查询，返回的是元组列表[(Diameter, ParamName, ParamValue)]
+    result = access_DB(query)
+    return result   
+
+def select_user_THI(MET, MAT,userID):
+    # 拼接SQL语句
+    query = f"""
+        SELECT Thickness
+        FROM `USER_PARAM_T`
+        WHERE Method = '{MET}'
+        AND Material = '{MAT}'
+        AND User_ID = '{userID}'
+        """
+    #连接数据库并执行查询，返回的是元组列表[()]
     result = access_DB(query)
     return result
 
-def insert_SQL(params):
-    query = """INSERT INTO paramsdatatable (DataIndex, WeldingProcessName, WeldingMethod, WireDiameter,
-                              WeldingMaterial, WeldingShieldGas, ProcessingTypeCode, ParamName,
-                              ParamIndex, ParamValue)
-    VALUES ({}, '{}', '{}', {}, '{}', '{}', {}, '{}', {}, {})
-    """.format(params.DataIndex, params.WeldingProcessName, params.WeldingMethod, params.WireDiameter,
-               params.WeldingMaterial, params.WeldingShieldGas, params.ProcessingTypeCode, params.ParamName,
-               params.ParamIndex, params.ParamValue)
-    result = access_DB(query)
-    return result
 
-def update_SQL(params):
-    query = """UPDATE paramsdatatable
-    SET ParamValue = {}
-    WHERE WeldingMethod = '{}' AND WireDiameter = {} AND WeldingMaterial = '{}' AND ParamIndex = {} AND ParamName = '{}';
-    """.format(params.ParamValue, params.WeldingMethod, params.WireDiameter, params.WeldingMaterial,
-               params.ParamIndex, params.ParamName)
+#混合查询官方+用户
+#查找所有方法
+def get_all_MET(userID):
+    #新逻辑
+    query = """SELECT DISTINCT Method FROM param_data;"""
     result = access_DB(query)
-    return result
+    result0 = [item[0] for item in result] #元组列表变为列表 列表推导式 
+    result1 = list(set(result0))  #去重
+    
+    #加入用户的相关参数
+    query_user = f"""SELECT DISTINCT Method FROM USER_PARAM_T WHERE USER_ID={userID};"""
+    result_user = access_DB(query_user)
+    result_user0=[item[0] for item in result_user]
+    result1.extend(result_user0)
+    return result1
 
-def get_data_ID(params):
-    query = """SELECT DataIndex
-        FROM paramsdatatable
-        WHERE WeldingMethod = '{}' AND WireDiameter = {} AND WeldingMaterial = '{}' AND ParamIndex = {} AND ParamName = '{}';
-        """.format(params.WeldingMethod, params.WireDiameter, params.WeldingMaterial,
-                   params.ParamIndex, params.ParamName)
+#查找所有材料
+def get_all_MAT(userID):
+    #新逻辑
+    query = """SELECT Material FROM param_data;"""
     result = access_DB(query)
-    return result
+    result0 = [item[0] for item in result] #元组列表变为列表 列表推导式 
+    result1 = list(set(result0))  #去重
+    
+    #加入用户的相关参数
+    query_user = f"""SELECT DISTINCT Material FROM USER_PARAM_T WHERE USER_ID={userID};"""
+    result_user = access_DB(query_user)
+    result_user0=[item[0] for item in result_user]
+    result1.extend(result_user0)
+    return result1
+

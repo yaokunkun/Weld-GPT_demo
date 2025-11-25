@@ -1,0 +1,300 @@
+{"input": " thickness is 2.5 millimeters,  And then method is Gas Tungsten Arc Welding Which parameters are required.", "label": "QUERY"}
+{"input": "What’s the most interesting hobby you’ve ever picked up, even if just for a short time?", "label": "RAG"}
+{"input": " thickness of weld is 3.8 Please provide detailed information on the required parameters.", "label": "QUERY"}
+{"input": "The voltage needs a 200V bump to meet the required specs.", "label": "CONTROL"}
+{"input": "I learned after researching welding thickness is 2.5 millimeters, Uh  material of weld is High-quality Carbon Steel What parameters are needed?", "label": "QUERY"}
+{"input": "What would be your dream vacation destination, and why?", "label": "RAG"}
+{"input": "Let's give it a 245A surge to get the job done.", "label": "CONTROL"}
+{"input": "We need to ratchet up the voltage 201 volts for optimal performance.", "label": "CONTROL"}
+{"input": "What’s the strangest dream you’ve ever had, and did it leave you puzzled afterward?", "label": "RAG"}
+{"input": "The system requires an additional 41 amps to function properly.", "label": "CONTROL"}
+{"input": "Let's give the system a 114V bump to enhance its performance.", "label": "CONTROL"}
+{"input": " method is MAG, Eh As well as thickness is 3.6 Can you list the required parameters.", "label": "QUERY"}
+{"input": "I have understood method is Tungsten Inert Gas Welding Can you tell me which parameters are needed.", "label": "QUERY"}
+{"input": "When selecting filler metals for a dissimilar metal weld, what factors must be considered to ensure proper bonding?", "label": "RAG"}
+{"input": " welding material is al995, Uh, At the same time thickness is 2.5 millimeters Please provide detailed information on the required parameters?", "label": "QUERY"}
+{"input": "In TIG welding, how does adjusting the torch angle affect the weld pool and overall weld bead formation?", "label": "RAG"}
+{"input": " method is Self-Shielded Flux-Cored Arc Welding I need to know which parameters", "label": "QUERY"}
+{"input": "If you could instantly master one skill, what would it be?", "label": "RAG"}
+{"input": " thickness of weld is 1.0 millimeters, Good, And then welding material is High-quality Carbon Steel , ", "label": "QUERY"}
+{"input": "What’s the most interesting fact you know about space or outer space exploration?", "label": "RAG"}
+{"input": "We need to elevate the voltage by 114 volts to overcome the impedance.", "label": "CONTROL"}
+{"input": "Let's notch the voltage up by 189 volts for better performance.", "label": "CONTROL"}
+{"input": "What are some common signs of an electrical short circuit in welding equipment, and how can you safely diagnose and fix them?", "label": "RAG"}
+{"input": "The current needs to be cranked up by 344A.", "label": "CONTROL"}
+{"input": "The system requires an extra 270 amps to function properly.", "label": "CONTROL"}
+{"input": " method of weld is GMAWP, , As well as welding material is Ferrite,   welding thickness is 0.3 I need to know which parameters.", "label": "QUERY"}
+{"input": "Can you explain the concept of preheat and post-weld heat treatment, and how they impact the toughness of the welded joint?", "label": "RAG"}
+{"input": "I learned after researching welding material is almg5,   welding method is Pulse Gas Tungsten Arc Welding, Well As well as thickness of weld is 3.8 Can you list the required parameters.", "label": "QUERY"}
+{"input": "Let's juice up the system with an additional 270 volts.", "label": "CONTROL"}
+{"input": " welding material is CuSi3, Ha In addition welding method is FCWS Can you tell me which parameters are needed", "label": "QUERY"}
+{"input": "Let's juice up the system with an additional 114 volts.", "label": "CONTROL"}
+{"input": "Boost the voltage by 189V to meet the required specs.", "label": "CONTROL"}
+{"input": "The information I have is material of weld is Aluminum Magnesium, Eh Moreover thickness of weld is fifteen millimeters ", "label": "QUERY"}
+{"input": "The information I have is welding material is Al-Si-5,  And then method of weld is Gas Shielded Welding, Ah, Moreover welding thickness is 0.4 centermeters Please tell me which parameters are needed", "label": "QUERY"}
+{"input": "Give the circuit a 114V jolt to get it going.", "label": "CONTROL"}
+{"input": "What’s the weirdest food combination you’ve ever tried?", "label": "RAG"}
+{"input": "If you had to choose one book to be stranded with on a deserted island, what would it be and why?", "label": "RAG"}
+{"input": "We need to spike the current 344A higher.", "label": "CONTROL"}
+{"input": "The situation I understand is welding material is 99.5% Purity Aluminum Which parameters are required.", "label": "QUERY"}
+{"input": "If you could instantly master one skill, what would it be?", "label": "RAG"}
+{"input": "We need to spike the current by 200 amps to handle the surge.", "label": "CONTROL"}
+{"input": "I now understand that welding material is Copper Silicon 3 , Please explain the required parameters.", "label": "QUERY"}
+{"input": " welding thickness is 3.7 centermeters,  In addition welding material is Al995, Uh,  method is Flux-Cored Arc Welding .", "label": "QUERY"}
+{"input": "The information I have is welding thickness is eleven millimeters,   method of weld is ARC, Well Moreover material of weld is Rebar , Please explain the required parameters.", "label": "QUERY"}
+{"input": "How does preheating affect weld quality in high-carbon steel?", "label": "RAG"}
+{"input": " thickness of weld is four, Hmm, At the same time method is MIG Double Pulse, , Well material is Rebar , Can you tell me which parameters are needed?", "label": "QUERY"}
+{"input": "I just confirmed thickness is seven millimeters, ,   welding material is 5 Series Aluminum Silicon, ,  welding method is FCWG , Can you tell me which parameters are needed?", "label": "QUERY"}
+{"input": " thickness is 4.0 centermeters,  Moreover material is Aluminum Silicon 5, Uh, And then welding method is MIG Double Pulse Please tell me which parameters are needed?", "label": "QUERY"}
+{"input": "We need to inject an extra 114 amps into the circuit.", "label": "CONTROL"}
+{"input": "How do you troubleshoot excessive spatter in stick welding?", "label": "RAG"}
+{"input": " welding material is 5 Series Aluminum Magnesium,   thickness is five millimeters .", "label": "QUERY"}
+{"input": " method of weld is Gas Metal Arc Welding, Hmm Moreover material is Martensite, , Additionally thickness is 1.1 centermeters , ", "label": "QUERY"}
+{"input": "What’s your go-to strategy for dealing with a boring meeting?", "label": "RAG"}
+{"input": "I just found out material of weld is ZG Series Cast Steel .", "label": "QUERY"}
+{"input": "Let's juice up the system with an additional 5 volts.", "label": "CONTROL"}
+{"input": "What’s the most interesting hobby or activity you’ve picked up in the last year?", "label": "RAG"}
+{"input": " material is al995, Oh,  method is FCWG, Ha, Moreover thickness of weld is 9 millimeters , Please tell me which parameters are needed?", "label": "QUERY"}
+{"input": "I saw thickness of weld is 7 , Can you list the required parameters.", "label": "QUERY"}
+{"input": "We're going to have to ratchet up the voltage by 189 volts.", "label": "CONTROL"}
+{"input": "Boost the voltage by 245 volts to meet the specs.", "label": "CONTROL"}
+{"input": "Can you explain how to properly set up a GMAW machine for optimal wire feed speed and voltage settings?", "label": "RAG"}
+{"input": "I just found out welding thickness is 0.9 centermeters, Well, Moreover welding material is Steel, Uh,  method is MIG Double Pulse Please provide detailed information on the required parameters.", "label": "QUERY"}
+{"input": "Give it an extra 344 amp surge.", "label": "CONTROL"}
+{"input": "Let's juice it up with an additional 344 volts.", "label": "CONTROL"}
+{"input": "What’s the most useless invention that somehow still exists? ", "label": "RAG"}
+{"input": "If you had to pick a fictional character to have dinner with, who would it be and why?", "label": "RAG"}
+{"input": "The voltage needs to be elevated by 114V to meet the specs.", "label": "CONTROL"}
+{"input": "The information I have is thickness is 9 centermeters, Good  material is ZG Series Cast Steel , ", "label": "QUERY"}
+{"input": "What is the primary purpose of a grounding clamp in electrical welding, and how does it ensure safety?", "label": "RAG"}
+{"input": "The voltage should be elevated by 344V.", "label": "CONTROL"}
+{"input": "The current should be cranked up by 245 amps.", "label": "CONTROL"}
+{"input": "We need to dial up the current 201 amps to handle the new load.", "label": "CONTROL"}
+{"input": " welding material is Austenitic Ferritic Duplex Steel,  Moreover welding method is ARC, Eh In addition thickness of weld is 0.1 ", "label": "QUERY"}
+{"input": "Can you explain the process of post-weld heat treatment and its importance for certain alloys?", "label": "RAG"}
+{"input": "We need to ratchet up the voltage 200 volts for optimal performance.", "label": "CONTROL"}
+{"input": "Give the circuit a 189-volt jolt to get it going.", "label": "CONTROL"}
+{"input": " material is Rebar, , Furthermore thickness is 0.6 centermeters, ,  method of weld is CO2 Gas Shielded Welding What should I do now", "label": "QUERY"}
+{"input": " material of weld is Copper Silicon 3,   welding thickness is 1.1 millimeters Can you specify the required parameters?", "label": "QUERY"}
+{"input": "If you had to eat only one meal for the rest of your life, what would it be?", "label": "RAG"}
+{"input": "I just found out thickness of weld is 2.3 centermeters,  At the same time welding material is Aluminum Magnesium Alloy No. 5, Ha,  method of weld is GMAW , Which parameters are required", "label": "QUERY"}
+{"input": "If you could have dinner with any historical figure, who would it be and why?", "label": "RAG"}
+{"input": "What’s one thing you’d love to learn more about but haven’t had the chance to yet?", "label": "RAG"}
+{"input": " material is Shipbuilding Steel, Good Also thickness is 3.7 millimeters,  Moreover method of weld is MIG Double Pulse , Can you list the required parameters.", "label": "QUERY"}
+{"input": " material of weld is crni199, Uh, As well as thickness of weld is 3.5, Eh Well welding method is Shielded Metal Arc Welding , Please tell me which parameters are needed", "label": "QUERY"}
+{"input": "In TIG welding, why is it important to use a clean and smooth surface for the filler rod?", "label": "RAG"}
+{"input": "I just confirmed method is Flux-Cored Arc Welding, Eh, Moreover thickness of weld is 12, Ha Moreover material is Al995 ", "label": "QUERY"}
+{"input": "Can you explain the principle behind arc blow during SMAW welding and how to avoid it?", "label": "RAG"}
+{"input": "Why is argon commonly used as a shielding gas in TIG welding?", "label": "RAG"}
+{"input": "I noticed thickness of weld is 1.7 centermeters , .", "label": "QUERY"}
+{"input": "Let's dial up the amperage 200A to compensate for the resistance.", "label": "CONTROL"}
+{"input": "How can you identify and prevent common defects like cracks and incomplete fusion in your welding projects?", "label": "RAG"}
+{"input": "Do you think time travel is theoretically possible, and if so, what are the potential consequences of changing the past?", "label": "RAG"}
+{"input": "Give the circuit an extra 200A push to meet the demand.", "label": "CONTROL"}
+{"input": "The voltage needs to be elevated by 5V to meet the specs.", "label": "CONTROL"}
+{"input": "We need to spike the current by 168 amps to handle the load.", "label": "CONTROL"}
+{"input": "The information I have is method is MIG Welding, Well,  welding material is CuSi3 Please tell me which parameters are needed", "label": "QUERY"}
+{"input": "I just found out welding thickness is 2.5 millimeters, Well,  material of weld is almg5 , .", "label": "QUERY"}
+{"input": "How do you troubleshoot excessive spatter in stick welding?", "label": "RAG"}
+{"input": "The voltage needs to be lifted by 114 volts to ensure proper operation.", "label": "CONTROL"}
+{"input": "If you had to give up either coffee or dessert forever, which would it be and why?", "label": "RAG"}
+{"input": " method is gmaw, Well As well as thickness of weld is 6 centermeters , Which parameters are required", "label": "QUERY"}
+{"input": "The system requires an additional 114 amps to function properly.", "label": "CONTROL"}
+{"input": "How do you ensure proper grounding and electrical safety when setting up a welding station?", "label": "RAG"}
+{"input": "If time travel were possible, which historical period would you visit and why?", "label": "RAG"}
+{"input": "I saw welding thickness is 3.8 millimeters,   method of weld is MIG, Ah Moreover welding material is High Purity Aluminum ?", "label": "QUERY"}
+{"input": "What’s your favorite underrated movie?", "label": "RAG"}
+{"input": "Do you believe that video games can have educational value, and if so, which ones have taught you something useful?", "label": "RAG"}
+{"input": "I comprehend now welding thickness is 2.0 centermeters,   method of weld is Self-Shielded Flux-Cored Arc Welding, Hmm, Furthermore material is Copper Silicon 3 , Please list the parameters I need.", "label": "QUERY"}
+{"input": "We need to ratchet up the voltage by 270 volts for optimal performance.", "label": "CONTROL"}
+{"input": "We need to ratchet up the voltage by 114 volts for optimal performance.", "label": "CONTROL"}
+{"input": "How do you select the appropriate filler metal when dealing with dissimilar metals in welding?", "label": "RAG"}
+{"input": "Boost the voltage by 348V to power up the device.", "label": "CONTROL"}
+{"input": "I learned after researching thickness of weld is 0.3 millimeters, Uh Also welding material is High Purity Aluminum Can you tell me which parameters are needed", "label": "QUERY"}
+{"input": "The amperage needs to be cranked up by 189A.", "label": "CONTROL"}
+{"input": "I comprehend now welding thickness is 1.0 millimeters , ?", "label": "QUERY"}
+{"input": " welding material is al995, ,  method of weld is FCWG , Which parameters are required.", "label": "QUERY"}
+{"input": "Let's juice it up with an additional 245 volts.", "label": "CONTROL"}
+{"input": "The situation I understand is thickness of weld is 3.0 centermeters, Uh Moreover material of weld is T Series Tool Steel, Ah, In addition welding method is ig , Please tell me which parameters are needed?", "label": "QUERY"}
+{"input": "How can you determine the correct wire feed speed and voltage settings for MIG welding aluminum?", "label": "RAG"}
+{"input": " material is crni199,  Moreover method is mi, , In addition thickness is twelve centermeters What parameters are needed?", "label": "QUERY"}
+{"input": "What’s your go-to way to unwind after a long day at work?", "label": "RAG"}
+{"input": "I just found out method is MIG Double Pulse, Well, At the same time thickness is 1.5 centermeters Please tell me which parameters are needed.", "label": "QUERY"}
+{"input": "I now understand that material is Cu-Si-3, Ah, Also method of weld is Pulse Gas Metal Arc Welding Can you list the required parameters?", "label": "QUERY"}
+{"input": "Would you rather live without the internet or without air conditioning?", "label": "RAG"}
+{"input": "Give the system a 245V jolt to get it going.", "label": "CONTROL"}
+{"input": "Boost the power by adding 41 more volts to the mix.", "label": "CONTROL"}
+{"input": "If you had a time machine, what historical event would you want to witness firsthand?", "label": "RAG"}
+{"input": "What’s the weirdest food combination you’ve ever tried?", "label": "RAG"}
+{"input": "We need to ratchet up the voltage by 41 volts for optimal performance.", "label": "CONTROL"}
+{"input": "I noticed thickness of weld is twelve,  Additionally material of weld is Shipbuilding Steel, Oh,  welding method is MIG ", "label": "QUERY"}
+{"input": "Give the current an extra 168-amp push to get the job done.", "label": "CONTROL"}
+{"input": "We need to ratchet up the voltage by 348 volts for optimal performance.", "label": "CONTROL"}
+{"input": "I just discovered welding method is CO2 Gas Shielded Welding, Eh Moreover material of weld is Shipbuilding Steel , ", "label": "QUERY"}
+{"input": "Give the circuit a 270-volt jolt to get it going.", "label": "CONTROL"}
+{"input": "Boost the current by 344 amps.", "label": "CONTROL"}
+{"input": "We're going to have to inject an additional 168 amps into the system.", "label": "CONTROL"}
+{"input": "If you could have dinner with any historical figure, who would it be and why?", "label": "RAG"}
+{"input": "How can you adjust your welding technique to minimize distortion when welding thick materials?", "label": "RAG"}
+{"input": "Would you rather live without the internet or without air conditioning?", "label": "RAG"}
+{"input": " method is FCWG, Ah, At the same time thickness is 1.3 centermeters,  In addition material is Austenite Please explain the required parameters?", "label": "QUERY"}
+{"input": " method of weld is ig, Well, Moreover welding thickness is 3.4 millimeters, Ah  welding material is Rebar Which parameters are required.", "label": "QUERY"}
+{"input": "The voltage needs to be elevated by 348 volts to meet the specs.", "label": "CONTROL"}
+{"input": "What common issues can arise from improper grounding in electrical circuits and how can they be prevented?", "label": "RAG"}
+{"input": "Boost the electrical potential by 201 volts to power the load.", "label": "CONTROL"}
+{"input": "I now understand that thickness of weld is 2.1 centermeters, Oh, Moreover material of weld is Aluminum Silicon Alloy, , Moreover method of weld is mig ", "label": "QUERY"}
+{"input": "What’s the difference between AC and DC welding, and when should you use each?", "label": "RAG"}
+{"input": "The situation I understand is material of weld is Ordinary Carbon Steel , What should I do now.", "label": "QUERY"}
+{"input": "I learned after researching thickness is 7 millimeters, , Moreover material is Aluminum Silicon 5,  At the same time welding method is Gas Shielded Welding What should I do now", "label": "QUERY"}
+{"input": "What’s the difference between AC and DC welding, and when should you use each?", "label": "RAG"}
+{"input": "Give the system an extra 201A surge to compensate for the increased demand.", "label": "CONTROL"}
+{"input": "The current draw needs to be cranked up by 200 amps for full capacity.", "label": "CONTROL"}
+{"input": "The situation I understand is method is Shielded Metal Arc Welding, Uh, Moreover thickness is 9 centermeters, Ha  welding material is Rebar ?", "label": "QUERY"}
+{"input": "Give the circuit a 348-volt jolt to get it going.", "label": "CONTROL"}
+{"input": "The voltage needs to be elevated by 270 volts to meet the required specs.", "label": "CONTROL"}
+{"input": "If you could have any superpower, what would it be and why? ", "label": "RAG"}
+{"input": "The voltage needs a 201V bump to meet the required specs.", "label": "CONTROL"}
+{"input": "I have mastered material of weld is CuSi3, Uh Furthermore thickness of weld is 9 What should I do now", "label": "QUERY"}
+{"input": " thickness of weld is 2.1 millimeters, Ha Moreover material is Rebar .", "label": "QUERY"}
+{"input": "When performing arc welding, how can you minimize the risk of burns and eye injuries?", "label": "RAG"}
+{"input": "We need to spike the current by 245 amps.", "label": "CONTROL"}
+{"input": "We need to inject an extra 41 amps into the circuit.", "label": "CONTROL"}
+{"input": "I just discovered welding thickness is 2.0 millimeters , ?", "label": "QUERY"}
+{"input": "I just confirmed method of weld is GMAWP, Eh Additionally material is crni199 What parameters are needed?", "label": "QUERY"}
+{"input": "We need to ratchet up the voltage by 5 volts for optimal performance.", "label": "CONTROL"}
+{"input": "What factors should be considered when selecting filler material for welding dissimilar metals?", "label": "RAG"}
+{"input": " thickness is eight , ?", "label": "QUERY"}
+{"input": "Which mythical creature do you think would make the best pet and why?", "label": "RAG"}
+{"input": "What are the key differences between MIG and TIG welding, and in what scenarios would you prefer one over the other?", "label": "RAG"}
+{"input": "We need to spike the current by 5 amps to handle the load.", "label": "CONTROL"}
+{"input": "I just discovered welding thickness is fifteen millimeters, Good, Also material is Copper Silicon Alloy, , Furthermore method is Tungsten Inert Gas Welding .", "label": "QUERY"}
+{"input": "Which fictional character do you think would make the best friend and why?", "label": "RAG"}
+{"input": "I found out after verifying material of weld is 3 Series Copper Silicon , .", "label": "QUERY"}
+{"input": "What safety precautions are critical when welding in confined spaces?", "label": "RAG"}
+{"input": "We need to spike the current by 270 amps to handle the load.", "label": "CONTROL"}
+{"input": "If you could have any fictional character as a friend, who would it be and why?", "label": "RAG"}
+{"input": "If you could instantly travel anywhere in the world, where would you go?", "label": "RAG"}
+{"input": "What’s your go-to strategy for staying organized in a cluttered workspace?", "label": "RAG"}
+{"input": " method is MAG, Oh  thickness is four,  Also material is High-quality Carbon Steel Can you specify the required parameters", "label": "QUERY"}
+{"input": " welding thickness is 5 centermeters, Ah  material is Aluminum Silicon Magnesium, ,  method of weld is MAG What should I do now", "label": "QUERY"}
+{"input": "Give the current an extra 189-amp push.", "label": "CONTROL"}
+{"input": "When setting up a new welding project, what safety measures should always be prioritized to prevent fires and injuries?", "label": "RAG"}
+{"input": "I learned after researching welding method is Single Pulse, Ha Also material of weld is Pure Aluminum Plate, Ah And then welding thickness is 6 centermeters ?", "label": "QUERY"}
+{"input": "When setting up an arc welder, how do you ensure proper grounding to avoid electrical hazards?", "label": "RAG"}
+{"input": "What are the key differences between MIG and TIG welding techniques, and in what scenarios might one be preferred over the other?", "label": "RAG"}
+{"input": "What’s the most useless invention that somehow still exists? ", "label": "RAG"}
+{"input": "What safety measures should be taken to minimize the risk of electric shock during arc welding?", "label": "RAG"}
+{"input": "Let's push the current 201 amps higher to ensure proper operation.", "label": "CONTROL"}
+{"input": "Why is argon commonly used as a shielding gas in TIG welding?", "label": "RAG"}
+{"input": "If you could travel back in time to any era, where would you go and why?", "label": "RAG"}
+{"input": "I just confirmed welding material is Aluminum Magnesium Alloy, , And then thickness is 1.9 centermeters Please tell me which parameters are needed", "label": "QUERY"}
+{"input": "Give the system a 41-volt jolt to get it going.", "label": "CONTROL"}
+{"input": " welding thickness is 0.8 millimeters, Good, Well material of weld is High Chromium Nickel Alloy, Eh  method of weld is Self-Shielded Flux-Cored Arc Welding , Please tell me which parameters are needed.", "label": "QUERY"}
+{"input": "Can you explain the process of post-weld heat treatment and its importance for certain metals?", "label": "RAG"}
+{"input": "The current should be cranked up by 5 amps to ensure proper function.", "label": "CONTROL"}
+{"input": "We need to inject an additional 114 amps into the system to handle the load.", "label": "CONTROL"}
+{"input": "The amperage needs to be cranked up by 201 amps to meet the specs.", "label": "CONTROL"}
+{"input": "The current should be cranked up by 348A to meet the demand.", "label": "CONTROL"}
+{"input": "I noticed material is Copper Silicon, ,  welding method is Gas Shielded Welding, Ah And then thickness is 3.2 centermeters , Please list the parameters I need", "label": "QUERY"}
+{"input": "Give the system a 344V jolt.", "label": "CONTROL"}
+{"input": " method is Gas Shielded Welding, Hmm Furthermore thickness is 0.7 millimeters , What parameters are needed.", "label": "QUERY"}
+{"input": "I have mastered welding material is Ferrite, , And then method of weld is ARC,  Moreover thickness is 2.2 centermeters , What should I do now?", "label": "QUERY"}
+{"input": " method of weld is Gas Shielded Welding, Well,  thickness is 7, Well, Furthermore material of weld is Magnesium Aluminum Alloy 5 ?", "label": "QUERY"}
+{"input": "We need to juice up the current by 189 amps.", "label": "CONTROL"}
+{"input": "I have understood welding material is Pure Aluminum,  Moreover method of weld is gmaw ", "label": "QUERY"}
+{"input": "What are the potential hazards of not properly grounding your welding equipment?", "label": "RAG"}
+{"input": "Boost the power by adding 5 more volts to the supply.", "label": "CONTROL"}
+{"input": "I saw welding thickness is fourteen millimeters , ?", "label": "QUERY"}
+{"input": "I learned after researching thickness is 3.3, Well  welding material is cusi3 Which parameters are required.", "label": "QUERY"}
+{"input": "I just discovered thickness of weld is 2.3 , Please explain the required parameters?", "label": "QUERY"}
+{"input": "We need to ratchet up the voltage by 245 volts.", "label": "CONTROL"}
+{"input": "Boost the power by 114 volts to overcome the resistance.", "label": "CONTROL"}
+{"input": "We need to inject an extra 245A into the circuit.", "label": "CONTROL"}
+{"input": " welding thickness is 0.2 millimeters, Uh  material is CuSi3,   welding method is Gas Shielded Flux-Cored Arc Welding , Please provide detailed information on the required parameters.", "label": "QUERY"}
+{"input": " welding material is 5 Series Aluminum Magnesium, Uh Moreover welding method is Gas Shielded Flux-Cored Arc Welding , Which parameters are required?", "label": "QUERY"}
+{"input": "What’s the funniest joke you’ve heard recently that made you laugh out loud?", "label": "RAG"}
+{"input": "Let's juice up the system with an additional 348 volts.", "label": "CONTROL"}
+{"input": "In electrical engineering, why is grounding important in power distribution systems, and what are the risks of poor grounding practices?", "label": "RAG"}
+{"input": "I comprehend now material is Pure Aluminum Plate, , Moreover method of weld is GTAWP,   welding thickness is 0.4 , ?", "label": "QUERY"}
+{"input": "Let's dial up the current by 270 amps to ensure everything runs smoothly.", "label": "CONTROL"}
+{"input": "Can you recommend a book or movie that changed your perspective on something?", "label": "RAG"}
+{"input": "I now understand that welding material is Aluminum Silicon Alloy No. 5, Eh Well method of weld is GMAWP, Uh, Additionally thickness is 8 centermeters , ", "label": "QUERY"}
+{"input": "I just confirmed thickness is eighteen, , In addition method of weld is Flux-Cored Arc Welding, Uh Also welding material is Aluminum Alloy Mg-5 , Please list the parameters I need", "label": "QUERY"}
+{"input": "What’s the most interesting hobby or activity you’ve picked up recently, and how did you get into it?", "label": "RAG"}
+{"input": "The current should be cranked up by 114A to handle the load.", "label": "CONTROL"}
+{"input": " thickness of weld is fourteen centermeters, Hmm, Additionally method is ARC,  Moreover material is 99.5% Purity Aluminum .", "label": "QUERY"}
+{"input": "Give the circuit a 5V jolt to get it going.", "label": "CONTROL"}
+{"input": "Give the circuit a 201V jolt to get it going.", "label": "CONTROL"}
+{"input": "If you had to choose one book to read repeatedly throughout your life, what would it be and why?", "label": "RAG"}
+{"input": "The information I have is thickness of weld is 11 millimeters , What parameters are needed", "label": "QUERY"}
+{"input": "Let's dial up the current by 348 amps to ensure proper operation.", "label": "CONTROL"}
+{"input": "Why is argon commonly used as a shielding gas in TIG welding?", "label": "RAG"}
+{"input": "I learned after researching welding material is Silicon Aluminum Alloy Si-5,  Well method of weld is CO2 , What parameters are needed", "label": "QUERY"}
+{"input": "I found out after verifying welding material is Chromium Nickel 199,  In addition welding thickness is six millimeters,   method is Gas Metal Arc Welding Can you tell me which parameters are needed", "label": "QUERY"}
+{"input": " method of weld is Gas Metal Arc Welding,  As well as thickness is 2.3 millimeters , .", "label": "QUERY"}
+{"input": "What are some common signs that indicate the need for maintenance or replacement of your welding machine's consumables?", "label": "RAG"}
+{"input": "Boost the voltage by 114V to achieve the desired effect.", "label": "CONTROL"}
+{"input": "What’s your favorite underrated movie?", "label": "RAG"}
+{"input": "Who is your favorite fictional character, and what makes them stand out to you?", "label": "RAG"}
+{"input": "The amperage needs to be cranked up by 168A for optimal performance.", "label": "CONTROL"}
+{"input": "What are the key differences between MIG and TIG welding, and in what scenarios would you prefer one over the other?", "label": "RAG"}
+{"input": "How does preheating affect weld quality in high-carbon steel?", "label": "RAG"}
+{"input": "We need to step up the current by 270 amps to meet the demand.", "label": "CONTROL"}
+{"input": "Let's give it a 5A surge to see if it stabilizes.", "label": "CONTROL"}
+{"input": "The current should be cranked up by 41 amps to handle the load.", "label": "CONTROL"}
+{"input": "What’s your go-to method for staying organized at work?", "label": "RAG"}
+{"input": "The situation I understand is thickness is twelve, Oh, As well as welding method is mi , What parameters are needed?", "label": "QUERY"}
+{"input": "How can you ensure proper fit-up to minimize distortion during the welding process?", "label": "RAG"}
+{"input": "Give the system an extra 348-amp push to get it running smoothly.", "label": "CONTROL"}
+{"input": "When performing MIG welding on aluminum, why is it important to use a spool gun instead of a regular wire feeder?", "label": "RAG"}
+{"input": "What’s the funniest joke you’ve ever heard or told?", "label": "RAG"}
+{"input": "How can you minimize distortion when welding thick metal plates?", "label": "RAG"}
+{"input": "The voltage needs to be elevated by 41 volts to meet the specs.", "label": "CONTROL"}
+{"input": "I just discovered thickness is eleven centermeters, Uh, Moreover welding method is Self-Shielded Flux-Cored Arc Welding, Hmm, At the same time material is AlSi5 , .", "label": "QUERY"}
+{"input": "Give the circuit a 200V jolt to get it going.", "label": "CONTROL"}
+{"input": " thickness is three centermeters Can you specify the required parameters?", "label": "QUERY"}
+{"input": "What are some common causes of burn-through in sheet metal welding, and how can they be prevented?", "label": "RAG"}
+{"input": "When selecting electrodes for MIG welding, what factors should be considered?", "label": "RAG"}
+{"input": "Let's give it a 41-amp bump to ensure it runs smoothly.", "label": "CONTROL"}
+{"input": "When dealing with aluminum alloys, which type of electrode is preferred and why?", "label": "RAG"}
+{"input": "Let's juice up the system by 201 volts to see if it stabilizes.", "label": "CONTROL"}
+{"input": "The voltage needs to be elevated by 245V.", "label": "CONTROL"}
+{"input": "Let's juice up the circuit with an additional 41 volts.", "label": "CONTROL"}
+{"input": "Boost the electrical potential by 200 volts to power the load.", "label": "CONTROL"}
+{"input": " material is Steel, Well, As well as method is Flux-Cored Arc Welding Please tell me which parameters are needed", "label": "QUERY"}
+{"input": "What are the key differences between oxy-fuel cutting and plasma cutting, and in what situations would you prefer one over the other?", "label": "RAG"}
+{"input": "Boost the power by adding 270 more volts to the existing supply.", "label": "CONTROL"}
+{"input": "We need to spike the current by 348 amps to handle the load.", "label": "CONTROL"}
+{"input": "We're going to have to inject an extra 5 amps into the circuit.", "label": "CONTROL"}
+{"input": "What's the funniest meme you've seen recently, and why did it make you laugh so much?", "label": "RAG"}
+{"input": "I noticed thickness is 1.5 centermeters, Hmm Moreover material is Aluminum 99.5, Ah  welding method is Short Circuit Transfer Gas Metal Arc Welding , What should I do now?", "label": "QUERY"}
+{"input": "How do you troubleshoot excessive spatter in stick welding?", "label": "RAG"}
+{"input": "Let's give it a 114 amp surge to get the job done.", "label": "CONTROL"}
+{"input": "How does preheating affect weld quality in high-carbon steel?", "label": "RAG"}
+{"input": "What’s the funniest joke you’ve ever heard, and why did it make you laugh so much?", "label": "RAG"}
+{"input": "Let's dial the current up by 189 amps for the test.", "label": "CONTROL"}
+{"input": "We need to notch the voltage up by 344 volts.", "label": "CONTROL"}
+{"input": "What’s the difference between AC and DC welding, and when should you use each?", "label": "RAG"}
+{"input": "I found out after verifying welding method is Double Pulse, Ha Moreover thickness is 0.3 centermeters, ,  welding material is Aluminum Bar , Please list the parameters I need.", "label": "QUERY"}
+{"input": " welding material is Aluminum Silicon Magnesium , .", "label": "QUERY"}
+{"input": "What type of personal protective equipment (PPE) is essential for safe welding practices?", "label": "RAG"}
+{"input": "What are the key differences between flux-cored and solid wire MIG welding, and which one is better suited for outdoor applications?", "label": "RAG"}
+{"input": "Do you prefer books or movies, and why do you think one medium might be superior to the other?", "label": "RAG"}
+{"input": "Ratchet up the voltage 344 volts.", "label": "CONTROL"}
+{"input": "What are the key differences between MIG and TIG welding techniques, and in what situations would you prefer one over the other?", "label": "RAG"}
+{"input": "I have mastered thickness is 2.7, Eh  welding method is CO2, Ah, Also welding material is al995 , Please list the parameters I need.", "label": "QUERY"}
+{"input": "What factors should be considered when selecting the appropriate filler material for welding aluminum alloys?", "label": "RAG"}
+{"input": "The system needs a 189-volt shot in the arm.", "label": "CONTROL"}
+{"input": "If you could travel to any fictional world, which one would you choose and why?", "label": "RAG"}
+{"input": "I noticed method is CO2, Ah  welding thickness is 6, Hmm Moreover welding material is Copper Silicon Alloy Please list the parameters I need", "label": "QUERY"}
+{"input": "I learned after researching thickness is 1.0, Uh As well as welding method is Short Circuit Transfer Gas Metal Arc Welding, Oh, Furthermore material is Chromium Nickel 199 .", "label": "QUERY"}
+{"input": " welding thickness is 2.4 centermeters I need to know which parameters", "label": "QUERY"}
+{"input": "I just confirmed welding thickness is 10 millimeters, Eh  method of weld is MAG, Oh Furthermore material of weld is Chromium Nickel 199 , .", "label": "QUERY"}
+{"input": "Let's juice up the system by 200 volts to see if it stabilizes.", "label": "CONTROL"}
+{"input": " material is Magnesium Aluminum Alloy 5, Eh, Additionally welding method is Gas Tungsten Arc Welding, Ah  thickness is 10 What parameters are needed", "label": "QUERY"}
+{"input": "We need to notch up the voltage by 114 volts to meet the requirements.", "label": "CONTROL"}
+{"input": "What safety precautions are critical when welding in confined spaces?", "label": "RAG"}
+{"input": "I just discovered method is Pulse Gas Tungsten Arc Welding, Oh Moreover welding material is Ferrite , ", "label": "QUERY"}
+{"input": "Which historical figure do you think would be most at home in today's digital age?", "label": "RAG"}
+{"input": "What safety precautions are critical when welding in confined spaces?", "label": "RAG"}
+{"input": "I just discovered material of weld is al995, Hmm  welding thickness is 1.8 centermeters, Hmm, Moreover welding method is Single Pulse What should I do now.", "label": "QUERY"}

@@ -23,9 +23,14 @@ model = fasttext.load_model(config.fast_text_moedel_path)
  3.翻译文本不能超过5000个字符，即汉语不超过15000个字节，英文不超过5000个字节。
  4.此接口调用返回时长上有优化、通过个性化术语资源使用可以做到词语个性化翻译、后面会支持更多的翻译语种。
 '''
-APPId = 'ff9d26aa'
-APISecret = 'YTlhZDY0M2ZhYzk4ZjcwMGMyMDhhYThj'
-APIKey = 'd78a8f15d26324aacc0614a4e16a8b50'
+#企业api
+#APPId = 'ff9d26aa'
+#APISecret = 'YTlhZDY0M2ZhYzk4ZjcwMGMyMDhhYThj'
+#APIKey = 'd78a8f15d26324aacc0614a4e16a8b50'
+
+APPId = '825879b7'
+APISecret = 'ZGViYmE0ZTk4NmRiZGM3OWViYmI0MjBl'
+APIKey = '812feeed03ce2d4fd13526b38d08ce56'
 
 # 术语资源唯一标识，请根据控制台定义的RES_ID替换具体值，如不需术语可以不用传递此参数
 # RES_ID = "its_en_cn_word"
@@ -167,6 +172,9 @@ def is_english_char(char):
     return char.isascii() and char.isalpha()
 
 def directly_judge_language(s):
+    # 现在的逻辑：空格、标点符号，一律视为中文
+    if all(char in string.whitespace or char in string.punctuation for char in s):
+        return "cn"
     if s.strip(string.punctuation).lower() in corpus_list:
         return "cn"
     for char in s:

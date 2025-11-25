@@ -2,6 +2,7 @@
 # This file is auto-generated, don't edit it. Thanks.
 import os
 import sys
+sys.path.append('/dev_data/zkyao/code/Weld-GPT_demo')
 
 from typing import List
 
@@ -86,4 +87,4 @@ class Sample:
 
 
 if __name__ == '__main__':
-    print(Sample.main(123456, 18122470040))
+    print(Sample.main(123456, 17687946136))

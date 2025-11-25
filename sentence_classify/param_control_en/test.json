@@ -1,0 +1,300 @@
+{"input": "We need to pare the voltage back by 75 volts to ensure safety.", "label": "down", "slot": 75}
+{"input": "The voltage needs to be trimmed by 45 volts to prevent overheating.", "label": "down", "slot": 45}
+{"input": "The voltage needs a 90V bump to meet specs.", "label": "up", "slot": 90}
+{"input": "Set the current to 214 amps precisely.", "label": "control", "slot": 214}
+{"input": "The voltage needs to be trimmed by 75 volts to prevent overheating.", "label": "down", "slot": 75}
+{"input": "Set the current to 214 amps accurately.", "label": "control", "slot": 214}
+{"input": "Give the circuit a 154-volt jolt to get it going.", "label": "up", "slot": 154}
+{"input": "We need to spike the current by 113 amps to handle the load.", "label": "up", "slot": 113}
+{"input": "Let's give the voltage a 59V boost.", "label": "up", "slot": 59}
+{"input": "Ensure the current is set to 214A.", "label": "control", "slot": 214}
+{"input": "Regulate the current to exactly 156 amps.", "label": "control", "slot": 156}
+{"input": "Ensure the current is regulated to 214A.", "label": "control", "slot": 214}
+{"input": "Let's give the system a 327-amp surge to get it running smoothly.", "label": "up", "slot": 327}
+{"input": "Target the voltage at 18V.", "label": "control", "slot": 18}
+{"input": "Hold the voltage steady at 214 volts.", "label": "control", "slot": 214}
+{"input": "Slash the voltage by 84 volts, stat!", "label": "down", "slot": 84}
+{"input": "Boost the voltage by 351 volts to achieve the desired output.", "label": "up", "slot": 351}
+{"input": "Whittle down the current by 45A to ensure proper functioning.", "label": "down", "slot": 45}
+{"input": "We're looking to dial down the voltage 358V.", "label": "down", "slot": 358}
+{"input": "Slash the voltage by 75 volts, stat!", "label": "down", "slot": 75}
+{"input": "The voltage should be trimmed by 79V.", "label": "down", "slot": 79}
+{"input": "Tune the current to exactly 5 amps.", "label": "control", "slot": 5}
+{"input": "We need to juice up the current by 59 amps.", "label": "up", "slot": 59}
+{"input": "Ensure the voltage is set at 317V.", "label": "control", "slot": 317}
+{"input": "We need to dial back the current by 358 amps.", "label": "down", "slot": 358}
+{"input": "Boost the electrical potential by 90 volts to energize the load.", "label": "up", "slot": 90}
+{"input": "The current should be increased by 59 amps.", "label": "up", "slot": 59}
+{"input": "Bring the voltage up to 58 volts.", "label": "control", "slot": 58}
+{"input": "The system requires a 45-volt reduction to function correctly.", "label": "down", "slot": 45}
+{"input": "The voltage needs to be trimmed by 75 volts for stability.", "label": "down", "slot": 75}
+{"input": "Let's juice it up with an additional 154 volts.", "label": "up", "slot": 154}
+{"input": "The voltage needs to be elevated by 113 volts to meet the specs.", "label": "up", "slot": 113}
+{"input": "The current should be trimmed by 358A.", "label": "down", "slot": 358}
+{"input": "Set the current to 214 amps.", "label": "control", "slot": 214}
+{"input": "The voltage needs to be trimmed by 75 volts to prevent overheating.", "label": "down", "slot": 75}
+{"input": "We need to give the current a 59A lift.", "label": "up", "slot": 59}
+{"input": "Give the voltage a 59V shot.", "label": "up", "slot": 59}
+{"input": "Target the voltage at 214V precisely.", "label": "control", "slot": 214}
+{"input": "Give the current an extra 59A push.", "label": "up", "slot": 59}
+{"input": "The voltage needs a 59V bump.", "label": "up", "slot": 59}
+{"input": "We need to pare the current back by 75 amps to ensure safety.", "label": "down", "slot": 75}
+{"input": "Tighten the voltage to 214 volts.", "label": "control", "slot": 214}
+{"input": "Target the current at 214A precisely.", "label": "control", "slot": 214}
+{"input": "Boost the power by 113 volts to achieve the desired output.", "label": "up", "slot": 113}
+{"input": "The current needs to be scaled back by 75 amps to maintain stability.", "label": "down", "slot": 75}
+{"input": "Let's dial up the current by 113 amps to ensure proper function.", "label": "up", "slot": 113}
+{"input": "Trim the voltage by 45V to maintain optimal performance.", "label": "down", "slot": 45}
+{"input": "Regulate the current to exactly 317 amps.", "label": "control", "slot": 317}
+{"input": "Fix the voltage at 214V.", "label": "control", "slot": 214}
+{"input": "Ensure the voltage is calibrated to 214V.", "label": "control", "slot": 214}
+{"input": "Fix the current at 156A.", "label": "control", "slot": 156}
+{"input": "Adjust the voltage to 18V.", "label": "control", "slot": 18}
+{"input": "Slash the voltage by 118 volts, giving it a good trim.", "label": "down", "slot": 118}
+{"input": "Chop 45 amps off the current to avoid a spike.", "label": "down", "slot": 45}
+{"input": "Let's give the system a 114V lift to enhance its performance.", "label": "up", "slot": 114}
+{"input": "The current should be reduced by 75A to maintain safe operation.", "label": "down", "slot": 75}
+{"input": "The current needs a 84A haircut.", "label": "down", "slot": 84}
+{"input": "Let's dial the current back 45 amps to maintain stability.", "label": "down", "slot": 45}
+{"input": "Target the voltage at precisely 214V.", "label": "control", "slot": 214}
+{"input": "Chop 75 volts off the supply to prevent overload.", "label": "down", "slot": 75}
+{"input": "Calibrate the output to 5 volts.", "label": "control", "slot": 5}
+{"input": "We need to spike the current 90 amps to handle the load.", "label": "up", "slot": 90}
+{"input": "Chop 45 volts off the supply to maintain stability.", "label": "down", "slot": 45}
+{"input": "Bring the voltage to 214 volts exactly.", "label": "control", "slot": 214}
+{"input": "Dial the voltage in to 214V.", "label": "control", "slot": 214}
+{"input": "We're looking at a 84V rollback on the power supply.", "label": "down", "slot": 84}
+{"input": "Tune the current to 214A.", "label": "control", "slot": 214}
+{"input": "Target the current at precisely 214A.", "label": "control", "slot": 214}
+{"input": "Set the voltage to 214 volts accurately.", "label": "control", "slot": 214}
+{"input": "Regulate the current to 18A.", "label": "control", "slot": 18}
+{"input": "We need to pare the voltage back by 45 volts to avoid issues.", "label": "down", "slot": 45}
+{"input": "Bring the voltage up to 18 volts.", "label": "control", "slot": 18}
+{"input": "Calibrate the potential to 18 volts.", "label": "control", "slot": 18}
+{"input": "The system needs a 79V rollback.", "label": "down", "slot": 79}
+{"input": "The current draw needs to be cranked up 90 amps to meet demand.", "label": "up", "slot": 90}
+{"input": "The voltage needs to be whittled down by 79V.", "label": "down", "slot": 79}
+{"input": "Ensure the voltage is set at 335V.", "label": "control", "slot": 335}
+{"input": "We need to elevate the voltage by 351 volts for optimal performance.", "label": "up", "slot": 351}
+{"input": "Voltage needs to be trimmed by 79V.", "label": "down", "slot": 79}
+{"input": "Bring the voltage to 214 volts.", "label": "control", "slot": 214}
+{"input": "The system needs to lose 84 volts of juice.", "label": "down", "slot": 84}
+{"input": "Chop 79 volts off the supply.", "label": "down", "slot": 79}
+{"input": "We need to spike the current by 114 amps to achieve the desired output.", "label": "up", "slot": 114}
+{"input": "Ensure the voltage is set at 5V.", "label": "control", "slot": 5}
+{"input": "The current needs to be dialed down by 75 amps to avoid overheating.", "label": "down", "slot": 75}
+{"input": "We need to notch the voltage down by 75 volts to stabilize the system.", "label": "down", "slot": 75}
+{"input": "The system requires a 75-volt cutback.", "label": "down", "slot": 75}
+{"input": "Whittle down the voltage by 45V to ensure optimal performance.", "label": "down", "slot": 45}
+{"input": "Lock the current in at 214 amps.", "label": "control", "slot": 214}
+{"input": "Fix the current at 5A.", "label": "control", "slot": 5}
+{"input": "We need to notch down the current by 79A.", "label": "down", "slot": 79}
+{"input": "Stabilize the current at 214A.", "label": "control", "slot": 214}
+{"input": "Calibrate the voltage to 317 volts.", "label": "control", "slot": 317}
+{"input": "Give the voltage a 59V lift.", "label": "up", "slot": 59}
+{"input": "The current needs to be bumped up by 327 amps to ensure proper operation.", "label": "up", "slot": 327}
+{"input": "Adjust the voltage to precisely 335 volts.", "label": "control", "slot": 335}
+{"input": "Give the system a 327-volt jolt to get it going.", "label": "up", "slot": 327}
+{"input": "Crank the current up by 59 amps.", "label": "up", "slot": 59}
+{"input": "Adjust the voltage to precisely 5 volts.", "label": "control", "slot": 5}
+{"input": "We need to ratchet up the voltage 90 volts for optimal performance.", "label": "up", "slot": 90}
+{"input": "Bring the voltage to exactly 214 volts.", "label": "control", "slot": 214}
+{"input": "Tune the current to exactly 18A.", "label": "control", "slot": 18}
+{"input": "Back off the voltage by 358 volts.", "label": "down", "slot": 358}
+{"input": "Let's give the circuit a 114 amp boost to meet the specifications.", "label": "up", "slot": 114}
+{"input": "Tighten the voltage to 214 volts.", "label": "control", "slot": 214}
+{"input": "The voltage needs to be raised by 114 volts to ensure proper operation.", "label": "up", "slot": 114}
+{"input": "Regulate the current to exactly 106 amps.", "label": "control", "slot": 106}
+{"input": "Tune the current to 106 amps.", "label": "control", "slot": 106}
+{"input": "We need to inject an additional 114 amps into the system to handle the load.", "label": "up", "slot": 114}
+{"input": "The voltage needs a 79V haircut.", "label": "down", "slot": 79}
+{"input": "The current needs a 79 amp rollback.", "label": "down", "slot": 79}
+{"input": "Bring the voltage up to 317 volts.", "label": "control", "slot": 317}
+{"input": "Let's give the voltage a 59V surge.", "label": "up", "slot": 59}
+{"input": "Boost the voltage by 114V to achieve the desired effect.", "label": "up", "slot": 114}
+{"input": "Calibrate the output to 214V.", "label": "control", "slot": 214}
+{"input": "The voltage needs to be scaled back by 75 volts to maintain stability.", "label": "down", "slot": 75}
+{"input": "Set the current to precisely 214 amps.", "label": "control", "slot": 214}
+{"input": "We're going to need to bleed 84 amps from the circuit.", "label": "down", "slot": 84}
+{"input": "We need to pare the current back by 45 amps for stability.", "label": "down", "slot": 45}
+{"input": "We need to give the current a 59A boost.", "label": "up", "slot": 59}
+{"input": "The voltage needs to be scaled back by 75 volts.", "label": "down", "slot": 75}
+{"input": "Tighten the voltage to 214 volts exactly.", "label": "control", "slot": 214}
+{"input": "Ensure the current is fixed at 214 amps.", "label": "control", "slot": 214}
+{"input": "Give the system an extra 113-amp push to get it running smoothly.", "label": "up", "slot": 113}
+{"input": "The voltage should be reduced by 75 volts to avoid damage.", "label": "down", "slot": 75}
+{"input": "The current should be increased by 59 amps.", "label": "up", "slot": 59}
+{"input": "Let's juice up the circuit with an additional 327 volts.", "label": "up", "slot": 327}
+{"input": "Ensure the voltage is set at 156V.", "label": "control", "slot": 156}
+{"input": "The system requires a 45-volt reduction to function correctly.", "label": "down", "slot": 45}
+{"input": "Bring the voltage up to 156 volts.", "label": "control", "slot": 156}
+{"input": "Set the amperage to 58 amps.", "label": "control", "slot": 58}
+{"input": "The voltage should be raised by 59 volts.", "label": "up", "slot": 59}
+{"input": "We're going to have to pare down the current by 75 amps.", "label": "down", "slot": 75}
+{"input": "The system needs a 358-volt haircut.", "label": "down", "slot": 358}
+{"input": "Set the voltage to 214 volts precisely.", "label": "control", "slot": 214}
+{"input": "Let's ratchet up the voltage by 59 volts.", "label": "up", "slot": 59}
+{"input": "Tune the current to 58 amps.", "label": "control", "slot": 58}
+{"input": "Boost the voltage by 154V to meet the required specs.", "label": "up", "slot": 154}
+{"input": "Let's juice up the system with an additional 113 volts.", "label": "up", "slot": 113}
+{"input": "We need to hike the voltage by 59 volts.", "label": "up", "slot": 59}
+{"input": "Stabilize the voltage at 317 volts.", "label": "control", "slot": 317}
+{"input": "We need to notch the voltage down by 75 volts.", "label": "down", "slot": 75}
+{"input": "We need to hike the voltage by 114 volts to meet the specifications.", "label": "up", "slot": 114}
+{"input": "Give the circuit a 113-volt jolt to get it going.", "label": "up", "slot": 113}
+{"input": "We need to elevate the voltage by 59 volts.", "label": "up", "slot": 59}
+{"input": "The system requires a 45-amp reduction to operate safely.", "label": "down", "slot": 45}
+{"input": "Set the current to 156 amps.", "label": "control", "slot": 156}
+{"input": "Tighten the voltage to exactly 214 volts.", "label": "control", "slot": 214}
+{"input": "Crank the current up by an extra 59 amps.", "label": "up", "slot": 59}
+{"input": "The current should be trimmed by 84 amps.", "label": "down", "slot": 84}
+{"input": "We need to pare the voltage back by 75 volts to ensure safety.", "label": "down", "slot": 75}
+{"input": "Set the current to 106 amps.", "label": "control", "slot": 106}
+{"input": "Let's pare down the voltage by 45 volts to optimize performance.", "label": "down", "slot": 45}
+{"input": "The current should be elevated by 327 amps to handle the load.", "label": "up", "slot": 327}
+{"input": "We need to pare the current back by 75 amps.", "label": "down", "slot": 75}
+{"input": "The voltage needs to be whittled down by 45V for safety.", "label": "down", "slot": 45}
+{"input": "The current needs to be whittled down by 45 amps to prevent overheating.", "label": "down", "slot": 45}
+{"input": "Give the current a 59A push.", "label": "up", "slot": 59}
+{"input": "The voltage should be elevated by 59 volts.", "label": "up", "slot": 59}
+{"input": "Boost the voltage by an additional 59 volts.", "label": "up", "slot": 59}
+{"input": "Add 59 more amps to the current.", "label": "up", "slot": 59}
+{"input": "The voltage needs to be trimmed by 45 volts to prevent overheating.", "label": "down", "slot": 45}
+{"input": "Ensure the voltage is regulated to 214V.", "label": "control", "slot": 214}
+{"input": "Maintain the current at 5A.", "label": "control", "slot": 5}
+{"input": "Give the current a 59A bump.", "label": "up", "slot": 59}
+{"input": "Give the current a 59A kick.", "label": "up", "slot": 59}
+{"input": "Regulate the current to 5 amps.", "label": "control", "slot": 5}
+{"input": "Fix the current at 18 amps.", "label": "control", "slot": 18}
+{"input": "Let's dial back the voltage 79 volts.", "label": "down", "slot": 79}
+{"input": "Keep the current at 58A.", "label": "control", "slot": 58}
+{"input": "Adjust the current to 214 amps.", "label": "control", "slot": 214}
+{"input": "Tighten the current to 214 amps.", "label": "control", "slot": 214}
+{"input": "The voltage needs to be scaled back by 75 volts to maintain stability.", "label": "down", "slot": 75}
+{"input": "Let's juice up the system by 90 volts to power through.", "label": "up", "slot": 90}
+{"input": "Chop 84 amps out of the current flow.", "label": "down", "slot": 84}
+{"input": "The system requires a 154-amp bump to handle the demand.", "label": "up", "slot": 154}
+{"input": "Let's give the system an extra 114A to handle the increased demand.", "label": "up", "slot": 114}
+{"input": "Let's give the voltage a 59V spike.", "label": "up", "slot": 59}
+{"input": "We need to elevate the voltage by 59 volts.", "label": "up", "slot": 59}
+{"input": "Give the current an extra 154-amp push to get the job done.", "label": "up", "slot": 154}
+{"input": "We need to pare back the current by 45 amps to avoid a surge.", "label": "down", "slot": 45}
+{"input": "Give the voltage a 59V jolt.", "label": "up", "slot": 59}
+{"input": "Fix the current at 317A.", "label": "control", "slot": 317}
+{"input": "Bring the voltage up to 214V.", "label": "control", "slot": 214}
+{"input": "Let's dial back the voltage 75V to prevent overheating.", "label": "down", "slot": 75}
+{"input": "Calibrate the voltage to 156 volts.", "label": "control", "slot": 156}
+{"input": "We need to hike the voltage by 114 volts to overcome the impedance.", "label": "up", "slot": 114}
+{"input": "Let's give the circuit a 114 amp boost to meet the specifications.", "label": "up", "slot": 114}
+{"input": "The current needs to be deflated by 358 amps.", "label": "down", "slot": 358}
+{"input": "Bring the current to 214 amps.", "label": "control", "slot": 214}
+{"input": "We need to notch the current down by 75 amps to stabilize the system.", "label": "down", "slot": 75}
+{"input": "Calibrate the voltage to 106 volts.", "label": "control", "slot": 106}
+{"input": "Boost the voltage by 59 volts.", "label": "up", "slot": 59}
+{"input": "Let's give the system an extra 114A to handle the increased demand.", "label": "up", "slot": 114}
+{"input": "The system needs a 154V surge to function properly.", "label": "up", "slot": 154}
+{"input": "Let's chip away 358 volts from the supply.", "label": "down", "slot": 358}
+{"input": "Maintain the current at 18 amps.", "label": "control", "slot": 18}
+{"input": "Boost the voltage by 327 volts to power up the device.", "label": "up", "slot": 327}
+{"input": "Give the circuit a 351-volt jolt to get it going.", "label": "up", "slot": 351}
+{"input": "The current should be trimmed by 79 amps.", "label": "down", "slot": 79}
+{"input": "We need to ratchet up the voltage by 327 volts for optimal performance.", "label": "up", "slot": 327}
+{"input": "The current needs to be scaled back by 75 amps to prevent damage.", "label": "down", "slot": 75}
+{"input": "Give the voltage a 59V bump.", "label": "up", "slot": 59}
+{"input": "The amperage has to be cranked up by 154A for optimal performance.", "label": "up", "slot": 154}
+{"input": "We need to notch up the voltage by 59 volts.", "label": "up", "slot": 59}
+{"input": "Add 59 more amps to the current.", "label": "up", "slot": 59}
+{"input": "We need to inject an extra 351 amps into the system.", "label": "up", "slot": 351}
+{"input": "Ensure the current is stabilized at 214A.", "label": "control", "slot": 214}
+{"input": "Trim the current by 45A to ensure proper functioning.", "label": "down", "slot": 45}
+{"input": "Regulate the current to 214A.", "label": "control", "slot": 214}
+{"input": "Fix the current at 106A.", "label": "control", "slot": 106}
+{"input": "Tune the current to 156 amps.", "label": "control", "slot": 156}
+{"input": "Chop 45 amps off the current to maintain stability.", "label": "down", "slot": 45}
+{"input": "We need to elevate the voltage by 114 volts to meet the specifications.", "label": "up", "slot": 114}
+{"input": "We've got to dial back the voltage 45V to prevent overheating.", "label": "down", "slot": 45}
+{"input": "Adjust the voltage to precisely 317 volts.", "label": "control", "slot": 317}
+{"input": "Let's inject an extra 90 amps into the circuit.", "label": "up", "slot": 90}
+{"input": "Slash the voltage by 358 volts, stat!", "label": "down", "slot": 358}
+{"input": "Bring the voltage up to 106 volts.", "label": "control", "slot": 106}
+{"input": "Bring the voltage up to 5V.", "label": "control", "slot": 5}
+{"input": "Stabilize the voltage at 156 volts.", "label": "control", "slot": 156}
+{"input": "Crank the current 59 amps higher.", "label": "up", "slot": 59}
+{"input": "Target the current at 214A.", "label": "control", "slot": 214}
+{"input": "We need to pare the voltage back by 45V to avoid a surge.", "label": "down", "slot": 45}
+{"input": "Back the voltage off by 84V, please.", "label": "down", "slot": 84}
+{"input": "We're going to have to ratchet the voltage up by 154 volts.", "label": "up", "slot": 154}
+{"input": "The voltage should be stabilized at 5 volts.", "label": "control", "slot": 5}
+{"input": "Target the voltage at 214V.", "label": "control", "slot": 214}
+{"input": "We need to ratchet up the voltage by 113 volts for optimal performance.", "label": "up", "slot": 113}
+{"input": "We need to dial down the current by 79 amps.", "label": "down", "slot": 79}
+{"input": "Take 79 amps off the current.", "label": "down", "slot": 79}
+{"input": "The voltage should be reduced by 75 volts to avoid damage.", "label": "down", "slot": 75}
+{"input": "Add 59 more amps to the current.", "label": "up", "slot": 59}
+{"input": "The system requires a 45-amp reduction to operate safely.", "label": "down", "slot": 45}
+{"input": "Target the voltage at exactly 58V.", "label": "control", "slot": 58}
+{"input": "The voltage needs to be cranked up by 351V to meet the specs.", "label": "up", "slot": 351}
+{"input": "The current needs to be trimmed by 75 amps to prevent overheating.", "label": "down", "slot": 75}
+{"input": "Tighten the current to exactly 214 amps.", "label": "control", "slot": 214}
+{"input": "Boost the voltage by 59 volts.", "label": "up", "slot": 59}
+{"input": "We need to spike the current by 114 amps to achieve the desired output.", "label": "up", "slot": 114}
+{"input": "Adjust the voltage to precisely 156 volts.", "label": "control", "slot": 156}
+{"input": "Set the voltage to precisely 214 volts.", "label": "control", "slot": 214}
+{"input": "We need to pare back the voltage by 79 volts.", "label": "down", "slot": 79}
+{"input": "The current should be reduced by 75 amps to avoid damage.", "label": "down", "slot": 75}
+{"input": "Trim the voltage by 75 volts to ensure safety.", "label": "down", "slot": 75}
+{"input": "The current should be cranked up by 113 amps to meet the demand.", "label": "up", "slot": 113}
+{"input": "Adjust the voltage to 214 volts.", "label": "control", "slot": 214}
+{"input": "Take a bite out of the current, 358 amps worth.", "label": "down", "slot": 358}
+{"input": "Ensure the voltage is set at 106V.", "label": "control", "slot": 106}
+{"input": "The system requires a 75-volt reduction to function properly.", "label": "down", "slot": 75}
+{"input": "Target the voltage at 214 volts.", "label": "control", "slot": 214}
+{"input": "We need to pare the current back by 45A to avoid a spike.", "label": "down", "slot": 45}
+{"input": "Let's give the system a 114V boost to enhance its performance.", "label": "up", "slot": 114}
+{"input": "Crank the current up by 59 amps.", "label": "up", "slot": 59}
+{"input": "The voltage should be lifted by 59 volts.", "label": "up", "slot": 59}
+{"input": "Tune the current to 317 amps.", "label": "control", "slot": 317}
+{"input": "The current needs a 79 amp trim.", "label": "down", "slot": 79}
+{"input": "The current should be increased by 59 amps.", "label": "up", "slot": 59}
+{"input": "Knock the current back 75 amps to stabilize the circuit.", "label": "down", "slot": 75}
+{"input": "The voltage needs to be trimmed by 45V to meet the specs.", "label": "down", "slot": 45}
+{"input": "We need to notch the current down by 75 amps.", "label": "down", "slot": 75}
+{"input": "The current should be trimmed by 75 amps to maintain stability.", "label": "down", "slot": 75}
+{"input": "Bring the current to exactly 214 amps.", "label": "control", "slot": 214}
+{"input": "We're looking at a 75V rollback on the power supply.", "label": "down", "slot": 75}
+{"input": "Ensure the current is calibrated to 214A.", "label": "control", "slot": 214}
+{"input": "Add an extra 59A to the current.", "label": "up", "slot": 59}
+{"input": "Give the circuit a 90V jolt to get it going.", "label": "up", "slot": 90}
+{"input": "We need to notch down the voltage by 79 volts.", "label": "down", "slot": 79}
+{"input": "The system needs a 45-volt rollback to ensure safe operation.", "label": "down", "slot": 45}
+{"input": "Adjust the voltage to precisely 106 volts.", "label": "control", "slot": 106}
+{"input": "Stabilize the current at 58A.", "label": "control", "slot": 58}
+{"input": "The voltage needs to be cranked up by 327 volts to meet the specs.", "label": "up", "slot": 327}
+{"input": "The current needs a 45-amp rollback to ensure proper functioning.", "label": "down", "slot": 45}
+{"input": "We need to inject an extra 327 amps into the circuit.", "label": "up", "slot": 327}
+{"input": "Stabilize the voltage at 106 volts.", "label": "control", "slot": 106}
+{"input": "Boost the voltage by 114V to achieve the desired effect.", "label": "up", "slot": 114}
+{"input": "We need to spike the current by 154 amps to power the load.", "label": "up", "slot": 154}
+{"input": "Give the amperage a 90A shot in the arm.", "label": "up", "slot": 90}
+{"input": "The current should be reduced by 79A.", "label": "down", "slot": 79}
+{"input": "The current should be trimmed down by 45A to prevent overload.", "label": "down", "slot": 45}
+{"input": "We need to elevate the voltage by 114 volts to overcome the impedance.", "label": "up", "slot": 114}
+{"input": "Set the current to 317 amps.", "label": "control", "slot": 317}
+{"input": "The voltage needs to be lifted by 114 volts to ensure proper operation.", "label": "up", "slot": 114}
+{"input": "Boost the system's voltage by an additional 59 volts.", "label": "up", "slot": 59}
+{"input": "Let's juice up the system with an additional 351 volts.", "label": "up", "slot": 351}
+{"input": "The current needs to be trimmed by 45 amps to prevent overheating.", "label": "down", "slot": 45}
+{"input": "We need to give the current a 59A jolt.", "label": "up", "slot": 59}
+{"input": "We need to notch the voltage down by 75 volts to stabilize the system.", "label": "down", "slot": 75}
+{"input": "Ensure the voltage is set at 214 volts.", "label": "control", "slot": 214}
+{"input": "Chop 45 volts off the supply to prevent damage.", "label": "down", "slot": 45}
+{"input": "Slash the voltage by 45 volts to stabilize the circuit.", "label": "down", "slot": 45}
+{"input": "Let's dial down the voltage 84 volts.", "label": "down", "slot": 84}
+{"input": "Ensure the voltage is stabilized at 214V.", "label": "control", "slot": 214}
+{"input": "Ensure the voltage is set at 18.", "label": "control", "slot": 18}
+{"input": "Bring the current to 214 amps exactly.", "label": "control", "slot": 214}
+{"input": "Stabilize the voltage at 214.", "label": "control", "slot": 214}
+{"input": "We need to dial down the current by 75 amps to avoid a surge.", "label": "down", "slot": 75}
+{"input": "The current needs to be elevated by 114A to ensure optimal performance.", "label": "up", "slot": 114}
+{"input": "The current needs to be elevated by 114A to ensure optimal performance.", "label": "up", "slot": 114}
+{"input": "We need to pare down the current by 79A.", "label": "down", "slot": 79}

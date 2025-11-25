@@ -4,6 +4,7 @@ from app.config.config import Args, device
 from app.utils.materials import corpus_of_value
 from seqeval.metrics.sequence_labeling import get_entities
 import torch
+from app.utils.paramSQL import get_all_MET, get_all_MAT, get_all_THI
 
 args = Args()
 device = device
@@ -20,11 +21,18 @@ def get_unit_intent(text):
             return "QUERY_CM"
     return "QUERY_MM"
 
-def check_MET(value):
+def check_MET(value,userID):
     value_list = corpus_of_value['MET']
-    return True if value in value_list else False
+    #插入用户定义的方法
+    value_list.extend(get_all_MET(userID))
+    if any(v in value_list for v in {value, value.upper(), value.lower()}) :
+        print("这里有识别到")
+        return True    
+    else:
+        print("这里没有识别到")
+        return False
 
-def predict(text):
+def predict(text,userID):
     config = args
     model.eval()
     with torch.no_grad():
@@ -56,7 +64,7 @@ def predict(text):
             entity_list[1] = tokenizer.decode(entity[1]).replace(' ', '')  # 注意，中文模型要.replace(' ', '')，英文是不加的，应为英文单词之间得空格
             # 如果焊接方法不在语料库里，刨掉
             if entity_list[0] == 'MET':
-                if check_MET(entity_list[1]):
+                if check_MET(entity_list[1],userID):
                     decoded_entities.append(tuple(entity_list))
             elif entity_list[1] not in ['[CLS]', '[SEP]']:  # 有时候会抽风，把这两个东西标注为实体
                 decoded_entities.append(tuple(entity_list))
