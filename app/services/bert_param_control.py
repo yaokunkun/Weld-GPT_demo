@@ -8,18 +8,21 @@ from app.config.config import param_control_config as bert_config
 from app.utils.materials import corpus_of_value
 from seqeval.metrics.sequence_labeling import get_entities
 import torch
+from app.connection_pool_for_main import http_client
+import httpx
+from fastapi import HTTPException
 mapping_chinese_num2arab_num = {'点': '.', '零': '0', '一': '1', '壹': '1', '两':'2', '二': '2', '貳': '2', '三': '3', '叁': '3', '四': '4', '肆': '4', '五': '5', '伍': '4','六': '6', '七': '7', '八': '8', '捌': '8', '九': '9', '玖': '9'}
 
 
-args = Args()
-device = device
-args.device = device
+# args = Args()
+# device = device
+# args.device = device
 
-label_list = bert_config['label_list']
-tokenizer = BertTokenizer.from_pretrained(bert_config['tokenizer_dir'])
-model = AutoModelForSequenceClassification.from_pretrained(bert_config['model_dir'], num_labels=len(label_list))
-model.to(device)
-model.eval()
+# label_list = bert_config['label_list']
+# tokenizer = BertTokenizer.from_pretrained(bert_config['tokenizer_dir'])
+# model = AutoModelForSequenceClassification.from_pretrained(bert_config['model_dir'], num_labels=len(label_list))
+# model.to(device)
+# model.eval()
 
 def chinese_num2arab_num(query):
     result = ""
@@ -70,7 +73,7 @@ def _extract_measure(query):
         return 'VOLTAGE'
     return None        
 
-def rule_predict(query):
+async def rule_predict(query):
     query = chinese_num2arab_num(query)
     query = _exclude_current_number(query)
     number = _extract_number(query)
@@ -88,22 +91,32 @@ def rule_predict(query):
     elif any(down_pattern in query for down_pattern in down_patterns) and all(up_down_exclude_pattern not in query for up_down_exclude_pattern in up_down_exclude_patterns):
         mode = 'down'
     else: 
-        mode = model_predict(query)
+        mode = await model_predict(http_client.client,query)
     return (mode, number, measuer)
     
-def model_predict(query):
-    inputs = tokenizer(query, padding=True, return_tensors="pt")
-    inputs.to(device)
-    with torch.no_grad():
-        outputs = model(**inputs)
+# def model_predict(query):
+#     inputs = tokenizer(query, padding=True, return_tensors="pt")
+#     inputs.to(device)
+#     with torch.no_grad():
+#         outputs = model(**inputs)
 
-    logits = outputs.logits
-    predicted_classes = torch.argmax(logits, dim=1)
-    prediction = label_list[predicted_classes[0]]
-    return prediction
+#     logits = outputs.logits
+#     predicted_classes = torch.argmax(logits, dim=1)
+#     prediction = label_list[predicted_classes[0]]
+#     return prediction
 
-def predict(query):
-    return rule_predict(query)
+async def model_predict(client: httpx.AsyncClient, query):
+    json_for_bert={"query":query}
+    # 直接发起 POST 请求
+    response = await client.post("/bert_cn_control", json=json_for_bert)
+    # 处理响应
+    if response.status_code in [200, 201, 202]:
+        return response.json()["predictions"]
+    else:
+        raise HTTPException(status_code=503, detail="bert_server_lost")
+
+async def predict(query):
+    return await rule_predict(query)
 
 if __name__ == '__main__':
     # toy_query = "电流改到3, 现在是18V"

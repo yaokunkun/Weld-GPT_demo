@@ -20,7 +20,7 @@ mapping_query_value2standard_value = possible_param_values
 number_values_list = [item for value_list in number_values.values() for item in value_list]
 number_values_list = sorted(number_values_list, key=len, reverse=True)
 # 所有焊接方法的列表
-key_list = ["MIG", "MMA","TIG_AC", "TIG_DC"]
+key_list = ["MIG", "MMA","TIG_AC", "TIG_DC","TIG"]
 method_list = [item for key in key_list  for item in possible_param_values[key]]
 method_list = sorted(method_list, key=len, reverse=True)
 # 所有焊接材料的列表
@@ -204,7 +204,7 @@ def determine_single_welding_intent(slots):
     else:
         return 'OTHER'
 
-def rule_regconization(query,userID):
+def rule_recognition(query,userID):
     from app.utils.paramSQL import get_all_MET,get_all_MAT, get_all_THI
     """
     对query进行牌号的材料匹配
@@ -234,15 +234,22 @@ def rule_regconization(query,userID):
                 print(f"拼音校正：{lacked_value}=>{matched_value}")
                 break
 
-        # Second
+        # Second: 优先匹配内置材料
         if matched_value == "":
-            material_list.extend(get_all_MAT(userID))
             for material_value in material_list:
                 if material_value in query or material_value.lower() in query.lower():
                     matched_value = material_value
                     break
+
+        # Third: 再匹配用户自定义材料（长度降序，避免短串截断）
+        if matched_value == "":
+            user_materials = get_all_MAT(userID)
+            for material_value in sorted(user_materials, key=len, reverse=True):
+                if material_value in query or material_value.lower() in query.lower():
+                    matched_value = material_value
+                    break
         
-        # Third
+        # Finally, pinyin match (only for内置材料)
         if matched_value == "":
             query_pinyin = p.get_pinyin(query)
             for i, material_pinyin in enumerate(material_list_of_pinyin):
@@ -266,15 +273,16 @@ def rule_regconization(query,userID):
     # """
     def match_MET(query,userID):
         matched_value = ""
-        method_list.extend(get_all_MET(userID))
-        for method_value in method_list:
+        user_methods = get_all_MET(userID)
+        method_candidates = method_list + user_methods
+        for method_value in method_candidates:
             if method_value in query or method_value.lower() in query.lower():
                 matched_value = method_value
                 break
         # 先把所有缺字的方法放进列表里，统一先match了，再作补充处理。
         lacked_values = {
             'mi': "mig",
-            'ig': "mig",
+            #'ig': "mig",
             'gma': "gma",
             "maw": "gmaw",
             "7保焊": "气保焊",
@@ -332,6 +340,7 @@ def rule_regconization(query,userID):
             r'板厚是(\d+)',
             r'厚度用(\d+)',
             r'板厚用(\d+)',
+            r'(\d+)厚',
             r'(\d+)个厚'
         ]
         # 将模式列表连接成一个单一的正则表达式
@@ -355,6 +364,45 @@ def rule_regconization(query,userID):
         matched_result['THI'] = matched_value
 
     return matched_result, query
+
+
+def rule_recognition_user(query, userID):
+    """
+    仅用于用户库精确匹配的规则识别：
+    - 只匹配用户自定义材料/方法
+    - 优先长串，避免被短串截断
+    """
+    from app.utils.paramSQL import get_all_MET, get_all_MAT
+
+    matched_result = {}
+
+    def match_MAT_user(query, userID):
+        matched_value = ""
+        user_materials = get_all_MAT(userID)
+        for material_value in sorted(user_materials, key=len, reverse=True):
+            if material_value in query or material_value.lower() in query.lower():
+                matched_value = material_value
+                break
+        return matched_value
+
+    def match_MET_user(query, userID):
+        matched_value = ""
+        user_methods = get_all_MET(userID)
+        for method_value in sorted(user_methods, key=len, reverse=True):
+            if method_value in query or method_value.lower() in query.lower():
+                matched_value = method_value
+                break
+        return matched_value
+
+    matched_value = match_MAT_user(query, userID)
+    if matched_value != "":
+        matched_result['MAT'] = matched_value
+
+    matched_value = match_MET_user(query, userID)
+    if matched_value != "":
+        matched_result['MET'] = matched_value
+
+    return matched_result
 
 
 def update_rule_result(slots, matched_value):

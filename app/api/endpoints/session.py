@@ -1,4 +1,5 @@
 import ast
+import time
 from typing import Dict, Any, List, Tuple
 import logging
 from fastapi import HTTPException, APIRouter, Body
@@ -7,13 +8,14 @@ from app.models.Session import Session, sessions
 from app.services import bert_service, bert_param_control, bert_intent_recognize
 from app.utils.parse_intent_and_slot import parse_intent_and_slot
 from app.utils.query_process import chinese_num2arab_num, process_THI, diff_match, fix_query, \
-    determine_single_welding_intent, standardize_value, rule_regconization, update_rule_result, \
-    ner_replace
+    determine_single_welding_intent, standardize_value, rule_recognition, rule_recognition_user, \
+    update_rule_result, ner_replace
 from app.utils.state_switch import state_switch
 from app.utils import xunfei_translate
 from app.api.endpoints import intent_route
 from app.api.endpoints.session_en import session_en
 import fasttext
+import unicodedata
 
 router = APIRouter()
 accent_map = {
@@ -34,6 +36,17 @@ def accent_rule(query):
             query = query.replace(k, v)
     return query
 
+#去除标点符号，保留部分标点函数
+def remove_punctuation(text: str, keep: str = "-_.") -> str:
+    keep_set = set(keep)
+    out = []
+    for ch in text:
+        # Unicode 类别以 P 开头的是标点（Punctuation）
+        if unicodedata.category(ch).startswith("P") and ch not in keep_set:
+            continue
+        out.append(ch)
+    return "".join(out)
+
 @router.post("/session/start", response_model=Dict[str, str])
 def start_session():
     session = Session()
@@ -42,29 +55,35 @@ def start_session():
 
 
 @router.post("/session/{session_id}/", response_model=Dict[str, Any])
-def send_message_query(session_id: str, query: str, userID: int):
+async def send_message_query(session_id: str, query: str, userID: int):
+    
+#    start_wall = time.time()
+#    start_cpu = time.process_time() 
+    
     session = sessions.get(session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
     
-    # 0603: 开头直接检测语言，只要不是中文，直接RAG返回   1119:加入历史记录检测  1124：短文本过滤
-    session.add_user_messages(query)
+    # 0603: 开头直接检测语言，只要不是中文，直接RAG返回   1119:加入历史记录检测  1124：短文本过滤 1212 去除标点
+    query2=remove_punctuation(query)
+    session.add_user_messages(query2)
     history_queries=" ".join(session.get_user_messages())
+    
     print("历史对话：",history_queries)
     
-    language=xunfei_translate.directly_judge_language(query)    #先用模型判断一下
-    if len(query) < 8 and language!="cn":                       #如果不是中文还短，就判断一下历史记录
+    language=xunfei_translate.directly_judge_language(query2)    #先用模型判断一下
+    if len(query2) < 8 and language!="cn":                       #如果不是中文还短，就判断一下历史记录
         language = xunfei_translate.directly_judge_language(history_queries)
     if language == "un":                                        #如果识别的是un就用网络识别
-        language = xunfei_translate.check_language(query)
-        if len(query) < 8 and language!="cn":                   #如果网络识别不是中文且是短句子那就上历史记录识别，长句子就还是中文走中文，英文走英文
+        language = xunfei_translate.check_language(query2)
+        if len(query2) < 8 and language!="cn":                   #如果网络识别不是中文且是短句子那就上历史记录识别，长句子就还是中文走中文，英文走英文
             language = xunfei_translate.check_language(history_queries)
             if language == "un":                                #如果还是识别不出来，那就没招了，直接识别短句query吧。
-                language = xunfei_translate.check_language(query)   
+                language = xunfei_translate.check_language(query2)   
     if language == "en":
-        return session_en(query, session, userID)
+        return await session_en(query, session, userID)
     if language not in ["en","cn"]:
-        if all(ord(ch) < 128 for ch in query):
+        if all(ord(ch) < 128 for ch in query2):
             return session_en(query, session, userID)
         else:
             return {
@@ -75,7 +94,7 @@ def send_message_query(session_id: str, query: str, userID: int):
     
     query = accent_rule(query)
     ## -②.0217需求：把参数查询、电流控制、rag放进一个前端里
-    sentence_intent = bert_intent_recognize.predict(query)
+    sentence_intent = await bert_intent_recognize.predict(query)
     ### 得到识别的意图∈['RAG', 'CONTROL', 'PARAM']后，根据意图进行不同的处理
     if sentence_intent == "RAG":
         history_messages = session.get_rag_messages()
@@ -90,7 +109,7 @@ def send_message_query(session_id: str, query: str, userID: int):
         }
     elif sentence_intent == "CONTROL":
         fixed_query = query
-        response, control_param = intent_route.get_control_response(query)
+        response, control_param = await intent_route.get_control_response(query)
         return {
             'fixed_query': fixed_query,
             "response": response,
@@ -98,14 +117,14 @@ def send_message_query(session_id: str, query: str, userID: int):
         }
     else:
         print("用户ID",userID)
-        # -①其他语言翻译为中文，防止用户突然切换语言，血的教训！！！！
+        ## -①其他语言翻译为中文，防止用户突然切换语言，血的教训！！！！
         ## 检测语言是否是中文
-        language = xunfei_translate.directly_judge_language(query)
-        if language == "un":
-            language = xunfei_translate.check_language(query)
+        #language = xunfei_translate.directly_judge_language(query)
+        #if language == "un":
+        #    language = xunfei_translate.check_language(query)
         ## 不是中文则进行讯飞翻译
-        if language != "cn" and len(query) > 8:
-            query = xunfei_translate.translate(text=query, source_language=language)
+        #if language != "cn" and len(query) > 8:
+        #    query = xunfei_translate.translate(text=query, source_language=language)
         # 调用模型，获取输出：意图与槽位
         logging.info(f"query text: {query}")
         query = ner_replace(query)
@@ -114,28 +133,35 @@ def send_message_query(session_id: str, query: str, userID: int):
         query = query.replace(" ","")
 
         ## ①.5基于规则匹配牌号材料
-        matched_value, query_for_bert = rule_regconization(query,userID)
+        matched_value_official, query_for_bert = rule_recognition(query, userID)
+        matched_value_user = rule_recognition_user(query, userID)
 
         # 调用模型，获取输出
-        response = bert_service.predict(query_for_bert,userID)
+        response = await bert_service.predict(query_for_bert,userID)
         intent = response['意图']
         slots = response['槽位']
         slots = ast.literal_eval(slots)
-        if matched_value != {}:
-            slots = update_rule_result(slots, matched_value)
-        logging.info(f"槽位：{slots}")
-        print(f"槽位：{slots}")
+        slots_official = update_rule_result(slots, matched_value_official) if matched_value_official != {} else slots
+        slots_user = update_rule_result(slots, matched_value_user) if matched_value_user != {} else slots
+        logging.info(f"槽位：{slots_user}")
+        print(f"槽位：{slots_user}")
+        print(f"槽位识别官方：{slots_official}")
+        
+
 
         ## ②去除THI中的汉字，并进行单位转换
-        slots = process_THI(intent, slots)
-        ## ③模糊匹配
-        fixed_slots = slots if matched_value != {} else diff_match(slots, {'MAT': 0.7, 'MET': 0.7})  # todo:优化一下
+        slots_official = process_THI(intent, slots_official)
+        slots_user = process_THI(intent, slots_user)
+        # 保留用户原始槽位（用于用户库精确匹配）
+        raw_slots = slots_user
+        ## ③模糊匹配（仅用于官方库）
+        fixed_slots = slots_official if matched_value_official != {} else diff_match(slots_official, {'MAT': 0.7, 'MET': 0.7})  # todo:优化一下
 
 
         ### 返回出修正后的query给前端
         # fixed_query, early_exit = fix_query(query, slots, fixed_slots) if not is_instant else query, False
         #### 1°字符修正  2°拼音修正
-        fixed_query = query if matched_value != {} else fix_query(query, slots, fixed_slots)
+        fixed_query = query if matched_value_official != {} else fix_query(query, slots_official, fixed_slots)
         logging.info(f"fixed quert: {fixed_query}")
 
 
@@ -151,19 +177,32 @@ def send_message_query(session_id: str, query: str, userID: int):
         standard_slots = standardize_value(fixed_slots)
 
         ## ⑥新session中存储的值（standard value），更新session的状态
-        session.add_and_update(fixed_slots, standard_slots)
+        #session.add_and_update(fixed_slots, standard_slots)  2026-01-28 debug
+        session.add_and_update(raw_slots, standard_slots)
         new_intent, history_original_slots, history_slots = session.get_intent_and_slots()
 
         # 根据模型输出的意图和实体，整合结果
         print(fixed_slots)
-        response = parse_intent_and_slot(new_intent, history_original_slots, history_slots, userID)
-        if isinstance(response, str) and language not in ["cn", "un"]:
-            response = xunfei_translate.translate_to(text=response, target_language=language)
-        elif language not in ["cn", "un"]:
-            response["response"] = xunfei_translate.translate_to(text=response["response"], target_language=language)
+        response = await parse_intent_and_slot(new_intent, history_original_slots, history_slots, userID)
+        #if isinstance(response, str) and language not in ["cn", "un"]:
+        #    response = xunfei_translate.translate_to(text=response, target_language=language)
+        #elif language not in ["cn", "un"]:
+        #    response["response"] = xunfei_translate.translate_to(text=response["response"], target_language=language)
 
-        #针对TIG_AC方法写一条standard_slots //废弃
-        #if any("Al" in sublist for sublist in standard_slots): standard_slots.append(["MET","TIG_AC"])
+        session.add_rag_messages(query, response)
+        if isinstance(response, dict):
+            response["response"] = "AI生成仅供参考 \n " + (response["response"])
+        else:
+            response = "AI生成仅供参考 \n " + (response)
+
+    
+    #高并发开销计时 
+    # end_wall = time.time()
+    # end_cpu = time.process_time()
+    
+    # print("Wall time:", end_wall - start_wall)
+    # print("CPU time:", end_cpu - start_cpu)
+    
     # 成诺0530新需求：查到数据的时候，多返回一个参数——材料名称
     if 'data' in response and isinstance(response, dict) and len(response['data']) > 0:
         material_name = [standard_slot[1] for standard_slot in standard_slots if standard_slot[0] == 'MAT']

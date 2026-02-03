@@ -56,34 +56,162 @@ def parse_media_sequence(input_list):
     
     return media_sequence
 
+
+RAG_MODEL="qwen2.5-instruct"
+GEN_MODEL="qwen2.5-instruct"
 def get_rag_response(query, history_messages, language="cn"):
-    time.sleep(5)
+    # max_turns = 3
+    messages = [
+        {"role": "user", "content": "你好，请问你了解电焊知识吗"},
+        {"role": "assistant", "content": "我是电焊领域的专家，很乐意为你解答！"},
+    ]
+    # print((history_messages))
+    if isinstance(history_messages, list) and history_messages:
+        # history_messages = history_messages[-max_turns:]
+        for history_message in history_messages:
+            messages.append({"role": "user", "content": f"{history_message.query}"})
+            messages.append({"role": "assistant", "content": f"{history_message.response}"})
+            # print(history_message)
+    if language == "en":
+        query = "Please response in English. " + query
+    
+    messages_without_query = messages
+    messages.append({"role": "user", "content": f"{query}"})
+    
+    # time.sleep(5)
     base_url = "http://127.0.0.1:7861/knowledge_base/local_kb/多模态知识库1115"
     client = openai.Client(base_url=base_url, api_key="EMPTY")
-
     #多模态知识库2调用
     data = {
-        "model": "qwen2.5-instruct",
-        "messages": [
-            {"role": "user", "content": "你好"},
-            {"role": "assistant", "content": "你好，我是电焊领域的专家。"},
-            {"role": "user", "content": query},
-        ],
+        "model": RAG_MODEL,
+        "messages": messages,
+        "stream": False,
+        "max_tokens":4096,
+        "temperature": 0.6,
+        "extra_body": {
+        "top_k": 20,
+        "score_threshold": 0.5,
+        "return_direct": True,
+        },
+    }
+
+    resp = client.chat.completions.create(**data)
+    resp = json.loads(resp)
+    retrieve_texts = resp['docs'][-20:]
+    # print(retrieve_texts)
+
+    #电焊知识库调用
+    base_url_1 = "http://127.0.0.1:7861/knowledge_base/local_kb/电焊"
+    client_1 = openai.Client(base_url=base_url_1, api_key="EMPTY")
+    data_1 = {
+        "model": RAG_MODEL,
+        "messages": messages,
         "stream": False,
         "max_tokens":4096,
         "temperature": 0.6,
         "extra_body": {
         "top_k": 3,
-        "score_threshold": 2.0,
+        "score_threshold": 0.5,
         "return_direct": True,
         },
     }
 
+    resp_1 = client_1.chat.completions.create(**data_1)
+    resp_1 = json.loads(resp_1)
+    retrieve_texts_1 = resp_1['docs'][-3:]
 
-    resp = client.chat.completions.create(**data)
-    resp = json.loads(resp)
-    retrieve_texts = resp['docs'][-3:]
+    
+    client_get_question = OpenAI(base_url="http://127.0.0.1:9997/v1", api_key="not used actually")
 
+    prompt = '''
+        （请不要进行长时间思考，快速回答问题）
+
+        你是一名电焊领域的技术专家，请从用户提出的问题中精准识别并提取所有**具体的电焊相关专业术语**作为关键词。
+
+        要求：
+        - 提取出来的关键词数量不限，若关键词长度大于3，则拆分为严格小于等于3的关键词！！英文除外
+        - **提取以下类别的术语**：
+        - 具体焊接工艺（如：气保焊、氩弧焊、手工焊、埋弧焊、激光焊等）
+        - 焊接设备或工具（如：焊枪、送丝机、焊机等）
+        - 焊接材料（如：铝镁、合金、焊条等）
+        - 缺陷类型（如：气孔、未熔合、咬边、裂纹等）
+        - 工艺参数（如：电流、电压、干伸长等）
+        - **严格排除以下内容**：
+        - 泛化词汇：如“电焊”“焊接”“焊”“焊工”等常见通用词；
+        - 通用动词、疑问词、助词（如“怎么”“如何”“解决”“使用”等）；
+        - 输出必须为标准 JSON 格式，仅包含一个字段 "keywords"，其值为字符串数组；
+        - 若无符合要求的术语，返回空数组；
+        - 尽量将复合词拆分为最小有效专业单元（例如：“铝镁焊丝” → ["铝镁", "焊丝"]）；
+        - 不要解释、不要额外文本，只输出 JSON。
+        
+        示例1：
+        输入：气保焊可以焊接哪些材料？
+        输出：
+        {
+            "keywords": ["气保焊"]
+        }
+
+        示例2：
+        输入：手工焊和氩弧焊的区别是什么？
+        输出：
+        {
+            "keywords": ["手工焊", "氩弧焊"]
+        }
+
+        示例3：
+        输入：为什么TIG焊容易出现气孔？
+        输出：
+        {
+            "keywords": ["TIG", "气孔"]
+        }
+
+        示例4：
+        输入：电焊时怎么防止飞溅？
+        输出：
+        {
+            "keywords": ["飞溅"]
+        }
+
+        示例5：
+        输入：焊接的基本原理是什么？
+        输出：
+        {
+            "keywords": []
+        }
+
+        当前用户问题：
+        '''
+
+    # print(prompt+query)
+    
+    response = client_get_question.chat.completions.create(
+        model=GEN_MODEL,
+        temperature=0.6,
+        max_tokens=2048,
+        top_p=0.7,
+        messages=[
+            {"role": "system", "content": "你好，我是电焊领域的专家。"},
+            {"role": "user", "content": prompt+query}
+        ]
+    )
+    
+    print(prompt+query)
+    output = response.choices[0].message.content
+
+    required = json.loads(output)
+    required = required["keywords"]
+    print(retrieve_texts)
+    print(f"大模型识别出的关键词{required}")
+
+    if required:
+        retrieve_texts = [
+            doc for doc in retrieve_texts 
+            if any(kw.lower() in doc.lower() for kw in required)
+        ]
+
+    retrieve_texts = retrieve_texts[0:3]
+    print(retrieve_texts)
+    
     #匹配检索结果中的文件路径
     pattern = r'\[([^\]]+)\.txt\]'
 
@@ -116,55 +244,49 @@ def get_rag_response(query, history_messages, language="cn"):
 
     parsed_media_url = parse_media_sequence(add_media_url)
 
-    #电焊知识库调用
-    base_url_1 = "http://127.0.0.1:7861/knowledge_base/local_kb/电焊"
-    client_1 = openai.Client(base_url=base_url_1, api_key="EMPTY")
 
-
-    data_1 = {
-        "model": "qwen2.5-instruct",
-        "messages": [
-            {"role": "user", "content": "你好"},
-            {"role": "assistant", "content": "你好，我是电焊领域的专家。"},
-            {"role": "user", "content": query},
-        ],
-        "stream": False,
-        "max_tokens":4096,
-        "temperature": 0.6,
-        "extra_body": {
-        "top_k": 3,
-        "score_threshold": 2.0,
-        "return_direct": True,
-        },
-    }
-
-
-    resp_1 = client_1.chat.completions.create(**data_1)
-    resp_1 = json.loads(resp_1)
-    retrieve_texts_1 = resp_1['docs'][-3:]
-
-
-    client_get_question = OpenAI(base_url="http://127.0.0.1:9997/v1", api_key="not used actually")
-    prompt = "假设你现在是电焊领域的专家，你需要根据用户当前问题，以及检索出的相关知识来回答问题。\n相关知识：{}\n用户当前问题："
-
+    prompt = '''
+        <注意事项>你是一个能够控制智能焊机的大模型，如果用户提问与参考问题高度相关，请严格参考以下示例词语进行回答，并且不要回答其他在参考回答中没有出现的内容或进行联想；
+        若与参考问题无关，请不要参考以下示例：
+        问题1：焊接方法有什么？\我可以选择哪些焊接方法？
+        目前可使用焊接方法：['MIG', 'MMA', 'tig_ac', 'tig_dc']
+        
+        问题2：焊接材料有什么？\我可以选择哪些焊接材料？
+        目前可使用焊接材料：['FE', 'CUSI', 'ALMG', 'FLUX', 'STEEL', 'ALSI']
+        <注意事项结束>
+        
+        假设你现在是电焊领域的专家，你需要根据用户当前问题，结合历史对话内容，以及检索出的相关知识来回答问题。
+        历史对话：{}
+        相关知识：{}
+        
+        用户当前问题：
+    '''
+    
+    
+    print(prompt.format(messages_without_query, str(retrieve_texts+retrieve_texts_1))+query)
     response = client_get_question.chat.completions.create(
-                model="qwen2.5-instruct",
-                temperature=0.6,
-            max_tokens=2048,
-            top_p=0.7,
-                messages=[
-                    {"role": "system", "content": "你好，我是电焊领域的专家。"},
-                    {"role": "user", "content": prompt.format(retrieve_texts+retrieve_texts_1)+query}
-                ]
-            )
+        model=GEN_MODEL,
+        temperature=0.6,
+        max_tokens=2048,
+        top_p=0.7,
+        messages=[
+            {"role": "system", "content": "你好，我是电焊领域的专家。"},
+            {"role": "user", "content": prompt.format(messages_without_query, str(retrieve_texts+retrieve_texts_1))+query}
+        ]
+    )
     output = response.choices[0].message.content
 
-    print(parsed_media_url)
+    output += f"\n\nAI生成"
+
+    # print(parsed_media_url)
     return output, str(retrieve_texts)+"\n"+str(retrieve_texts_1), [], parsed_media_url
 
-def get_control_response(query, language="cn"):
+
+
+
+async def get_control_response(query, language="cn"):
     if language == "cn":
-        result = bert_param_control.predict(query)
+        result =await bert_param_control.predict(query)
         if not result:
             return "请提供您需要进行控制的参数，例如：请将电压增大5伏、请将电流减小2安、将电流设置为27安。", ()
         
@@ -181,7 +303,7 @@ def get_control_response(query, language="cn"):
         response = f"好的，我知道您想要{mode}{result[1]}{measure}"
         return response, result
     elif language == "en":
-        result = bert_param_control_en.predict(query)
+        result =await bert_param_control_en.predict(query)
         if not result:
             return "Please provide the parameter you want to control, e.g., please increase the voltage by 5 volts, please decrease the current by 2 amps, or set the current to 27 amps.", ()
         

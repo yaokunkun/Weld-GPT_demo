@@ -1,5 +1,6 @@
 import json
-import random
+import secrets
+import time
 from urllib import parse
 
 import requests
@@ -10,7 +11,44 @@ from app.utils.encryption import hash_password, check_password
 from app.utils.aliyunSendSms import Sample
 from app.utils import userSQL
 
-def add(UserName, Password, PhoneNumber, UserRole):
+# 20260126 验证码有效期5分钟，冷却时间60秒及新增验证码存储字典
+_SMS_CODE_TTL_SECONDS = 300
+_SMS_CODE_COOLDOWN_SECONDS = 60
+_SMS_CODE_STORE = {}
+# 20260126 新增验证码生成函数
+def _generate_sms_code(length=6):
+    return "".join(str(secrets.randbelow(10)) for _ in range(length))
+
+def _set_sms_code(phone_number, code):
+    now = time.time()
+    _SMS_CODE_STORE[phone_number] = {
+        "code": code,
+        "expires_at": now + _SMS_CODE_TTL_SECONDS,
+        "last_sent_at": now,
+    }
+# 20260126 新增验证码获取函数
+def _get_sms_record(phone_number):
+    record = _SMS_CODE_STORE.get(phone_number)
+    if not record:
+        return None
+    if time.time() > record["expires_at"]:
+        _SMS_CODE_STORE.pop(phone_number, None)
+        return None
+    return record
+# 20260126 新增验证码验证函数
+def _verify_sms_code(phone_number, code):
+    record = _get_sms_record(phone_number)
+    if not record:
+        return False, "验证码未发送或已过期！"
+    if str(code) != str(record["code"]):
+        return False, "验证码错误！"
+    _SMS_CODE_STORE.pop(phone_number, None)
+    return True, "ok"
+
+def add(UserName, Password, PhoneNumber, UserRole, VerifyCode):
+    ok, msg = _verify_sms_code(PhoneNumber, VerifyCode)
+    if not ok:
+        return {"info": msg}
     user = User(UserID=max(get_all_userID(), key=lambda x:x[0])[0]+1,
                 UserName=UserName, Password=Password, PhoneNumber=PhoneNumber, UserRole=UserRole)
     user.Password = hash_password(user.Password)
@@ -50,15 +88,26 @@ def login(UserName, Password, PhoneNumber):
         return {'info': "密码错误！", 'userID':-1, 'userName': -1, 'phoneNumber': -1,'userRole': -1}
 
 def send_message(phoneNumber):
-    length = 6
-    code = ''
-    for i in range(length):
-        code += str(random.randint(0, 9))
-    result = Sample.main(code, phoneNumber)
-    return {'info': '验证码发送成功' if result.status_code == 200 else '验证码发送失败',
-            'code':code}
+    if not phoneNumber:
+        return {"info": "手机号不能为空！"}
+    now = time.time()
+    record = _SMS_CODE_STORE.get(phoneNumber)
+    if record and now - record.get("last_sent_at", 0) < _SMS_CODE_COOLDOWN_SECONDS:
+        return {"info": "验证码发送过于频繁，请在上次请求的60秒后再试！"}
+    code = _generate_sms_code()
+    try:
+        result = Sample.main(code, phoneNumber)
+    except Exception:
+        return {"info": "验证码发送失败！"}
+    if result is None or getattr(result, "status_code", None) != 200:
+        return {"info": "验证码发送失败！"}
+    _set_sms_code(phoneNumber, code)
+    return {"info": "验证码发送成功！"}
     
-def update_password(phoneNumber, newPassword):
+def update_password(phoneNumber, newPassword, VerifyCode):
+    ok, msg = _verify_sms_code(phoneNumber, VerifyCode)
+    if not ok:
+        return {"info": msg, "userID": -1}
     hashed_password = hash_password(newPassword)
     userSQL.update_password(phoneNumber, hashed_password)
     result = login_by_PhoneNumber(phoneNumber, newPassword)

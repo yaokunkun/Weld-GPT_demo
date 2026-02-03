@@ -44,9 +44,9 @@ class Sample:
     ):
         client = Sample.create_client()
         send_sms_request = dysmsapi_20170525_models.SendSmsRequest(
-            template_code='SMS_470085089',
+            template_code='SMS_327400601',
             template_param=str({"code":f"{code}"}),
-            sign_name='智能焊接系统',
+            sign_name='佛山市三乔焊接实业',
             phone_numbers=f'{PhoneNumber}'
         )
         runtime = util_models.RuntimeOptions()

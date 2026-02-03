@@ -3,7 +3,7 @@ from app.utils import paramSQL
 from app.utils import userParamSQL
 from app.services.bert_param_recommend import recommend,rec_tig_ac,rec_tig_dc
 
-def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
+async def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
     """
     用处理好的NER，查询数据库，并得到response
     :param intent:
@@ -42,18 +42,54 @@ def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
     elif MAT.upper()=="AL" and MET.upper()=="MIG" and THI==0:
         ret = f"检测到您查询的焊接方法为 MIG, 焊接材料为铝 , 本系统下铝有多个种类 【\"AlMg \",\"AlSi\",\"pureAl\"】对应参数不同,请输入你想要查询的具体材料，除此之外请提供焊接厚度"
         return ret
-    # 方法为TIG_AC   
-    if  MET.upper()=="TIG_AC" and THI!=0:
-        return rec_tig_ac(THI)
-    elif MET.upper()=="TIG_AC" and THI==0:
-        ret = f"您查询的TIG_AC焊接方法只能使用铝材料,若想要使用焊机推荐的MIG焊接方法需要使用的焊接材料可以是{all_MAT},若您真的想要使用tig_ac方法,请提供焊接厚度"
-        return ret
-    # 方法为TIG_DC   
-    if  MET.upper()=="TIG_DC" and THI!=0:
-        return rec_tig_dc(THI)
-    elif MET.upper()=="TIG_DC" and THI==0:
-        ret = f"您查询的TIG_DC焊接方法只能使用钢材料,若想要使用焊机推荐的MIG焊接方法需要使用的焊接材料可以是{all_MAT},若您真的想要使用tig_dc方法,请提供焊接厚度"
-        return ret
+    # 方法在tig大类下进行用户数据库查询
+    if MET.upper()in ["TIG","TIG_AC","TIG_DC"]:
+        userData_result_dict_tig = paramSQL.select_user_SQL(old_MET, old_MAT, THI, userID)
+        user_new_result_dict_tig={}
+        #拼接用户库
+        if userData_result_dict_tig and len(userData_result_dict_tig) != 0:
+            
+            for Diameter, ParamName, ParamValue in userData_result_dict_tig :
+                DiameterO = f"WireDiameter:{Diameter}"  # 字典键值拼接
+                if DiameterO not in user_new_result_dict_tig:
+                    user_new_result_dict_tig[DiameterO] = []  # 创建字典键值与对应列表
+                user_new_result_dict_tig[DiameterO].append({ParamName: ParamValue})  # 填写列表
+        
+        # 方法只有TIG
+        if MET.upper()=="TIG":
+            if MAT.upper()=="AL":
+                MET="TIG_AC"
+            elif MAT.upper()=="STEEL":
+                MET="TIG_DC"
+            else:
+                ret = f"您查询的TIG焊接方法官方只能使用铝材料或钢材料,铝材使用TIG_AC方法,钢材使用TIG_DC方法,若您真的想要使用TIG方法,请提供焊接材料 或 准确说出焊接方法，同时提供焊接厚度。"
+                if len(user_new_result_dict_tig) == 0:
+                    return ret
+                else:
+                    return {"response": ret, "data":"空","data_user": user_new_result_dict_tig}
+        # 方法为TIG_AC   
+        if  MET.upper()=="TIG_AC" and THI!=0:
+            tig_res_dict = rec_tig_ac(THI)
+            if len(user_new_result_dict_tig) == 0:
+                return tig_res_dict
+            else:
+                tig_res_dict["data_user"]=user_new_result_dict_tig
+                return tig_res_dict
+        elif MET.upper()=="TIG_AC" and THI==0:
+            ret = f"您查询的TIG_AC焊接方法只能使用铝材料,若想要使用焊机推荐的MIG焊接方法需要使用的焊接材料可以是{all_MAT},若您真的想要使用tig_ac方法,请提供焊接厚度"
+            return ret
+        # 方法为TIG_DC   
+        if  MET.upper()=="TIG_DC" and THI!=0:
+            tig_res_dict = rec_tig_dc(THI)
+            if len(user_new_result_dict_tig) == 0:
+                return tig_res_dict
+            else:
+                tig_res_dict["data_user"]=user_new_result_dict_tig
+                return tig_res_dict
+        elif MET.upper()=="TIG_DC" and THI==0:
+            ret = f"您查询的TIG_DC焊接方法只能使用钢材料,若想要使用焊机推荐的MIG焊接方法需要使用的焊接材料可以是{all_MAT},若您真的想要使用tig_dc方法,请提供焊接厚度"
+            return ret
+    
     #焊接方法mig或mma
     if intent == 'QUERY_1':
         all_MET.extend(["TIG_DC","TIG_AC"])
@@ -111,12 +147,12 @@ def parse_intent_and_slot(intent, original_slots, standard_slots, userID):
         
         
         if len(result_dict) == 0 and len(userData_result_dict) == 0:
-            return recommend(MAT, MET, THI, userID)
+            return await recommend(MAT, MET, THI, userID)
         #若官方库需要进行计算厚度我们给他走推荐算法计算一次
         flag=select_SQL_rec(MET,MAT)
         official_cal={}
         if len(flag) != 0 and len(result_dict) == 0 and len(userData_result_dict) != 0:
-            official_cal=recommend(MAT, MET, THI, userID)
+            official_cal=await recommend(MAT, MET, THI, userID)
             
         print(official_cal)
         new_result_dict = {}

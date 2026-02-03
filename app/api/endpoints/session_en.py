@@ -5,7 +5,7 @@ from app.api.endpoints import intent_route
 from app.utils import xunfei_translate
 
 from app.utils.query_process import chinese_num2arab_num, process_THI, diff_match, fix_query, \
-    determine_single_welding_intent, standardize_value, rule_regconization, update_rule_result, \
+    determine_single_welding_intent, standardize_value, rule_recognition, update_rule_result, \
     ner_replace
 from app.services import bert_service
 from app.utils.parse_intent_and_slot import parse_intent_and_slot
@@ -14,14 +14,14 @@ import ast
 import logging
 
 
-def session_en(query, session,userID):
+async def session_en(query, session,userID):
     #测试导入参数类型
     #print(type(session))     #<class 'app.models.Session.Session'>
     #print(session)            #<app.models.Session.Session object at 0x7f5067d9a5e0>
     #print(query,userID)      #My method is MIG, the thickness is 5.5, the material is aluminum magnesium 14
     # 1. 意图识别
     query = query.lower()
-    sentence_intent = bert_intent_recognize_en.predict(query)
+    sentence_intent = await bert_intent_recognize_en.predict(query)
     # 2. 根据识别结果分流链路
     if sentence_intent == "RAG":
         history_messages = session.get_rag_messages()
@@ -37,18 +37,32 @@ def session_en(query, session,userID):
         }
     elif sentence_intent == "CONTROL":
         fixed_query = query
-        #response, control_param = intent_route.get_control_response(query, language="en")
+        response, control_param =await  intent_route.get_control_response(query, language="en")
         return {
             'fixed_query': fixed_query,
-            "response": "English version control function is under development",
-            #'control_param': control_param,
+            "response": response,
+            'control_param': control_param,
         }
+        #response, control_param = intent_route.get_control_response(query, language="en")
+        # return {
+        #     'fixed_query': fixed_query,
+        #     "response": "English version control function is under development",
+        #     #'control_param': control_param,
+        # }
     else:#参数查询逻辑-转换为中文再查询
         print("这是一个数据库查询")
+        query = re.sub(r"actig", r"交流氩弧焊", query)
         query = xunfei_translate.translate(text=query, source_language="en")
         query = re.sub(r"米格", r"mig", query)
         query = re.sub(r"阿尔西", r"alsi", query)
         query = re.sub(r"综合格斗", r"mma", query)
+        query = re.sub(r"库西", r"cusi", query)
+        query = re.sub(r"酷西", r"cusi", query)
+        query = re.sub(r"助焊剂", r"flux", query)
+        query = re.sub(r"蒂加奇", r"tigac", query)
+        query = re.sub(r"阿尔", r"al", query)
+        query = re.sub(r"艾尔", r"al", query)
+        
         print("成功翻译！")
         # 调用模型，获取输出：意图与槽位
         logging.info(f"query text: {query}")
@@ -58,10 +72,10 @@ def session_en(query, session,userID):
         query = query.replace(" ","")
 
         ## ①.5基于规则匹配牌号材料
-        matched_value, query_for_bert = rule_regconization(query,userID)
+        matched_value, query_for_bert = rule_recognition(query,userID)
 
         # 调用模型，获取输出
-        response = bert_service.predict(query_for_bert,userID)
+        response =await bert_service.predict(query_for_bert,userID)
         intent = response['意图']
         slots = response['槽位']
         slots = ast.literal_eval(slots)
@@ -100,7 +114,7 @@ def session_en(query, session,userID):
 
         # 根据模型输出的意图和实体，整合结果
         print(fixed_slots)
-        response = parse_intent_and_slot(new_intent, history_original_slots, history_slots, userID)
+        response = await parse_intent_and_slot(new_intent, history_original_slots, history_slots, userID)
         #翻译一下2025-08-29
         #print(type(fixed_query))  #str
         #print(type(response))   ##str和dict都有可能
@@ -109,6 +123,15 @@ def session_en(query, session,userID):
             response["response"] = xunfei_translate.translate_to(text= response["response"], target_language='en')
         else:
             response=xunfei_translate.translate_to(text= response, target_language='en')
+        
+        session.add_rag_messages(query, response)
+        
+        if isinstance(response, dict):
+            response["response"] = "AI-generated content. Please use with discretion. \n " + (response["response"])
+        else:
+            response = "AI-generated content. Please use with discretion. \n " + (response)
+
+
         # 成诺0530新需求：查到数据的时候，多返回一个参数——材料名称
         if 'data' in response and isinstance(response, dict) and len(response['data']) > 0:
             material_name = [standard_slot[1] for standard_slot in standard_slots if standard_slot[0] == 'MAT']

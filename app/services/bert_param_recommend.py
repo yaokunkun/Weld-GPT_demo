@@ -6,6 +6,9 @@ from transformers import AutoTokenizer, AutoModel
 from sklearn.metrics.pairwise import cosine_similarity
 import torch
 import numpy as np
+from app.connection_pool_for_main import http_client
+import httpx
+from fastapi import HTTPException
 
 def linear_fit_and_predict(data, x):
     # 分离二维元组列表中的 x 和 y 值
@@ -39,7 +42,8 @@ def linear_interpolation(data, x):
     return linear_fit_and_predict(data, x)
 
 # corpus_of_MAT = corpus_of_value['MAT']
-corpus_of_MAT = ['Al-99.5']
+#corpus_of_MAT = ['Al-99.5']
+corpus_of_MAT = ["FE","STEEL","ALSI","ALMG","CUSI","FLUX"]
 
 materials_map = {
     'Al-Si-4': 'AlSi',
@@ -93,32 +97,44 @@ def formulate_result_dict(result_dict):
         new_dict[new_dict_key] = new_dict_list
     return new_dict
     
-def get_embeddings(texts):
-    inputs = tokenizer(texts, padding=True, truncation=True, return_tensors='pt')
+async def get_embeddings(texts):
+    inputs = tokenizer(texts, padding=True, truncation=True, return_tensors='pt',max_length=128)
     with torch.no_grad():
         outputs = model(**inputs)
     # 取 [CLS] 标记的输出作为句子的表示
     embeddings = outputs.last_hidden_state[:, 0, :].numpy()
     return embeddings
+# async def get_embeddings(client: httpx.AsyncClient,texts):
+#     json_for_embedding={"texts":texts}
+#     # 直接发起 POST 请求
+#     response = await client.post("/bge_recommend_embedding", json=json_for_embedding)
+#     # 处理响应
+#     if response.status_code in [200, 201, 202]:
+#         resp = response.json()["predictions"]
+#         embeddings = np.array(resp, dtype=np.float32)
+#         return embeddings
+#     else:
+#         raise HTTPException(status_code=503, detail="bert_server_lost")
 
-corpus_embeddings = get_embeddings(corpus_of_MAT)
+
 
 
 def rule_recommend(MAT):
     return materials_map.get(MAT, "AlMg")  # TODO
 
-def model_recommend(MAT):
-    input_embedding = get_embeddings([MAT])
+async def model_recommend(MAT):
+    corpus_embeddings = await get_embeddings(corpus_of_MAT) #http_client.client,
+    input_embedding = await get_embeddings([MAT]) #http_client.client,
     similarities = cosine_similarity(input_embedding, corpus_embeddings)[0]
     most_similar_index = np.argmax(similarities)
     return corpus_of_MAT[most_similar_index]
 
-def material_recommend(MAT):
+async def material_recommend(MAT):
     result = rule_recommend(MAT)
     if result:
         return 'RULE', result
     else:
-        return 'MODEL', model_recommend(MAT)
+        return 'MODEL', await model_recommend(MAT)
     
 def thickness_recommend(MAT, MET, THI):
     # all_params = get_all_param_by_MAT_MET(MET, MAT)
@@ -185,7 +201,7 @@ def thickness_recommend(MAT, MET, THI):
     # }
     return result_dict
 
-def recommend(MAT, MET, THI, userID):
+async def recommend(MAT, MET, THI, userID):
     """
     return: dict: {"response": response_sentence, "data": result_dict}
     """
@@ -203,7 +219,7 @@ def recommend(MAT, MET, THI, userID):
         return rec_tig_ac(THI)
     # 2.如果没有，走材料推荐
     if len(all_THI) == 0:
-        rec_type, new_MAT = material_recommend(MAT)
+        rec_type, new_MAT = await material_recommend(MAT)
         response += material_recommend_sentence_with_map.format(MET=MET, THI=THI, MAT=MAT, new_MAT=new_MAT) if rec_type == 'RULE' else material_recommend_sentence_without_map.format(MET=MET, THI=THI, MAT=MAT, new_MAT=new_MAT)
         MAT = new_MAT
     #2.1. 如果查询到数据为用户私有数据，直接返回用户厚度。

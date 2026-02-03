@@ -1,0 +1,25 @@
+cursor /   code .
+
+conda activate weld_gpt
+
+screen -ls
+
+screen -r new_test
+uvicorn app.main:app --host 0.0.0.0 --port 8002
+
+screen -S service
+screen -r service
+会话内输入 exit 或按 Ctrl+D 结束程序，会话外使用 screen -S <会话ID> -X quit
+ctrl+a d
+gunicorn -k uvicorn.workers.UvicornWorker app.main:app --workers 5 --bind 0.0.0.0:8001 --timeout 360
+
+screen -r event
+uvicorn app.events_read:logs --host 0.0.0.0 --port 2045
+
+screen -r bert
+gunicorn -k uvicorn.workers.UvicornWorker app.RUN_bert_models.startmodels:bert_app --workers 5 --bind 127.0.0.1:2077 --timeout 120
+
+查看网口占用 并杀死程序
+lsof -i :8002
+kill 3087540（PID）
+

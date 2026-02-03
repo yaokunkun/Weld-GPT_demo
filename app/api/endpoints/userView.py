@@ -6,8 +6,8 @@ from app.services import userService
 router = APIRouter()
 
 @router.post("/user/add", response_model=dict)
-def add_user(UserName, Password, PhoneNumber, UserRole):
-    return add(UserName, Password, PhoneNumber, UserRole)
+def add_user(UserName, Password, PhoneNumber, UserRole, VerifyCode):
+    return add(UserName, Password, PhoneNumber, UserRole, VerifyCode)
 
 @router.post("/user/update", response_model=dict)
 def update_user(userID, NewUserName="", NewPassword="", NewPhoneNumber="", NewUserRole=""):
@@ -23,5 +23,5 @@ def send_message(PhoneNumber):
     return userService.send_message(PhoneNumber)
 
 @router.post("/user/update_password", response_model=dict)
-def update_password(PhoneNumber, NewPassword):
-    return userService.update_password(PhoneNumber, NewPassword)
+def update_password(PhoneNumber, NewPassword, VerifyCode):
+    return userService.update_password(PhoneNumber, NewPassword, VerifyCode)

@@ -84,5 +84,9 @@ def find2(IDS):
     if not resultO:
         return {'info': "数据不存在！"}
     else:
-        my_dict = {result[0]: result[1:] for result in resultO}
+        # 兜底：过滤空元组，避免 IndexError
+        safe_results = [result for result in resultO if result and len(result) > 0]
+        if not safe_results:
+            return {'info': "数据不存在！"}
+        my_dict = {result[0]: result[1:] for result in safe_results}
         return my_dict

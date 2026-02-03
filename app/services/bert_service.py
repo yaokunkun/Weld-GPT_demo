@@ -5,70 +5,87 @@ from app.utils.materials import corpus_of_value
 from seqeval.metrics.sequence_labeling import get_entities
 import torch
 from app.utils.paramSQL import get_all_MET, get_all_MAT, get_all_THI
+from app.connection_pool_for_main import http_client
+import httpx
+from fastapi import HTTPException
 
-args = Args()
-device = device
-args.device = device
+# args = Args()
+# device = device
+# args.device = device
 
-tokenizer = BertTokenizer.from_pretrained(args.bert_dir)
-model = AutoModelForTokenClassification.from_pretrained(args.load_dir)
-model.to(device)
+# tokenizer = BertTokenizer.from_pretrained(args.bert_dir)
+# model = AutoModelForTokenClassification.from_pretrained(args.load_dir)
+# model.to(device)
 
 
-def get_unit_intent(text):
-    for x in ["厘米", "公分", "cm", "CM"]:
-        if x in text:
-            return "QUERY_CM"
-    return "QUERY_MM"
+async def predict(text,userID):
+    #工厂函数包装一下
+    return await predict1(http_client.client,text,userID)
 
-def check_MET(value,userID):
-    value_list = corpus_of_value['MET']
-    #插入用户定义的方法
-    value_list.extend(get_all_MET(userID))
-    if any(v in value_list for v in {value, value.upper(), value.lower()}) :
-        print("这里有识别到")
-        return True    
+async def predict1(client: httpx.AsyncClient, text, userID):
+    json_to_predict={"text":text,"userID":str(userID)}
+    #发起 POST 请求
+    response = await client.post("/bert_predict",json=json_to_predict)
+    #响应处理
+    if response.status_code in [200, 201, 202]:
+        return response.json()
     else:
-        print("这里没有识别到")
-        return False
+        raise HTTPException(status_code=503, detail="bert_server_lost")
 
-def predict(text,userID):
-    config = args
-    model.eval()
-    with torch.no_grad():
-        text = text.lower()
-        inputs = tokenizer.encode_plus(
-            text=text,
-            max_length=config.max_len,
-            padding='max_length',
-            truncation='only_first',
-            return_attention_mask=True,
-            return_tensors='pt'
-        )
-        for key in inputs.keys():
-            inputs[key] = inputs[key].to(device)
+# def get_unit_intent(text):
+#     for x in ["厘米", "公分", "cm", "CM"]:
+#         if x in text:
+#             return "QUERY_CM"
+#     return "QUERY_MM"
 
-        input_ids = inputs['input_ids']
-        attention_mask = inputs['attention_mask']
+# def check_MET(value,userID):
+#     value_list = corpus_of_value['MET']
+#     #插入用户定义的方法
+#     value_list.extend(get_all_MET(userID))
+#     if any(v in value_list for v in {value, value.upper(), value.lower()}) :
+#         print("这里有识别到")
+#         return True    
+#     else:
+#         print("这里没有识别到")
+#         return False
 
-        # 计算输出
-        output = model(input_ids, attention_mask)
-        output = output.logits.detach().cpu().numpy()
-        output = np.argmax(output, -1)
-        output = output[0]
-        output = [config.id2ner_label[i] for i in output]
-        entities = [(i[0], input_ids[0][i[1]:i[2] + 1], i[1], i[2]) for i in get_entities(output)]  # 重点：是拿input_ids和output的logits对应，可千万别拿text[1:-1]去对应
-        decoded_entities = []
-        for entity in entities:
-            entity_list = list(entity)
-            entity_list[1] = tokenizer.decode(entity[1]).replace(' ', '')  # 注意，中文模型要.replace(' ', '')，英文是不加的，应为英文单词之间得空格
-            # 如果焊接方法不在语料库里，刨掉
-            if entity_list[0] == 'MET':
-                if check_MET(entity_list[1],userID):
-                    decoded_entities.append(tuple(entity_list))
-            elif entity_list[1] not in ['[CLS]', '[SEP]']:  # 有时候会抽风，把这两个东西标注为实体
-                decoded_entities.append(tuple(entity_list))
-        print(decoded_entities)
+# def predict(text,userID):
+#     config = args
+#     model.eval()
+#     with torch.no_grad():
+#         text = text.lower()
+#         inputs = tokenizer.encode_plus(
+#             text=text,
+#             max_length=config.max_len,
+#             padding='max_length',
+#             truncation='only_first',
+#             return_attention_mask=True,
+#             return_tensors='pt'
+#         )
+#         for key in inputs.keys():
+#             inputs[key] = inputs[key].to(device)
 
-        return {'意图': get_unit_intent(text),
-                '槽位': str(decoded_entities)}
+#         input_ids = inputs['input_ids']
+#         attention_mask = inputs['attention_mask']
+
+#         # 计算输出
+#         output = model(input_ids, attention_mask)
+#         output = output.logits.detach().cpu().numpy()
+#         output = np.argmax(output, -1)
+#         output = output[0]
+#         output = [config.id2ner_label[i] for i in output]
+#         entities = [(i[0], input_ids[0][i[1]:i[2] + 1], i[1], i[2]) for i in get_entities(output)]  # 重点：是拿input_ids和output的logits对应，可千万别拿text[1:-1]去对应
+#         decoded_entities = []
+#         for entity in entities:
+#             entity_list = list(entity)
+#             entity_list[1] = tokenizer.decode(entity[1]).replace(' ', '')  # 注意，中文模型要.replace(' ', '')，英文是不加的，应为英文单词之间得空格
+#             # 如果焊接方法不在语料库里，刨掉
+#             if entity_list[0] == 'MET':
+#                 if check_MET(entity_list[1],userID):
+#                     decoded_entities.append(tuple(entity_list))
+#             elif entity_list[1] not in ['[CLS]', '[SEP]']:  # 有时候会抽风，把这两个东西标注为实体
+#                 decoded_entities.append(tuple(entity_list))
+#         print(decoded_entities)
+
+#         return {'意图': get_unit_intent(text),
+#                 '槽位': str(decoded_entities)}
