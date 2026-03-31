@@ -288,7 +288,7 @@ def get_rag_response(query, history_messages, language="cn", Enable_thinking=Fal
     response = client_get_question.chat.completions.create(
         model=GEN_MODEL,
         temperature=0.6,
-        max_tokens=51200,
+        max_tokens=128000,
         top_p=0.7,
         messages=[
             {"role": "system", "content": "你是电焊领域的专家，请解答用户的问题。"},

@@ -14,7 +14,7 @@ import ast
 import logging
 
 
-async def session_en(query, session,userID):
+async def session_en(query, session,userID, enable_thinking = False):
     #测试导入参数类型
     #print(type(session))     #<class 'app.models.Session.Session'>
     #print(session)            #<app.models.Session.Session object at 0x7f5067d9a5e0>
@@ -27,12 +27,13 @@ async def session_en(query, session,userID):
         history_messages = session.get_rag_messages()
         
         # 25.7.4 多返回了推荐问题列表
-        response_text, retrieve_text, recommend_list, parsed_media_url = intent_route.get_rag_response(query, history_messages, language="en")
+        response_text, thinking_text, retrieve_text, recommend_list, parsed_media_url= intent_route.get_rag_response(query, history_messages, language="en", Enable_thinking=enable_thinking)
         session.add_rag_messages(query, response_text)
         return {
             "fixed_query": query,
             # "response": '\n\n'.join([response_text, retrieve_text]),
             "response": response_text,
+            "thinking": thinking_text,
             "media_url": parsed_media_url
         }
     elif sentence_intent == "CONTROL":
@@ -139,13 +140,15 @@ async def session_en(query, session,userID):
                 "fixed_query": fixed_query,
                 "response": response, 
                 "current_slots": standard_slots,
+                "history_all_slots": history_slots,
                 "material_name": material_name
                 }
         else:
             return {
                 "fixed_query": fixed_query,
                 "response": response,
-                "current_slots": standard_slots
+                "current_slots": standard_slots,
+                "history_all_slots": history_slots
             }
         # return{
         #     "fixed_query": fixed_query,

@@ -55,7 +55,7 @@ def start_session():
 
 
 @router.post("/session/{session_id}/", response_model=Dict[str, Any])
-async def send_message_query(session_id: str, query: str, userID: int):
+async def send_message_query(session_id: str, query: str, userID: int, enable_thinking: bool = False):
     
 #    start_wall = time.time()
 #    start_cpu = time.process_time() 
@@ -99,12 +99,13 @@ async def send_message_query(session_id: str, query: str, userID: int):
     if sentence_intent == "RAG":
         history_messages = session.get_rag_messages()
         # 25.7.4 多返回了推荐问题列表
-        response_text, retrieve_text, recommend_list, parsed_media_url= intent_route.get_rag_response(query, history_messages)
+        response_text, thinking_text, retrieve_text, recommend_list, parsed_media_url= intent_route.get_rag_response(query, history_messages, Enable_thinking=enable_thinking)
         session.add_rag_messages(query, response_text)
         return {
             "fixed_query": query,
             # "response": '\n\n'.join([response_text, retrieve_text]),
             "response": response_text,
+            "thinking": thinking_text,
             "media_url": parsed_media_url
         }
     elif sentence_intent == "CONTROL":
@@ -176,6 +177,8 @@ async def send_message_query(session_id: str, query: str, userID: int):
         ## ⑤标准化查询值
         standard_slots = standardize_value(fixed_slots)
 
+        
+        
         ## ⑥新session中存储的值（standard value），更新session的状态
         #session.add_and_update(fixed_slots, standard_slots)  2026-01-28 debug
         session.add_and_update(raw_slots, standard_slots)
@@ -184,6 +187,9 @@ async def send_message_query(session_id: str, query: str, userID: int):
         # 根据模型输出的意图和实体，整合结果
         print(fixed_slots)
         response = await parse_intent_and_slot(new_intent, history_original_slots, history_slots, userID)
+        
+
+        
         #if isinstance(response, str) and language not in ["cn", "un"]:
         #    response = xunfei_translate.translate_to(text=response, target_language=language)
         #elif language not in ["cn", "un"]:
@@ -210,13 +216,15 @@ async def send_message_query(session_id: str, query: str, userID: int):
             "fixed_query": fixed_query,
             "response": response,
             "current_slots": standard_slots,
+            "history_all_slots": history_slots,
             "material_name": material_name
         }
     else:
         return {
             "fixed_query": fixed_query,
             "response": response,
-            "current_slots": standard_slots
+            "current_slots": standard_slots,
+            "history_all_slots": history_slots
         }
 
 
