@@ -120,7 +120,7 @@ async def rule_predict(query):
     if any(key_word in query for key_word in ['电压', '电流']):
         if any(corpus.lower() in query.lower() for corpus in corpus_list):
             exclude.append('CONTROL')
-    #if not thickness and len(query)<8:
+    #if not thickness and len(query)<6:
     #    return 'QUERY'
     if any(rag_pattern in query for rag_pattern in rag_patterns):
         return 'RAG'
