@@ -30,5 +30,4 @@ sentence_classify/print_output.py
 
 mysql/*
 tests/*
-backup2.sql
-backup.sql
+SQL&Redis相关文件/*

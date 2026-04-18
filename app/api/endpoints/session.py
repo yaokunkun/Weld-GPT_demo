@@ -2,9 +2,10 @@ import ast
 import time
 from typing import Dict, Any, List, Tuple
 import logging
-from fastapi import HTTPException, APIRouter, Body
+from fastapi import HTTPException, APIRouter, Body, Request
 
-from app.models.Session import Session, sessions
+from app.models.Session import Session
+from app.services import session_store
 from app.services import bert_service, bert_param_control, bert_intent_recognize
 from app.utils.parse_intent_and_slot import parse_intent_and_slot
 from app.utils.query_process import chinese_num2arab_num, process_THI, diff_match, fix_query, \
@@ -48,22 +49,43 @@ def remove_punctuation(text: str, keep: str = "-_.") -> str:
     return "".join(out)
 
 @router.post("/session/start", response_model=Dict[str, str])
-def start_session():
+async def start_session(request: Request):
     session = Session()
-    sessions[session.id] = session
+    redis = getattr(request.app.state, "session_redis", None)
+    await session_store.save_session(redis, session, session.id)
     return {"session_id": session.id}
 
 
 @router.post("/session/{session_id}/", response_model=Dict[str, Any])
-async def send_message_query(session_id: str, query: str, userID: int, enable_thinking: bool = False):
+async def send_message_query(
+    request: Request,
+    session_id: str,
+    query: str,
+    userID: int,
+    enable_thinking: bool = False,
+):
     
 #    start_wall = time.time()
 #    start_cpu = time.process_time() 
     
-    session = sessions.get(session_id)
+    redis = getattr(request.app.state, "session_redis", None)
+    session = await session_store.get_session(redis, session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
-    
+    try:
+        return await _send_message_query_body(
+            query, userID, enable_thinking, session
+        )
+    finally:
+        await session_store.save_session(redis, session, session_id)
+
+
+async def _send_message_query_body(
+    query: str,
+    userID: int,
+    enable_thinking: bool,
+    session: Session,
+):
     # 0603: 开头直接检测语言，只要不是中文，直接RAG返回   1119:加入历史记录检测  1124：短文本过滤 1212 去除标点
     query2=remove_punctuation(query)
     session.add_user_messages(query2)
@@ -84,7 +106,7 @@ async def send_message_query(session_id: str, query: str, userID: int, enable_th
         return await session_en(query, session, userID)
     if language not in ["en","cn"]:
         if all(ord(ch) < 128 for ch in query2):
-            return session_en(query, session, userID)
+            return await session_en(query, session, userID)
         else:
             return {
                 "fixed_query": query,
@@ -197,9 +219,9 @@ async def send_message_query(session_id: str, query: str, userID: int, enable_th
 
         session.add_rag_messages(query, response)
         if isinstance(response, dict):
-            response["response"] = "AI生成仅供参考 \n " + (response["response"])
+            response["response"] =  (response["response"]) + "\n AI生成仅供参考 " 
         else:
-            response = "AI生成仅供参考 \n " + (response)
+            response =  (response) + "\n AI生成仅供参考 "
 
     
     #高并发开销计时 

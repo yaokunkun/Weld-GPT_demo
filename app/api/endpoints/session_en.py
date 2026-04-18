@@ -128,9 +128,9 @@ async def session_en(query, session,userID, enable_thinking = False):
         session.add_rag_messages(query, response)
         
         if isinstance(response, dict):
-            response["response"] = "AI-generated content. Please use with discretion. \n " + (response["response"])
+            response["response"] =  (response["response"]) + "\n AI-generated content. Please use with discretion. "
         else:
-            response = "AI-generated content. Please use with discretion. \n " + (response)
+            response =  (response) +  "\n AI-generated content. Please use with discretion. "
 
 
         # 成诺0530新需求：查到数据的时候，多返回一个参数——材料名称

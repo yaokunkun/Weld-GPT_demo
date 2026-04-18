@@ -9,7 +9,7 @@
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/app/main.py",
-            "python": "/home/zkyao/miniconda3/envs/vora/bin/python",
+            "python": "/home/sanqiao/.conda/envs/weld_gpt/bin/python",
             "console": "integratedTerminal",
             "cwd": "/dev_data/zkyao/code/Weld-GPT_demo/app",
             "env": {

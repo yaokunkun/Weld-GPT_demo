@@ -294,7 +294,7 @@ def  predict(PRE:PredictReq):
     text=PRE.text.lower()
     userID=PRE.userID
     with torch.no_grad():
-        inputs = tokenizer.encode_plus(
+        inputs = tokenizer(
             text=text,
             max_length=config.max_len,
             padding='max_length',

@@ -6,6 +6,7 @@ from app.api.init import router as api_router
 import logging
 from app.config import config
 import os
+import redis.asyncio as redis_async
 from datetime import datetime
 import time
 import json
@@ -79,7 +80,25 @@ logging.basicConfig(level=logging.INFO,
 @asynccontextmanager
 async def main_service_lifetime(app:FastAPI):
     await http_client.init()
+    app.state.session_redis = None
+    try:
+        client = redis_async.from_url(
+            config.REDIS_URL,
+            encoding="utf-8",
+            decode_responses=True,
+        )
+        await client.ping()
+        app.state.session_redis = client
+        logging.info("Redis session backend connected: %s", config.REDIS_URL)
+    except Exception:
+        logging.warning(
+            "Redis unavailable; sessions fall back to in-memory (not safe with multiple workers). URL=%s",
+            config.REDIS_URL,
+            exc_info=True,
+        )
     yield
+    if getattr(app.state, "session_redis", None) is not None:
+        await app.state.session_redis.aclose()
     await http_client.close()
 
 # # 依赖项：获取客户端

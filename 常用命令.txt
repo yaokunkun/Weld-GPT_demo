@@ -23,4 +23,3 @@ gunicorn -k uvicorn.workers.UvicornWorker app.RUN_bert_models.startmodels:bert_a
 lsof -i :8002
 kill 3087540（PID）
 
-docker restart mysql

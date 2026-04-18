@@ -110,9 +110,9 @@ def get_control_response(query, language="cn"):
 def question_recommend(user_question):
     # 返回：output：[recommend_question_1,recommend_question_2,recommend_question_3]
     # 返回：data_base_related: 示例问题知识库返回的检索结果
-    base_url = "http://127.0.0.1:7861/knowledge_base/local_kb/问题推荐示例"
+    base_url = "http://192.168.2.250:7861/knowledge_base/local_kb/问题推荐示例"
     client = openai.Client(base_url=base_url, api_key="EMPTY")
-    client_get_question = OpenAI(base_url="http://127.0.0.1:9997/v1", api_key="not used actually")
+    client_get_question = OpenAI(base_url="http://192.168.2.250:9997/v1", api_key="not used actually")
 
     question = user_question
     data = {
